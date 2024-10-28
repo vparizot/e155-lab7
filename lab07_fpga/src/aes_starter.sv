@@ -79,17 +79,51 @@ module aes_core(input  logic         clk,
                 output logic         done, 
                 output logic [127:0] cyphertext);
     // TODO: Your code goes here
+  
 
     // Define internal variables
 
     // call submodules 
-    AddRoundKey(state, )
+    
+    AddRoundKey(state, key);
 
+    for round = 1 step 1 to 9 // psuedo code for 9 rounds
+      subBytes(state);
+      shiftRows(state);
+      MixColumns(state);
+      AddRoundKey(statw, key, keynext);
+    endfor 
+
+    subBytes (state);
+    ShiftRows (state);
+    AddRoundKey (state, w);
+
+    out = state
 
     
     
 endmodule
 
+module subBytes(input  logic [127:0] in,
+                output logic [127:0] subByteState);
+
+
+    // internal logic variables
+    
+
+
+    // call sbox_sync                       16*x+y
+    sbox_sync sbox_sync1(in[7:0], clk, out1[7:0]);
+    sbox_sync sbox_sync1(in[7:0], clk, out1[7:0]);
+    sbox_sync sbox_sync1(in[7:0], clk, out1[7:0]);
+    sbox_sync sbox_sync1(in[7:0], clk, out1[7:0]);
+    sbox_sync sbox_sync1(in[7:0], clk, out1[7:0]);
+    sbox_sync sbox_sync1(in[7:0], clk, out1[7:0]);
+    sbox_sync sbox_sync1(in[7:0], clk, out1[7:0]);
+    sbox_sync sbox_sync1(in[7:0], clk, out1[7:0]);
+    sbox_sync sbox_sync1(in[7:0], clk, out1[7:0]);
+
+endmodule
 /////////////////////////////////////////////
 // sbox
 //   Infamous AES byte substitutions with magic numbers
