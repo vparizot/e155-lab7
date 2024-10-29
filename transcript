@@ -1,0 +1,610 @@
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# 5 compiles, 0 failed with no errors.
+vsim -gui work.subBytes_tb
+# vsim -gui work.subBytes_tb 
+# Start time: 15:26:34 on Oct 29,2024
+# //  ModelSim DE-64 2022.3 Jul 18 2022
+# //
+# //  Copyright 1991-2022 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim DE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.subBytes_tb
+# Loading work.subBytes
+# Loading work.sbox_sync
+add wave -position end  sim:/subBytes_tb/clk
+add wave -position end  sim:/subBytes_tb/in
+add wave -position end  sim:/subBytes_tb/out
+add wave -position end  sim:/subBytes_tb/outExpected
+run 500
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sbox_sync1
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sbox_sync2
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sbox_sync3
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sbox_sync4
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sbox_sync5
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sbox_sync6
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sbox_sync7
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sbox_sync8
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sbox_sync9
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sbox_sync10
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sbox_sync11
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sbox_sync12
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sbox_sync13
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sbox_sync14
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sbox_sync15
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sbox_sync16
+run 500
+run 500
+run 500
+run 500
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv failed with 1 errors.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 1 failed with 1 error.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+vsim -gui work.rotWord_tb
+# End time: 15:56:57 on Oct 29,2024, Elapsed time: 0:30:23
+# Errors: 0, Warnings: 23
+# vsim -gui work.rotWord_tb 
+# Start time: 15:56:57 on Oct 29,2024
+# Loading sv_std.std
+# Loading work.rotWord_tb
+# Loading work.rotWord
+add wave -position end  sim:/rotWord_tb/word
+add wave -position end  sim:/rotWord_tb/rotWordOut
+add wave -position end  sim:/rotWord_tb/rotWordOutExpected
+add wave -position end  sim:/rotWord_tb/clk
+run 500
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+vsim -gui work.rotWord_tb
+# End time: 15:59:00 on Oct 29,2024, Elapsed time: 0:02:03
+# Errors: 0, Warnings: 2
+# vsim -gui work.rotWord_tb 
+# Start time: 15:59:00 on Oct 29,2024
+# Loading sv_std.std
+# Loading work.rotWord_tb
+# Loading work.rotWord
+add wave -position end  sim:/rotWord_tb/word
+add wave -position end  sim:/rotWord_tb/rotWordOut
+add wave -position end  sim:/rotWord_tb/rotWordOutExpected
+add wave -position end  sim:/rotWord_tb/clk
+run 500
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+vsim -gui work.subWord_tb
+# End time: 16:02:29 on Oct 29,2024, Elapsed time: 0:03:29
+# Errors: 0, Warnings: 2
+# vsim -gui work.subWord_tb 
+# Start time: 16:02:29 on Oct 29,2024
+# Loading sv_std.std
+# Loading work.subWord_tb
+# Loading work.subWord
+# Loading work.sbox_sync
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 3, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /subWord_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/subword_tb.sv Line: 5
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/subword_tb.sv(5): [TFMPC] - Missing connection for port 'clk'.
+add wave -position end  sim:/subWord_tb/word
+add wave -position end  sim:/subWord_tb/subWordOut
+add wave -position end  sim:/subWord_tb/subWordOutExpected
+add wave -position end  sim:/subWord_tb/clk
+run 500
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subWord_tb/dut/sboxsyncsw1
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subWord_tb/dut/sboxsyncsw2
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subWord_tb/dut/sboxsyncsw3
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subWord_tb/dut/sboxsyncsw4
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+vsim -gui work.subWord_tb
+# End time: 16:03:56 on Oct 29,2024, Elapsed time: 0:01:27
+# Errors: 0, Warnings: 8
+# vsim -gui work.subWord_tb 
+# Start time: 16:03:56 on Oct 29,2024
+# Loading sv_std.std
+# Loading work.subWord_tb
+# Loading work.subWord
+# Loading work.sbox_sync
+add wave -position end  sim:/subWord_tb/word
+add wave -position end  sim:/subWord_tb/subWordOut
+add wave -position end  sim:/subWord_tb/subWordOutExpected
+add wave -position end  sim:/subWord_tb/clk
+run 500
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subWord_tb/dut/sboxsyncsw1
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subWord_tb/dut/sboxsyncsw2
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subWord_tb/dut/sboxsyncsw3
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subWord_tb/dut/sboxsyncsw4
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+vsim -gui work.subWord_tb
+# End time: 16:05:07 on Oct 29,2024, Elapsed time: 0:01:11
+# Errors: 0, Warnings: 6
+# vsim -gui work.subWord_tb 
+# Start time: 16:05:07 on Oct 29,2024
+# Loading sv_std.std
+# Loading work.subWord_tb
+# Loading work.subWord
+# Loading work.sbox_sync
+add wave -position end  sim:/subWord_tb/word
+add wave -position end  sim:/subWord_tb/subWordOut
+add wave -position end  sim:/subWord_tb/subWordOutExpected
+add wave -position end  sim:/subWord_tb/clk
+run 500
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subWord_tb/dut/sboxsyncsw1
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subWord_tb/dut/sboxsyncsw2
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subWord_tb/dut/sboxsyncsw3
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subWord_tb/dut/sboxsyncsw4
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv failed with 2 errors.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 1 failed with 2 errors.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+vsim -gui work.subWord_tb
+# End time: 16:11:06 on Oct 29,2024, Elapsed time: 0:05:59
+# Errors: 0, Warnings: 7
+# vsim -gui work.subWord_tb 
+# Start time: 16:11:06 on Oct 29,2024
+# Loading sv_std.std
+# Loading work.subWord_tb
+# Loading work.subWord
+# Loading work.sbox_sync
+add wave -position end  sim:/subWord_tb/word
+add wave -position end  sim:/subWord_tb/subWordOut
+add wave -position end  sim:/subWord_tb/subWordOutExpected
+add wave -position end  sim:/subWord_tb/clk
+run 500
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subWord_tb/dut/sboxsyncsw1
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subWord_tb/dut/sboxsyncsw2
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subWord_tb/dut/sboxsyncsw3
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subWord_tb/dut/sboxsyncsw4
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+vsim -gui work.subword_tb
+# End time: 16:13:59 on Oct 29,2024, Elapsed time: 0:02:53
+# Errors: 0, Warnings: 6
+# vsim -gui work.subword_tb 
+# Start time: 16:13:59 on Oct 29,2024
+# Loading sv_std.std
+# Loading work.subword_tb
+# Loading work.subWord
+# Loading work.sbox_sync
+add wave -position end  sim:/subword_tb/word
+add wave -position end  sim:/subword_tb/subWordOut
+add wave -position end  sim:/subword_tb/subWordOutExpected
+add wave -position end  sim:/subword_tb/clk
+run 500
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subword_tb/dut/sboxsyncsw1
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subword_tb/dut/sboxsyncsw2
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subword_tb/dut/sboxsyncsw3
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subword_tb/dut/sboxsyncsw4
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv failed with 1 errors.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv failed with 1 errors.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 2 failed with 2 errors.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv failed with 1 errors.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv failed with 1 errors.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 2 failed with 2 errors.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv failed with 1 errors.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 1 failed with 1 error.
+vsim -gui work.subword_tb
+# End time: 16:25:27 on Oct 29,2024, Elapsed time: 0:11:28
+# Errors: 0, Warnings: 9
+# vsim -gui work.subword_tb 
+# Start time: 16:25:27 on Oct 29,2024
+# Loading sv_std.std
+# Loading work.subword_tb
+# Loading work.subWord
+# Loading work.sbox_sync
+add wave -position end  sim:/subword_tb/word
+add wave -position end  sim:/subword_tb/subWordOut
+add wave -position end  sim:/subword_tb/subWordOutExpected
+add wave -position end  sim:/subword_tb/clk
+run 500
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subword_tb/dut/sboxsyncsw1
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subword_tb/dut/sboxsyncsw2
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subword_tb/dut/sboxsyncsw3
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subword_tb/dut/sboxsyncsw4
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv failed with 1 errors.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 1 failed with 1 error.
+vsim -gui work.subBytes_tb
+# End time: 16:31:09 on Oct 29,2024, Elapsed time: 0:05:42
+# Errors: 0, Warnings: 6
+# vsim -gui work.subBytes_tb 
+# Start time: 16:31:09 on Oct 29,2024
+# Loading sv_std.std
+# Loading work.subBytes_tb
+# Loading work.subBytes
+# Loading work.sbox_sync
+add wave -position end  sim:/subBytes_tb/clk
+add wave -position end  sim:/subBytes_tb/in
+add wave -position end  sim:/subBytes_tb/out
+add wave -position end  sim:/subBytes_tb/outExpected
+run 500
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync1
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync2
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync3
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync4
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync5
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync6
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync7
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync8
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync9
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync10
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync11
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync12
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync13
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync14
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync15
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync16
+vsim -gui work.subBytes_tb
+# End time: 16:34:04 on Oct 29,2024, Elapsed time: 0:02:55
+# Errors: 0, Warnings: 17
+# vsim -gui work.subBytes_tb 
+# Start time: 16:34:04 on Oct 29,2024
+# Loading sv_std.std
+# Loading work.subBytes_tb
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv failed with 1 errors.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 1 failed with 1 error.
+vsim -gui work.subBytes_tb
+# End time: 16:34:37 on Oct 29,2024, Elapsed time: 0:00:33
+# Errors: 0, Warnings: 2
+# vsim -gui work.subBytes_tb 
+# Start time: 16:34:37 on Oct 29,2024
+# Loading sv_std.std
+# Loading work.subBytes_tb
+# Loading work.subBytes
+# Loading work.sbox_sync
+add wave -position end  sim:/subBytes_tb/clk
+add wave -position end  sim:/subBytes_tb/in
+add wave -position end  sim:/subBytes_tb/out
+add wave -position end  sim:/subBytes_tb/outExpected
+run 500
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(402)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync1
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(402)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync2
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(402)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync3
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(402)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync4
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(402)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync5
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(402)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync6
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(402)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync7
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(402)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync8
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(402)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync9
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(402)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync10
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(402)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync11
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(402)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync12
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(402)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync13
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(402)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync14
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(402)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync15
+# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(402)
+#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync16
+run 500
+run 500
+run 500
+run 500
+run 1000

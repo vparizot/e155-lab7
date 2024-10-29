@@ -1,0 +1,57 @@
+C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/subBytes_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/subBytes_tb.sv
+Model Technology ModelSim DE-64 vlog 2022.3 Compiler 2022.07 Jul 18 2022
+-- Compiling module subBytes_tb
+
+Top level modules:
+	subBytes_tb
+
+} {} {}} C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/rotWord_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/rotWord_tb.sv
+Model Technology ModelSim DE-64 vlog 2022.3 Compiler 2022.07 Jul 18 2022
+-- Compiling module rotWord_tb
+
+Top level modules:
+	rotWord_tb
+
+} {} {}} C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/shiftRows_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/shiftRows_tb.sv
+Model Technology ModelSim DE-64 vlog 2022.3 Compiler 2022.07 Jul 18 2022
+
+} {} {}} C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv
+Model Technology ModelSim DE-64 vlog 2022.3 Compiler 2022.07 Jul 18 2022
+-- Compiling module testbench_aes_core
+
+Top level modules:
+	testbench_aes_core
+
+} {} {}} C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/keyExpansionRound_tb.sv {0 {vlog -work work -sv -stats=none C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/keyExpansionRound_tb.sv
+Model Technology ModelSim DE-64 vlog 2022.3 Compiler 2022.07 Jul 18 2022
+-- Compiling module keyExpansionRound_tb
+** Error: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/keyExpansionRound_tb.sv(9): (vlog-2730) Undefined variable: 'clk'.
+
+} {4.0 5.0} {}} C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/subword_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/subword_tb.sv
+Model Technology ModelSim DE-64 vlog 2022.3 Compiler 2022.07 Jul 18 2022
+-- Compiling module subword_tb
+
+Top level modules:
+	subword_tb
+
+} {} {}} C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/keyExpansion_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/keyExpansion_tb.sv
+Model Technology ModelSim DE-64 vlog 2022.3 Compiler 2022.07 Jul 18 2022
+
+} {} {}} C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/addRoundKey_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/addRoundKey_tb.sv
+Model Technology ModelSim DE-64 vlog 2022.3 Compiler 2022.07 Jul 18 2022
+
+} {} {}} C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_sbox_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_sbox_tb.sv
+Model Technology ModelSim DE-64 vlog 2022.3 Compiler 2022.07 Jul 18 2022
+-- Compiling module testbench_aes_sbox
+
+Top level modules:
+	testbench_aes_sbox
+
+} {} {}} C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv
+Model Technology ModelSim DE-64 vlog 2022.3 Compiler 2022.07 Jul 18 2022
+-- Compiling module testbench_aes_spi
+
+Top level modules:
+	testbench_aes_spi
+
+} {} {}}
