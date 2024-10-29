@@ -79,10 +79,10 @@ module aes_core(input  logic         clk,
                 output logic         done, 
                 output logic [127:0] cyphertext);
     // TODO: Your code goes here
-  
 
     // Define internal variables
-
+    logic [127:0] out1, out2, out3, out4, out5;
+    
     // call submodules 
     
     AddRoundKey(state, key);
@@ -98,32 +98,10 @@ module aes_core(input  logic         clk,
     ShiftRows (state);
     AddRoundKey (state, w);
 
-    out = state
-
-    
-    
+    out = state 
 endmodule
 
-module subBytes(input  logic [127:0] in,
-                output logic [127:0] subByteState);
 
-
-    // internal logic variables
-    
-
-
-    // call sbox_sync                       16*x+y
-    sbox_sync sbox_sync1(in[7:0], clk, out1[7:0]);
-    sbox_sync sbox_sync1(in[7:0], clk, out1[7:0]);
-    sbox_sync sbox_sync1(in[7:0], clk, out1[7:0]);
-    sbox_sync sbox_sync1(in[7:0], clk, out1[7:0]);
-    sbox_sync sbox_sync1(in[7:0], clk, out1[7:0]);
-    sbox_sync sbox_sync1(in[7:0], clk, out1[7:0]);
-    sbox_sync sbox_sync1(in[7:0], clk, out1[7:0]);
-    sbox_sync sbox_sync1(in[7:0], clk, out1[7:0]);
-    sbox_sync sbox_sync1(in[7:0], clk, out1[7:0]);
-
-endmodule
 /////////////////////////////////////////////
 // sbox
 //   Infamous AES byte substitutions with magic numbers
@@ -222,4 +200,205 @@ module galoismult(input  logic [7:0] a,
     
     assign ashift = {a[6:0], 1'b0};
     assign y = a[7] ? (ashift ^ 8'b00011011) : ashift;
+endmodule
+
+module subBytes(input  logic [127:0] in,
+                input logic clk,
+                output logic [127:0] out);
+
+    // call sbox_sync                       16*x+y
+    sbox_sync sbox_sync1(in[7:0], clk, out1[7:0]);
+    sbox_sync sbox_sync2(in[15:8], clk, out1[15:8]);
+    sbox_sync sbox_sync3(in[23:16], clk, out1[23:16]);
+    sbox_sync sbox_sync4(in[31:24], clk, out1[31:24]);
+    sbox_sync sbox_sync5(in[39:32], clk, out1[39:32]);
+    sbox_sync sbox_sync6(in[47:40], clk, out1[47:40]);
+    sbox_sync sbox_sync7(in[55:48], clk, out1[55:48]);
+    sbox_sync sbox_sync8(in[63:56], clk, out1[63:56]);
+    sbox_sync sbox_sync9(in[71:64], clk, out1[71:64]);
+    sbox_sync sbox_sync10(in[79:72], clk, out1[79:72]);
+    sbox_sync sbox_sync11(in[87:80], clk, out1[87:80]);
+    sbox_sync sbox_sync12(in[95:88], clk, out1[95:88]);
+    sbox_sync sbox_sync13(in[103:96], clk, out1[103:96]);
+    sbox_sync sbox_sync14(in[111:104], clk, out1[111:104]);
+    sbox_sync sbox_sync15(in[119:112], clk, out1[119:112]);
+    sbox_sync sbox_sync16(in[127:120], clk, out1[127:120]);
+endmodule
+
+//   The key and message are 128-bit values packed into an array of 16 bytes as
+//   shown below
+//        [127:120] [95:88] [63:56] [31:24]     S0,0    S0,1    S0,2    S0,3
+//        [119:112] [87:80] [55:48] [23:16]     S1,0    S1,1    S1,2    S1,3
+//        [111:104] [79:72] [47:40] [15:8]      S2,0    S2,1    S2,2    S2,3
+//        [103:96]  [71:64] [39:32] [7:0]       S3,0    S3,1    S3,2    S3,3
+//
+//   Equivalently, the values are packed into four words as given
+//        [127:96]  [95:64] [63:32] [31:0]      w[0]    w[1]    w[2]    w[3]
+module shiftRows(input  logic [127:0] in,
+                 // input logic clk,
+                 output logic [127:0] out);
+    // row 0 unshifted
+    assign out[127:120] = in[127:120];
+    assign out[95:88] = in[95:88];
+    assign out[63:56] = in[63:56];
+    assign out[31:24] = in[31:24];
+
+    // row 1 shifted by 1
+    assign out[119:112] = in[87:80];
+    assign out[87:80] = in[55:48];
+    assign out[55:48] = in[23:16];
+    assign out[23:16] = in[119:112];
+
+    // row 2 shifted by 2
+    assign out[111:104] = in[47:40];
+    assign out[79:72] = in[15:8];
+    assign out[47:40] = in[111:104];
+    assign out[15:8] = in[79:72];
+
+    // row 3 shifted by 3
+    assign out[103:96] = in[7:0];
+    assign out[71:64] = in[103:96];
+    assign out[39:32] = in[71:64];
+    assign out[7:0] = in[39:32];
+endmodule
+
+module AddRoundKey(input  logic [127:0] in,
+                   input  logic [127:0] roundKey,
+                   input logic clk,
+                   output logic [127:0] out);
+
+  //internal variable
+  // logic [31:0] in0, in1, in2, in3;
+  // logic [31:0] rkey0, rkey1, rkey2, rkey3;
+
+  // find roundkey for each word 
+
+  // logic [31:0] y0, y1, y2, y3;
+
+  // assign {a0, a1, a2, a3} = a;
+  // assign {rkey0, rkey1, rkey2, rkey3} = roundKey;
+
+  // XOR operations for each word
+  // assign out0 = in0 ^ rkey0;
+  // assign out1 = in1 ^ rkey1;
+  // assign out2 = in2 ^ rkey2;
+  // assign out3 = in3 ^ rkey3;
+
+  assign out = in ^ roundKey; 
+
+endmodule
+
+module keyExpansionRound(input logic [127:0] key,
+                         input logic [3:0] j
+                         output logic [31:0] rkey0, rkey1, rkey2, rkey3);
+    
+    logic [31:0] key0, key1, key2, key3; 
+    assign key0 = key[31:0];
+    assign key1 = key[63:32];
+    assign key2 = key[95:64];
+    assign key3 = key[127:96];
+    
+    //round constants
+    logic [31:0] rcon;
+    Rcon[0] = 32'h01000000;
+    Rcon[1] = 32'h02000000;
+    Rcon[2] = 32'h04000000;
+    Rcon[3] = 32'h08000000;
+    Rcon[4] = 32'h10000000;
+    Rcon[5] = 32'h20000000;
+    Rcon[6] = 32'h40000000;
+    Rcon[7] = 32'h80000000;
+    Rcon[8] = 32'h1B000000;
+    Rcon[9] = 32'h36000000;
+
+    // define words of roundkeys
+    logic [31:0] swkey0, swkey1, swkey2, swkey3;
+    logic [31:0] rotkey0, rotkey1, rotkey2, rotkey3;
+    logic [31:0] rkey0, rkey1, rkey2, rkey3;
+
+    // call subword, rot word (need to repeat for EACH Rcon)
+    rotword(key0, rotkey0);
+    subword(rotkey0, clk, swkey0);
+    assign rkey0 = key0 ^ swkey0 ^ rcon[j];
+
+    rotword(key1, rotkey1);
+    subword(rotkey1, clk, swkey1);
+    assign rkey1 = key1 ^ rkey0;
+
+    rotword(key2, rotkey2);
+    subword(rotkey2, clk, swkey2);
+    assign rkey2 = key2 ^ rkey1;
+
+    rotword(key3, rotkey3);
+    subword(rotkey3, clk, swkey3);
+    assign rkey3 = key3 ^ rkey2;
+
+
+endmodule
+
+
+// generate round key 
+// Expansion of the given cipher key into 11 partial keys
+module keyExpansion(input  logic [127:0] key,
+                    input  logic clk,
+                    output logic [127:0] roundKey);
+//        [127:120] [95:88] [63:56] [31:24]     S0,0    S0,1    S0,2    S0,3
+//        [119:112] [87:80] [55:48] [23:16]     S1,0    S1,1    S1,2    S1,3
+//        [111:104] [79:72] [47:40] [15:8]      S2,0    S2,1    S2,2    S2,3
+//        [103:96]  [71:64] [39:32] [7:0]       S3,0    S3,1    S3,2    S3,3
+  logic [3:0] j; // keeps track of round
+
+  always_ff @(posedge clk)
+    if (j <= 9)
+      begin
+        keyExpansionRound(key, j, rkey0, rkey1, rkey2, rkey3);
+      end
+    else if (j = 10)
+      begin 
+
+      end
+    assign j = j+1;
+
+  assign roundkey = {rkey0, rkey1, rkey2, rkey3};
+
+
+
+    // i <- 0
+    // while i <= Nk - 1 do:
+      // w[i] <- key[4*i...4*i+3]
+      // i <- i +1
+    // end while
+    // whiel i <= 4*Nr+3 do
+      // temp <- w[i-1]
+      // if i mod Nk = 0 then
+        // temp <- SubWord(RotWord(temp)) XOR Rcon [i/Nk]
+      // else if Nk > 6 and i mod Nk = 4 then
+        // temp <- SubWord(temp)
+      // end if
+      // w[i] <- w[i - Nk] xor temp
+      // i <- i+1
+    // end while
+    // return w
+
+endmodule
+
+module subWord (input logic [31:0] word,
+                input logic clk,
+                output logic [31:0] subWordOut);
+
+    logic [7:0] word0, word1, word2, word3, subWordOut0, subWordOut1, subWordOut2, subWordOut3;
+    assign {word0, word1, word2, word3} = word;
+
+    sbox_sync sboxsyncsw1(word0, clk, subWordOut0);
+    sbox_sync sboxsyncsw2(word1, clk, subWordOut1);
+    sbox_sync sboxsyncsw3(word2, clk, subWordOut2);
+    sbox_sync sboxsyncsw4(word3, clk, subWordOut3);
+
+    assign subWordOut = {subWordOut0, subWordOut1, subWordOut2, subWordOut3}
+endmodule
+
+module rotWord(input logic [31:0] word
+               output logic [31:0 rotWordOut]);
+
+    assign y = {word[23:0], word[31:24]}; 
 endmodule
