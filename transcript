@@ -3,10 +3,16 @@
 # Compile of aes_spi_tb.sv was successful.
 # Compile of aes_starter.sv was successful.
 # Compile of subBytes_tb.sv was successful.
-# 5 compiles, 0 failed with no errors.
-vsim -gui work.subBytes_tb
-# vsim -gui work.subBytes_tb 
-# Start time: 15:26:34 on Oct 29,2024
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_core
+# vsim -gui work.testbench_aes_core 
+# Start time: 15:31:10 on Oct 30,2024
 # //  ModelSim DE-64 2022.3 Jul 18 2022
 # //
 # //  Copyright 1991-2022 Mentor Graphics Corporation
@@ -21,127 +27,66 @@ vsim -gui work.subBytes_tb
 # //  18 U.S.C. Section 1905.
 # //
 # Loading sv_std.std
-# Loading work.subBytes_tb
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
 # Loading work.subBytes
 # Loading work.sbox_sync
-add wave -position end  sim:/subBytes_tb/clk
-add wave -position end  sim:/subBytes_tb/in
-add wave -position end  sim:/subBytes_tb/out
-add wave -position end  sim:/subBytes_tb/outExpected
-run 500
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sbox_sync1
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sbox_sync2
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sbox_sync3
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sbox_sync4
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sbox_sync5
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sbox_sync6
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sbox_sync7
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sbox_sync8
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sbox_sync9
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sbox_sync10
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sbox_sync11
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sbox_sync12
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sbox_sync13
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sbox_sync14
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sbox_sync15
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sbox_sync16
-run 500
-run 500
-run 500
-run 500
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 0 failed with no errors.
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 0 failed with no errors.
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv failed with 1 errors.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 1 failed with 1 error.
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 0 failed with no errors.
-vsim -gui work.rotWord_tb
-# End time: 15:56:57 on Oct 29,2024, Elapsed time: 0:30:23
-# Errors: 0, Warnings: 23
-# vsim -gui work.rotWord_tb 
-# Start time: 15:56:57 on Oct 29,2024
-# Loading sv_std.std
-# Loading work.rotWord_tb
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
 # Loading work.rotWord
-add wave -position end  sim:/rotWord_tb/word
-add wave -position end  sim:/rotWord_tb/rotWordOut
-add wave -position end  sim:/rotWord_tb/rotWordOutExpected
-add wave -position end  sim:/rotWord_tb/clk
-run 500
+# Loading work.subWord
+# Loading work.round10
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'clk'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(339).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/ark1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 90
+# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'roundKey'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(341).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/ark1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 90
+# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(241).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r0/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'clk'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(242).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r0/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
+# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(241).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r1/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'clk'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(242).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r1/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
+# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(241).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r2/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'clk'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(242).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r2/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
+# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(241).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r3/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'clk'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(242).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r3/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
+# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(241).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r4/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'clk'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(242).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r4/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
+# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(241).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r5/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'clk'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(242).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r5/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
+# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(241).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r6/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'clk'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(242).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r6/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
+# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(241).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r7/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'clk'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(242).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r7/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
+# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(241).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r8/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'clk'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(242).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r8/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
+# ** Fatal: (vsim-3365) Too many port connections. Expected 5, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r9 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 100
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 15:31:21 on Oct 30,2024, Elapsed time: 0:00:11
+# Errors: 1, Warnings: 22
 # Compile of aes_core_tb.sv was successful.
 # Compile of aes_sbox_tb.sv was successful.
 # Compile of aes_spi_tb.sv was successful.
@@ -154,19 +99,66 @@ run 500
 # Compile of shiftRows_tb.sv was successful.
 # Compile of subword_tb.sv was successful.
 # 11 compiles, 0 failed with no errors.
-vsim -gui work.rotWord_tb
-# End time: 15:59:00 on Oct 29,2024, Elapsed time: 0:02:03
-# Errors: 0, Warnings: 2
-# vsim -gui work.rotWord_tb 
-# Start time: 15:59:00 on Oct 29,2024
+vsim -gui work.testbench_aes_core
+# vsim -gui work.testbench_aes_core 
+# Start time: 15:33:18 on Oct 30,2024
 # Loading sv_std.std
-# Loading work.rotWord_tb
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
 # Loading work.rotWord
-add wave -position end  sim:/rotWord_tb/word
-add wave -position end  sim:/rotWord_tb/rotWordOut
-add wave -position end  sim:/rotWord_tb/rotWordOutExpected
-add wave -position end  sim:/rotWord_tb/clk
-run 500
+# Loading work.subWord
+# Loading work.round10
+# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(241).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r0/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'clk'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(242).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r0/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
+# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(241).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r1/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'clk'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(242).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r1/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
+# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(241).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r2/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'clk'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(242).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r2/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
+# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(241).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r3/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'clk'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(242).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r3/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
+# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(241).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r4/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'clk'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(242).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r4/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
+# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(241).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r5/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'clk'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(242).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r5/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
+# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(241).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r6/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'clk'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(242).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r6/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
+# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(241).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r7/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'clk'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(242).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r7/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
+# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(241).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r8/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'clk'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(242).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r8/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
+# ** Fatal: (vsim-3365) Too many port connections. Expected 5, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r9 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 100
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 15:33:21 on Oct 30,2024, Elapsed time: 0:00:03
+# Errors: 1, Warnings: 20
 # Compile of aes_core_tb.sv was successful.
 # Compile of aes_sbox_tb.sv was successful.
 # Compile of aes_spi_tb.sv was successful.
@@ -179,356 +171,30 @@ run 500
 # Compile of shiftRows_tb.sv was successful.
 # Compile of subword_tb.sv was successful.
 # 11 compiles, 0 failed with no errors.
-vsim -gui work.subWord_tb
-# End time: 16:02:29 on Oct 29,2024, Elapsed time: 0:03:29
-# Errors: 0, Warnings: 2
-# vsim -gui work.subWord_tb 
-# Start time: 16:02:29 on Oct 29,2024
+vsim -gui work.testbench_aes_core
+# vsim -gui work.testbench_aes_core 
+# Start time: 15:34:03 on Oct 30,2024
 # Loading sv_std.std
-# Loading work.subWord_tb
-# Loading work.subWord
-# Loading work.sbox_sync
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 3, found 2.
-#    Time: 0 ns  Iteration: 0  Instance: /subWord_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/subword_tb.sv Line: 5
-# ** Warning: (vsim-3722) C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/subword_tb.sv(5): [TFMPC] - Missing connection for port 'clk'.
-add wave -position end  sim:/subWord_tb/word
-add wave -position end  sim:/subWord_tb/subWordOut
-add wave -position end  sim:/subWord_tb/subWordOutExpected
-add wave -position end  sim:/subWord_tb/clk
-run 500
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subWord_tb/dut/sboxsyncsw1
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subWord_tb/dut/sboxsyncsw2
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subWord_tb/dut/sboxsyncsw3
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subWord_tb/dut/sboxsyncsw4
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 0 failed with no errors.
-vsim -gui work.subWord_tb
-# End time: 16:03:56 on Oct 29,2024, Elapsed time: 0:01:27
-# Errors: 0, Warnings: 8
-# vsim -gui work.subWord_tb 
-# Start time: 16:03:56 on Oct 29,2024
-# Loading sv_std.std
-# Loading work.subWord_tb
-# Loading work.subWord
-# Loading work.sbox_sync
-add wave -position end  sim:/subWord_tb/word
-add wave -position end  sim:/subWord_tb/subWordOut
-add wave -position end  sim:/subWord_tb/subWordOutExpected
-add wave -position end  sim:/subWord_tb/clk
-run 500
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subWord_tb/dut/sboxsyncsw1
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subWord_tb/dut/sboxsyncsw2
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subWord_tb/dut/sboxsyncsw3
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subWord_tb/dut/sboxsyncsw4
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 0 failed with no errors.
-vsim -gui work.subWord_tb
-# End time: 16:05:07 on Oct 29,2024, Elapsed time: 0:01:11
-# Errors: 0, Warnings: 6
-# vsim -gui work.subWord_tb 
-# Start time: 16:05:07 on Oct 29,2024
-# Loading sv_std.std
-# Loading work.subWord_tb
-# Loading work.subWord
-# Loading work.sbox_sync
-add wave -position end  sim:/subWord_tb/word
-add wave -position end  sim:/subWord_tb/subWordOut
-add wave -position end  sim:/subWord_tb/subWordOutExpected
-add wave -position end  sim:/subWord_tb/clk
-run 500
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subWord_tb/dut/sboxsyncsw1
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subWord_tb/dut/sboxsyncsw2
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subWord_tb/dut/sboxsyncsw3
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subWord_tb/dut/sboxsyncsw4
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv failed with 2 errors.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 1 failed with 2 errors.
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 0 failed with no errors.
-vsim -gui work.subWord_tb
-# End time: 16:11:06 on Oct 29,2024, Elapsed time: 0:05:59
-# Errors: 0, Warnings: 7
-# vsim -gui work.subWord_tb 
-# Start time: 16:11:06 on Oct 29,2024
-# Loading sv_std.std
-# Loading work.subWord_tb
-# Loading work.subWord
-# Loading work.sbox_sync
-add wave -position end  sim:/subWord_tb/word
-add wave -position end  sim:/subWord_tb/subWordOut
-add wave -position end  sim:/subWord_tb/subWordOutExpected
-add wave -position end  sim:/subWord_tb/clk
-run 500
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subWord_tb/dut/sboxsyncsw1
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subWord_tb/dut/sboxsyncsw2
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subWord_tb/dut/sboxsyncsw3
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subWord_tb/dut/sboxsyncsw4
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 0 failed with no errors.
-vsim -gui work.subword_tb
-# End time: 16:13:59 on Oct 29,2024, Elapsed time: 0:02:53
-# Errors: 0, Warnings: 6
-# vsim -gui work.subword_tb 
-# Start time: 16:13:59 on Oct 29,2024
-# Loading sv_std.std
-# Loading work.subword_tb
-# Loading work.subWord
-# Loading work.sbox_sync
-add wave -position end  sim:/subword_tb/word
-add wave -position end  sim:/subword_tb/subWordOut
-add wave -position end  sim:/subword_tb/subWordOutExpected
-add wave -position end  sim:/subword_tb/clk
-run 500
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subword_tb/dut/sboxsyncsw1
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subword_tb/dut/sboxsyncsw2
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subword_tb/dut/sboxsyncsw3
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subword_tb/dut/sboxsyncsw4
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 0 failed with no errors.
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv failed with 1 errors.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv failed with 1 errors.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 2 failed with 2 errors.
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv failed with 1 errors.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv failed with 1 errors.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 2 failed with 2 errors.
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv failed with 1 errors.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 1 failed with 1 error.
-vsim -gui work.subword_tb
-# End time: 16:25:27 on Oct 29,2024, Elapsed time: 0:11:28
-# Errors: 0, Warnings: 9
-# vsim -gui work.subword_tb 
-# Start time: 16:25:27 on Oct 29,2024
-# Loading sv_std.std
-# Loading work.subword_tb
-# Loading work.subWord
-# Loading work.sbox_sync
-add wave -position end  sim:/subword_tb/word
-add wave -position end  sim:/subword_tb/subWordOut
-add wave -position end  sim:/subword_tb/subWordOutExpected
-add wave -position end  sim:/subword_tb/clk
-run 500
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subword_tb/dut/sboxsyncsw1
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subword_tb/dut/sboxsyncsw2
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subword_tb/dut/sboxsyncsw3
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subword_tb/dut/sboxsyncsw4
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv failed with 1 errors.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 1 failed with 1 error.
-vsim -gui work.subBytes_tb
-# End time: 16:31:09 on Oct 29,2024, Elapsed time: 0:05:42
-# Errors: 0, Warnings: 6
-# vsim -gui work.subBytes_tb 
-# Start time: 16:31:09 on Oct 29,2024
-# Loading sv_std.std
-# Loading work.subBytes_tb
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
 # Loading work.subBytes
 # Loading work.sbox_sync
-add wave -position end  sim:/subBytes_tb/clk
-add wave -position end  sim:/subBytes_tb/in
-add wave -position end  sim:/subBytes_tb/out
-add wave -position end  sim:/subBytes_tb/outExpected
-run 500
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync1
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync2
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync3
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync4
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync5
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync6
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync7
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync8
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync9
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync10
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync11
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync12
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync13
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync14
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync15
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(139)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync16
-vsim -gui work.subBytes_tb
-# End time: 16:34:04 on Oct 29,2024, Elapsed time: 0:02:55
-# Errors: 0, Warnings: 17
-# vsim -gui work.subBytes_tb 
-# Start time: 16:34:04 on Oct 29,2024
-# Loading sv_std.std
-# Loading work.subBytes_tb
-# Loading work.subBytes
-# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+# ** Fatal: (vsim-3365) Too many port connections. Expected 5, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r9 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 100
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 15:34:10 on Oct 30,2024, Elapsed time: 0:00:07
+# Errors: 1, Warnings: 2
 # Compile of aes_core_tb.sv was successful.
 # Compile of aes_sbox_tb.sv was successful.
 # Compile of aes_spi_tb.sv was successful.
@@ -536,972 +202,70 @@ vsim -gui work.subBytes_tb
 # Compile of subBytes_tb.sv was successful.
 # Compile of addRoundKey_tb.sv was successful.
 # Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv failed with 1 errors.
+# Compile of keyExpansionRound_tb.sv was successful.
 # Compile of rotWord_tb.sv was successful.
 # Compile of shiftRows_tb.sv was successful.
 # Compile of subword_tb.sv was successful.
-# 11 compiles, 1 failed with 1 error.
-vsim -gui work.subBytes_tb
-# End time: 16:34:37 on Oct 29,2024, Elapsed time: 0:00:33
-# Errors: 0, Warnings: 2
-# vsim -gui work.subBytes_tb 
-# Start time: 16:34:37 on Oct 29,2024
+# 11 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_core
+# vsim -gui work.testbench_aes_core 
+# Start time: 15:35:01 on Oct 30,2024
 # Loading sv_std.std
-# Loading work.subBytes_tb
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
 # Loading work.subBytes
 # Loading work.sbox_sync
-add wave -position end  sim:/subBytes_tb/clk
-add wave -position end  sim:/subBytes_tb/in
-add wave -position end  sim:/subBytes_tb/out
-add wave -position end  sim:/subBytes_tb/outExpected
-run 500
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(402)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync1
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(402)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync2
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(402)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync3
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(402)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync4
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(402)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync5
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(402)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync6
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(402)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync7
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(402)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync8
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(402)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync9
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(402)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync10
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(402)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync11
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(402)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync12
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(402)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync13
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(402)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync14
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(402)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync15
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(402)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync16
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+add wave -position end  sim:/testbench_aes_core/clk
+add wave -position end  sim:/testbench_aes_core/load
+add wave -position end  sim:/testbench_aes_core/done
+add wave -position end  sim:/testbench_aes_core/key
+add wave -position end  sim:/testbench_aes_core/plaintext
+add wave -position end  sim:/testbench_aes_core/cyphertext
+add wave -position end  sim:/testbench_aes_core/expected
 run 500
 run 500
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+add wave -position end  sim:/testbench_aes_core/clk
+add wave -position end  sim:/testbench_aes_core/load
+add wave -position end  sim:/testbench_aes_core/done
+add wave -position end  sim:/testbench_aes_core/key
+add wave -position end  sim:/testbench_aes_core/plaintext
+add wave -position end  sim:/testbench_aes_core/cyphertext
+add wave -position end  sim:/testbench_aes_core/expected
+add wave -position end  sim:/testbench_aes_core/dut/key0
+add wave -position end  sim:/testbench_aes_core/dut/key1
+add wave -position end  sim:/testbench_aes_core/dut/key2
+add wave -position end  sim:/testbench_aes_core/dut/key3
+add wave -position end  sim:/testbench_aes_core/dut/key4
+add wave -position end  sim:/testbench_aes_core/dut/key5
+add wave -position end  sim:/testbench_aes_core/dut/key6
+add wave -position end  sim:/testbench_aes_core/dut/key7
+add wave -position end  sim:/testbench_aes_core/dut/key8
+add wave -position end  sim:/testbench_aes_core/dut/key9
+add wave -position end  sim:/testbench_aes_core/dut/key10
+add wave -position end  sim:/testbench_aes_core/dut/outA
+add wave -position end  sim:/testbench_aes_core/dut/outB
+add wave -position end  sim:/testbench_aes_core/dut/outC
+add wave -position end  sim:/testbench_aes_core/dut/outD
+add wave -position end  sim:/testbench_aes_core/dut/outE
+add wave -position end  sim:/testbench_aes_core/dut/outF
+add wave -position end  sim:/testbench_aes_core/dut/outG
+add wave -position end  sim:/testbench_aes_core/dut/outH
+add wave -position end  sim:/testbench_aes_core/dut/outI
+add wave -position end  sim:/testbench_aes_core/dut/outJ
 run 500
 run 500
 run 1000
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv failed with 1 errors.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 1 failed with 1 error.
-vsim -gui work.subBytes_tb
-# End time: 16:52:38 on Oct 29,2024, Elapsed time: 0:18:01
-# Errors: 0, Warnings: 18
-# vsim -gui work.subBytes_tb 
-# Start time: 16:52:38 on Oct 29,2024
-# Loading sv_std.std
-# Loading work.subBytes_tb
-# Loading work.subBytes
-# Loading work.sbox_sync
-add wave -position end  sim:/subBytes_tb/clk
-add wave -position end  sim:/subBytes_tb/in
-add wave -position end  sim:/subBytes_tb/out
-add wave -position end  sim:/subBytes_tb/outExpected
-run 500
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync1
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync2
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync3
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync4
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync5
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync6
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync7
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync8
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync9
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync10
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync11
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync12
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync13
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync14
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync15
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync16
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv failed with 1 errors.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 1 failed with 1 error.
-vsim -gui work.subBytes_tb
-# End time: 16:54:52 on Oct 29,2024, Elapsed time: 0:02:14
-# Errors: 0, Warnings: 19
-# vsim -gui work.subBytes_tb 
-# Start time: 16:54:52 on Oct 29,2024
-# Loading sv_std.std
-# Loading work.subBytes_tb
-# Loading work.subBytes
-# Loading work.sbox_sync
-add wave -position end  sim:/subBytes_tb/clk
-add wave -position end  sim:/subBytes_tb/in
-add wave -position end  sim:/subBytes_tb/out
-add wave -position end  sim:/subBytes_tb/outExpected
-run 500
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync1
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync2
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync3
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync4
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync5
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync6
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync7
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync8
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync9
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync10
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync11
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync12
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync13
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync14
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync15
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync16
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv failed with 1 errors.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 1 failed with 1 error.
-vsim -gui work.subBytes_tb
-# End time: 16:57:45 on Oct 29,2024, Elapsed time: 0:02:53
-# Errors: 0, Warnings: 18
-# vsim -gui work.subBytes_tb 
-# Start time: 16:57:45 on Oct 29,2024
-# Loading sv_std.std
-# Loading work.subBytes_tb
-# Loading work.subBytes
-# Loading work.sbox_sync
-add wave -position end  sim:/subBytes_tb/clk
-add wave -position end  sim:/subBytes_tb/in
-add wave -position end  sim:/subBytes_tb/out
-add wave -position end  sim:/subBytes_tb/outExpected
-run 500
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync1
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync2
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync3
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync4
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync5
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync6
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync7
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync8
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync9
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync10
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync11
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync12
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync13
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync14
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync15
-# ** Warning: (vsim-7) Failed to open readmem file "sbox.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(403)
-#    Time: 0 ns  Iteration: 0  Instance: /subBytes_tb/dut/sboxsync16
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv failed with 1 errors.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 1 failed with 1 error.
-vsim -gui work.subBytes_tb
-# End time: 16:59:45 on Oct 29,2024, Elapsed time: 0:02:00
-# Errors: 0, Warnings: 19
-# vsim -gui work.subBytes_tb 
-# Start time: 16:59:45 on Oct 29,2024
-# Loading sv_std.std
-# Loading work.subBytes_tb
-# Loading work.subBytes
-# Loading work.sbox_sync
-add wave -position end  sim:/subBytes_tb/clk
-add wave -position end  sim:/subBytes_tb/in
-add wave -position end  sim:/subBytes_tb/out
-add wave -position end  sim:/subBytes_tb/outExpected
-run 500
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv failed with 1 errors.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 1 failed with 1 error.
-vsim -gui work.subword_tb
-# End time: 17:01:34 on Oct 29,2024, Elapsed time: 0:01:49
-# Errors: 0, Warnings: 2
-# vsim -gui work.subword_tb 
-# Start time: 17:01:34 on Oct 29,2024
-# Loading sv_std.std
-# Loading work.subword_tb
-# Loading work.subWord
-# Loading work.sbox_sync
-add wave -position end  sim:/subword_tb/word
-add wave -position end  sim:/subword_tb/subWordOut
-add wave -position end  sim:/subword_tb/subWordOutExpected
-add wave -position end  sim:/subword_tb/clk
-run 500
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv failed with 1 errors.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 1 failed with 1 error.
-vsim -gui work.subword_tb
-# End time: 17:02:31 on Oct 29,2024, Elapsed time: 0:00:57
-# Errors: 0, Warnings: 2
-# vsim -gui work.subword_tb 
-# Start time: 17:02:31 on Oct 29,2024
-# Loading sv_std.std
-# Loading work.subword_tb
-# Loading work.subWord
-# Loading work.sbox_sync
-add wave -position end  sim:/subword_tb/word
-add wave -position end  sim:/subword_tb/subWordOut
-add wave -position end  sim:/subword_tb/subWordOutExpected
-add wave -position end  sim:/subword_tb/clk
-run 500
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv failed with 1 errors.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 1 failed with 1 error.
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv failed with 1 errors.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 1 failed with 1 error.
-vsim -gui work.shiftRows_tb
-# End time: 17:56:50 on Oct 29,2024, Elapsed time: 0:54:19
-# Errors: 0, Warnings: 3
-# vsim -gui work.shiftRows_tb 
-# Start time: 17:56:50 on Oct 29,2024
-# Loading sv_std.std
-# Loading work.shiftRows_tb
-# Loading work.shiftRows
-add wave -position end  sim:/shiftRows_tb/clk
-add wave -position end  sim:/shiftRows_tb/in
-add wave -position end  sim:/shiftRows_tb/out
-add wave -position end  sim:/shiftRows_tb/outExpected
-run 500
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv failed with 3 errors.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 1 failed with 3 errors.
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv failed with 3 errors.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 1 failed with 3 errors.
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv failed with 11 errors.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 1 failed with 11 errors.
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv failed with 10 errors.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 1 failed with 10 errors.
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv failed with 9 errors.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 1 failed with 9 errors.
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv failed with 9 errors.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 1 failed with 9 errors.
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv failed with 2 errors.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 1 failed with 2 errors.
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv failed with 2 errors.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 1 failed with 2 errors.
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful with warnings.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 0 failed with no errors.
-vsim -gui work.keyExpansionRound_tb
-# End time: 18:37:08 on Oct 29,2024, Elapsed time: 0:40:18
-# Errors: 0, Warnings: 10
-# vsim -gui work.keyExpansionRound_tb 
-# Start time: 18:37:08 on Oct 29,2024
-# Loading sv_std.std
-# Loading work.keyExpansionRound_tb
-# Loading work.keyExpansionRound
-# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 331
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 332
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 335
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 336
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 339
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 340
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 343
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 344
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# Error loading design
-# End time: 18:37:15 on Oct 29,2024, Elapsed time: 0:00:07
-# Errors: 8, Warnings: 1
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful with warnings.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 0 failed with no errors.
-vsim -gui work.keyExpansionRound_tb
-# vsim -gui work.keyExpansionRound_tb 
-# Start time: 18:39:21 on Oct 29,2024
-# Loading sv_std.std
-# Loading work.keyExpansionRound_tb
-# Loading work.keyExpansionRound
-# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 331
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 332
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 335
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 336
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 339
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 340
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 343
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 344
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# Error loading design
-# End time: 18:39:29 on Oct 29,2024, Elapsed time: 0:00:08
-# Errors: 8, Warnings: 1
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful with warnings.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 0 failed with no errors.
-vsim -gui work.keyExpansionRound_tb
-# vsim -gui work.keyExpansionRound_tb 
-# Start time: 18:41:57 on Oct 29,2024
-# Loading sv_std.std
-# Loading work.keyExpansionRound_tb
-# Loading work.keyExpansionRound
-# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 331
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 332
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 335
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 336
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 339
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 340
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 343
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 344
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# Error loading design
-# End time: 18:42:04 on Oct 29,2024, Elapsed time: 0:00:07
-# Errors: 8, Warnings: 3
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful with warnings.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 0 failed with no errors.
-vsim -gui work.keyExpansionRound_tb
-# vsim -gui work.keyExpansionRound_tb 
-# Start time: 18:43:36 on Oct 29,2024
-# Loading sv_std.std
-# Loading work.keyExpansionRound_tb
-# Loading work.keyExpansionRound
-# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 331
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 332
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 335
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 336
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 339
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 340
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 343
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 344
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# Error loading design
-# End time: 18:43:43 on Oct 29,2024, Elapsed time: 0:00:07
-# Errors: 8, Warnings: 2
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful with warnings.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 0 failed with no errors.
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful with warnings.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 0 failed with no errors.
-vsim -gui work.keyExpansionRound_tb
-# vsim -gui work.keyExpansionRound_tb 
-# Start time: 18:45:13 on Oct 29,2024
-# Loading sv_std.std
-# Loading work.keyExpansionRound_tb
-# Loading work.keyExpansionRound
-# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 331
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 332
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 335
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 336
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 339
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 340
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 343
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 344
-#         Searched libraries:
-#             C:/Users/vparizot/E155/lab7mvp/work
-# Error loading design
-# End time: 18:45:20 on Oct 29,2024, Elapsed time: 0:00:07
-# Errors: 8, Warnings: 3
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful with warnings.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 0 failed with no errors.
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful with warnings.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 0 failed with no errors.
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful with warnings.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 0 failed with no errors.
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful with warnings.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 0 failed with no errors.
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 0 failed with no errors.
-vsim -gui work.keyExpansionRound_tb
-# vsim -gui work.keyExpansionRound_tb 
-# Start time: 18:48:52 on Oct 29,2024
-# Loading sv_std.std
-# Loading work.keyExpansionRound_tb
-# Loading work.keyExpansionRound
-# ** Error: (vsim-3037) Missing instance name in instantiation of 'rotWord'.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 340
-# ** Error: (vsim-3037) Missing instance name in instantiation of 'subWord'.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 341
-# Error loading design
-# End time: 18:48:59 on Oct 29,2024, Elapsed time: 0:00:07
-# Errors: 2, Warnings: 6
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv failed with 2 errors.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 1 failed with 2 errors.
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv failed with 2 errors.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 1 failed with 2 errors.
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 0 failed with no errors.
-vsim -gui work.keyExpansionRound_tb
-# vsim -gui work.keyExpansionRound_tb 
-# Start time: 18:50:50 on Oct 29,2024
-# Loading sv_std.std
-# Loading work.keyExpansionRound_tb
-# Loading work.keyExpansionRound
-# ** Error: (vsim-3037) Missing instance name in instantiation of 'rotWord'.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 340
-# ** Error: (vsim-3037) Missing instance name in instantiation of 'subWord'.
-#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 342
-# Error loading design
-# End time: 18:50:57 on Oct 29,2024, Elapsed time: 0:00:07
-# Errors: 2, Warnings: 4
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 0 failed with no errors.
-vsim -gui work.keyExpansionRound_tb
-# vsim -gui work.keyExpansionRound_tb 
-# Start time: 18:51:34 on Oct 29,2024
-# Loading sv_std.std
-# Loading work.keyExpansionRound_tb
-# Loading work.keyExpansionRound
-# Loading work.rotWord
-# Loading work.subWord
-# Loading work.sbox_sync
-add wave -position end  sim:/keyExpansionRound_tb/round
-add wave -position end  sim:/keyExpansionRound_tb/key
-add wave -position end  sim:/keyExpansionRound_tb/rkey
-add wave -position end  sim:/keyExpansionRound_tb/rkeyexpected
-add wave -position end  sim:/keyExpansionRound_tb/clk
-run 500
-run 5000
-run 5000
-run 5000
-run 5000
-run 5000
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 0 failed with no errors.
-vsim -gui work.keyExpansionRound_tb
-# End time: 18:52:43 on Oct 29,2024, Elapsed time: 0:01:09
-# Errors: 0, Warnings: 3
-# vsim -gui work.keyExpansionRound_tb 
-# Start time: 18:52:43 on Oct 29,2024
-# Loading sv_std.std
-# Loading work.keyExpansionRound_tb
-# Loading work.keyExpansionRound
-# Loading work.rotWord
-# Loading work.subWord
-# Loading work.sbox_sync
-add wave -position end  sim:/keyExpansionRound_tb/round
-add wave -position end  sim:/keyExpansionRound_tb/key
-add wave -position end  sim:/keyExpansionRound_tb/rkey
-add wave -position end  sim:/keyExpansionRound_tb/rkeyexpected
-add wave -position end  sim:/keyExpansionRound_tb/clk
 run 50000
 # Compile of aes_core_tb.sv was successful.
 # Compile of aes_sbox_tb.sv was successful.
@@ -1514,135 +278,34 @@ run 50000
 # Compile of rotWord_tb.sv was successful.
 # Compile of shiftRows_tb.sv was successful.
 # Compile of subword_tb.sv was successful.
-# 11 compiles, 0 failed with no errors.
-vsim -gui work.keyExpansionRound_tb
-# End time: 19:00:42 on Oct 29,2024, Elapsed time: 0:07:59
-# Errors: 0, Warnings: 2
-# vsim -gui work.keyExpansionRound_tb 
-# Start time: 19:00:42 on Oct 29,2024
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.round1to9_tb
+# End time: 15:52:46 on Oct 30,2024, Elapsed time: 0:17:45
+# Errors: 0, Warnings: 3
+# vsim -gui work.round1to9_tb 
+# Start time: 15:52:46 on Oct 30,2024
 # Loading sv_std.std
-# Loading work.keyExpansionRound_tb
+# Loading work.round1to9_tb
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
 # Loading work.keyExpansionRound
 # Loading work.rotWord
 # Loading work.subWord
-# Loading work.sbox_sync
-add wave -position end  sim:/keyExpansionRound_tb/round
-add wave -position end  sim:/keyExpansionRound_tb/key
-add wave -position end  sim:/keyExpansionRound_tb/rkey
-add wave -position end  sim:/keyExpansionRound_tb/rkeyexpected
-add wave -position end  sim:/keyExpansionRound_tb/clk
-run 500
-# A time value could not be extracted from the current line
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 0 failed with no errors.
-vsim -gui work.keyExpansionRound_tb
-# End time: 19:03:51 on Oct 29,2024, Elapsed time: 0:03:09
-# Errors: 0, Warnings: 2
-# vsim -gui work.keyExpansionRound_tb 
-# Start time: 19:03:51 on Oct 29,2024
-# Loading sv_std.std
-# Loading work.keyExpansionRound_tb
-# Loading work.keyExpansionRound
-# Loading work.rotWord
-# Loading work.subWord
-# Loading work.sbox_sync
-add wave -position end  sim:/keyExpansionRound_tb/round
-add wave -position end  sim:/keyExpansionRound_tb/key
-add wave -position end  sim:/keyExpansionRound_tb/rkey
-add wave -position end  sim:/keyExpansionRound_tb/rkeyexpected
-add wave -position end  sim:/keyExpansionRound_tb/clk
-run 100
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 0 failed with no errors.
-vsim -gui work.keyExpansionRound_tb
-# End time: 19:05:08 on Oct 29,2024, Elapsed time: 0:01:17
-# Errors: 0, Warnings: 2
-# vsim -gui work.keyExpansionRound_tb 
-# Start time: 19:05:08 on Oct 29,2024
-# Loading sv_std.std
-# Loading work.keyExpansionRound_tb
-# Loading work.keyExpansionRound
-# Loading work.rotWord
-# Loading work.subWord
-# Loading work.sbox_sync
-add wave -position end  sim:/keyExpansionRound_tb/round
-add wave -position end  sim:/keyExpansionRound_tb/key
-add wave -position end  sim:/keyExpansionRound_tb/rkey
-add wave -position end  sim:/keyExpansionRound_tb/rkeyexpected
-add wave -position end  sim:/keyExpansionRound_tb/clk
-run 500
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv failed with 1 errors.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 1 failed with 1 error.
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv failed with 1 errors.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 1 failed with 1 error.
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 0 failed with no errors.
-vsim -gui work.keyExpansionRound_tb
-# End time: 19:11:35 on Oct 29,2024, Elapsed time: 0:06:27
-# Errors: 0, Warnings: 4
-# vsim -gui work.keyExpansionRound_tb 
-# Start time: 19:11:35 on Oct 29,2024
-# Loading sv_std.std
-# Loading work.keyExpansionRound_tb
-# Loading work.keyExpansionRound
-# Loading work.rotWord
-# Loading work.subWord
-# Loading work.sbox_sync
-add wave -position end  sim:/keyExpansionRound_tb/round
-add wave -position end  sim:/keyExpansionRound_tb/key
-add wave -position end  sim:/keyExpansionRound_tb/rkey
-add wave -position end  sim:/keyExpansionRound_tb/rkeyexpected
-add wave -position end  sim:/keyExpansionRound_tb/clk
+# Loading work.addRoundKey
+add wave -position end  sim:/round1to9_tb/round
+add wave -position end  sim:/round1to9_tb/currKey
+add wave -position end  sim:/round1to9_tb/in
+add wave -position end  sim:/round1to9_tb/outOfRound
+add wave -position end  sim:/round1to9_tb/rKeyOut
+add wave -position end  sim:/round1to9_tb/rkeyexpected
+add wave -position end  sim:/round1to9_tb/outOfRoundExpected
+add wave -position end  sim:/round1to9_tb/clk
 run 500
 # Compile of aes_core_tb.sv was successful.
 # Compile of aes_sbox_tb.sv was successful.
@@ -1655,23 +318,35 @@ run 500
 # Compile of rotWord_tb.sv was successful.
 # Compile of shiftRows_tb.sv was successful.
 # Compile of subword_tb.sv was successful.
-# 11 compiles, 0 failed with no errors.
-vsim -gui work.keyExpansionRound_tb
-# End time: 21:59:36 on Oct 29,2024, Elapsed time: 2:48:01
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.round1to9_tb
+# End time: 15:56:35 on Oct 30,2024, Elapsed time: 0:03:49
 # Errors: 0, Warnings: 2
-# vsim -gui work.keyExpansionRound_tb 
-# Start time: 21:59:36 on Oct 29,2024
+# vsim -gui work.round1to9_tb 
+# Start time: 15:56:35 on Oct 30,2024
 # Loading sv_std.std
-# Loading work.keyExpansionRound_tb
+# Loading work.round1to9_tb
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
 # Loading work.keyExpansionRound
 # Loading work.rotWord
 # Loading work.subWord
-# Loading work.sbox_sync
-add wave -position end  sim:/keyExpansionRound_tb/round
-add wave -position end  sim:/keyExpansionRound_tb/key
-add wave -position end  sim:/keyExpansionRound_tb/rkey
-add wave -position end  sim:/keyExpansionRound_tb/rkeyexpected
-add wave -position end  sim:/keyExpansionRound_tb/clk
+# Loading work.addRoundKey
+add wave -position end  sim:/round1to9_tb/round
+add wave -position end  sim:/round1to9_tb/currKey
+add wave -position end  sim:/round1to9_tb/in
+add wave -position end  sim:/round1to9_tb/outOfRound
+add wave -position end  sim:/round1to9_tb/rKeyOut
+add wave -position end  sim:/round1to9_tb/rkeyexpected
+add wave -position end  sim:/round1to9_tb/outOfRoundExpected
+add wave -position end  sim:/round1to9_tb/clk
+run 500
 run 500
 run 5000
 # Compile of aes_core_tb.sv was successful.
@@ -1685,324 +360,40 @@ run 5000
 # Compile of rotWord_tb.sv was successful.
 # Compile of shiftRows_tb.sv was successful.
 # Compile of subword_tb.sv was successful.
-# 11 compiles, 0 failed with no errors.
-vsim -gui work.keyExpansionRound_tb
-# End time: 22:33:19 on Oct 29,2024, Elapsed time: 0:33:43
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.round1to9_tb
+# End time: 16:05:31 on Oct 30,2024, Elapsed time: 0:08:56
 # Errors: 0, Warnings: 2
-# vsim -gui work.keyExpansionRound_tb 
-# Start time: 22:33:19 on Oct 29,2024
+# vsim -gui work.round1to9_tb 
+# Start time: 16:05:31 on Oct 30,2024
 # Loading sv_std.std
-# Loading work.keyExpansionRound_tb
+# Loading work.round1to9_tb
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
 # Loading work.keyExpansionRound
 # Loading work.rotWord
 # Loading work.subWord
-# Loading work.sbox_sync
-add wave -position end  sim:/keyExpansionRound_tb/round
-add wave -position end  sim:/keyExpansionRound_tb/key
-add wave -position end  sim:/keyExpansionRound_tb/rkey
-add wave -position end  sim:/keyExpansionRound_tb/rkeyexpected
-add wave -position end  sim:/keyExpansionRound_tb/clk
+# Loading work.addRoundKey
+add wave -position end  sim:/round1to9_tb/round
+add wave -position end  sim:/round1to9_tb/currKey
+add wave -position end  sim:/round1to9_tb/in
+add wave -position end  sim:/round1to9_tb/outOfRound
+add wave -position end  sim:/round1to9_tb/rKeyOut
+add wave -position end  sim:/round1to9_tb/rkeyexpected
+add wave -position end  sim:/round1to9_tb/outOfRoundExpected
+add wave -position end  sim:/round1to9_tb/clk
 run 500
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv failed with 1 errors.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 1 failed with 1 error.
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv failed with 1 errors.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 1 failed with 1 error.
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv failed with 3 errors.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 1 failed with 3 errors.
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 0 failed with no errors.
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
-vsim -gui work.keyExpansionRound_tb
-# End time: 22:44:39 on Oct 29,2024, Elapsed time: 0:11:20
-# Errors: 0, Warnings: 5
-# vsim -gui work.keyExpansionRound_tb 
-# Start time: 22:44:39 on Oct 29,2024
-# Loading sv_std.std
-# Loading work.keyExpansionRound_tb
-# Loading work.keyExpansionRound
-# Loading work.rotWord
-# Loading work.subWord
-# Loading work.sbox_sync
-add wave -position end  sim:/keyExpansionRound_tb/round
-add wave -position end  sim:/keyExpansionRound_tb/key
-add wave -position end  sim:/keyExpansionRound_tb/rkey
-add wave -position end  sim:/keyExpansionRound_tb/rkeyexpected
-add wave -position end  sim:/keyExpansionRound_tb/clk
-run 500
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 0 failed with no errors.
-vsim -gui work.keyExpansionRound_tb
-# End time: 22:50:23 on Oct 29,2024, Elapsed time: 0:05:44
-# Errors: 0, Warnings: 2
-# vsim -gui work.keyExpansionRound_tb 
-# Start time: 22:50:23 on Oct 29,2024
-# Loading sv_std.std
-# Loading work.keyExpansionRound_tb
-# Loading work.keyExpansionRound
-# Loading work.rotWord
-# Loading work.subWord
-# Loading work.sbox_sync
-add wave -position end  sim:/keyExpansionRound_tb/round
-add wave -position end  sim:/keyExpansionRound_tb/key
-add wave -position end  sim:/keyExpansionRound_tb/rkey
-add wave -position end  sim:/keyExpansionRound_tb/rkeyexpected
-add wave -position end  sim:/keyExpansionRound_tb/clk
-run 500
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 0 failed with no errors.
-vsim -gui work.keyExpansionRound_tb
-# End time: 22:54:00 on Oct 29,2024, Elapsed time: 0:03:37
-# Errors: 0, Warnings: 2
-# vsim -gui work.keyExpansionRound_tb 
-# Start time: 22:54:00 on Oct 29,2024
-# Loading sv_std.std
-# Loading work.keyExpansionRound_tb
-# Loading work.keyExpansionRound
-# Loading work.rotWord
-# Loading work.subWord
-# Loading work.sbox_sync
-add wave -position end  sim:/keyExpansionRound_tb/dut/key
-add wave -position end  sim:/keyExpansionRound_tb/dut/round
-add wave -position end  sim:/keyExpansionRound_tb/dut/clk
-add wave -position end  sim:/keyExpansionRound_tb/dut/rkey
-add wave -position end  sim:/keyExpansionRound_tb/dut/key0
-add wave -position end  sim:/keyExpansionRound_tb/dut/key1
-add wave -position end  sim:/keyExpansionRound_tb/dut/key2
-add wave -position end  sim:/keyExpansionRound_tb/dut/key3
-add wave -position end  sim:/keyExpansionRound_tb/dut/swkey0
-add wave -position end  sim:/keyExpansionRound_tb/dut/swkey1
-add wave -position end  sim:/keyExpansionRound_tb/dut/swkey2
-add wave -position end  sim:/keyExpansionRound_tb/dut/swkey3
-add wave -position end  sim:/keyExpansionRound_tb/dut/rotkey0
-add wave -position end  sim:/keyExpansionRound_tb/dut/rotkey1
-add wave -position end  sim:/keyExpansionRound_tb/dut/rotkey2
-add wave -position end  sim:/keyExpansionRound_tb/dut/rotkey3
-add wave -position end  sim:/keyExpansionRound_tb/dut/temp
-add wave -position end  sim:/keyExpansionRound_tb/dut/Rcon
-add wave -position end  sim:/keyExpansionRound_tb/dut/rkey0
-add wave -position end  sim:/keyExpansionRound_tb/dut/rkey1
-add wave -position end  sim:/keyExpansionRound_tb/dut/rkey2
-add wave -position end  sim:/keyExpansionRound_tb/dut/rkey3
-run 500
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 0 failed with no errors.
-add wave -position end  sim:/keyExpansionRound_tb/round
-add wave -position end  sim:/keyExpansionRound_tb/key
-add wave -position end  sim:/keyExpansionRound_tb/rkey
-add wave -position end  sim:/keyExpansionRound_tb/rkeyexpected
-add wave -position end  sim:/keyExpansionRound_tb/clk
-run 500
-run 500
-run 500
+add wave -position end  sim:/round1to9_tb/dut/keyOut
+add wave -position end  sim:/round1to9_tb/dut/keyOutTemp
+add wave -position end  sim:/round1to9_tb/dut/rkeyOut
 restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.keyExpansionRound_tb
-# Loading work.keyExpansionRound
-# Loading work.rotWord
-# Loading work.subWord
-# Loading work.sbox_sync
-run 1000
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv failed with 4 errors.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 1 failed with 4 errors.
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv failed with 3 errors.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 1 failed with 3 errors.
+run 500
 # Compile of aes_core_tb.sv was successful.
 # Compile of aes_sbox_tb.sv was successful.
 # Compile of aes_spi_tb.sv was successful.
@@ -2014,4 +405,391 @@ run 1000
 # Compile of rotWord_tb.sv was successful.
 # Compile of shiftRows_tb.sv was successful.
 # Compile of subword_tb.sv was successful.
-# 11 compiles, 0 failed with no errors.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.round1to9_tb
+# End time: 16:08:49 on Oct 30,2024, Elapsed time: 0:03:18
+# Errors: 0, Warnings: 2
+# vsim -gui work.round1to9_tb 
+# Start time: 16:08:49 on Oct 30,2024
+# Loading sv_std.std
+# Loading work.round1to9_tb
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.addRoundKey
+add wave -position end  sim:/round1to9_tb/round
+add wave -position end  sim:/round1to9_tb/currKey
+add wave -position end  sim:/round1to9_tb/in
+add wave -position end  sim:/round1to9_tb/outOfRound
+add wave -position end  sim:/round1to9_tb/rKeyOut
+add wave -position end  sim:/round1to9_tb/rkeyexpected
+add wave -position end  sim:/round1to9_tb/outOfRoundExpected
+add wave -position end  sim:/round1to9_tb/clk
+run 500
+vsim -gui work.testbench_aes_core
+# End time: 16:09:36 on Oct 30,2024, Elapsed time: 0:00:47
+# Errors: 0, Warnings: 1
+# vsim -gui work.testbench_aes_core 
+# Start time: 16:09:36 on Oct 30,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+add wave -position end  sim:/testbench_aes_core/clk
+add wave -position end  sim:/testbench_aes_core/load
+add wave -position end  sim:/testbench_aes_core/done
+add wave -position end  sim:/testbench_aes_core/key
+add wave -position end  sim:/testbench_aes_core/plaintext
+add wave -position end  sim:/testbench_aes_core/cyphertext
+add wave -position end  sim:/testbench_aes_core/expected
+add wave -position end  sim:/testbench_aes_core/dut/in
+add wave -position end  sim:/testbench_aes_core/dut/key0
+add wave -position end  sim:/testbench_aes_core/dut/key1
+add wave -position end  sim:/testbench_aes_core/dut/key2
+add wave -position end  sim:/testbench_aes_core/dut/key3
+add wave -position end  sim:/testbench_aes_core/dut/key4
+add wave -position end  sim:/testbench_aes_core/dut/key5
+add wave -position end  sim:/testbench_aes_core/dut/key6
+add wave -position end  sim:/testbench_aes_core/dut/key7
+add wave -position end  sim:/testbench_aes_core/dut/key8
+add wave -position end  sim:/testbench_aes_core/dut/key9
+add wave -position end  sim:/testbench_aes_core/dut/key10
+add wave -position end  sim:/testbench_aes_core/dut/outA
+add wave -position end  sim:/testbench_aes_core/dut/outB
+add wave -position end  sim:/testbench_aes_core/dut/outC
+add wave -position end  sim:/testbench_aes_core/dut/outD
+add wave -position end  sim:/testbench_aes_core/dut/outE
+add wave -position end  sim:/testbench_aes_core/dut/outF
+add wave -position end  sim:/testbench_aes_core/dut/outG
+add wave -position end  sim:/testbench_aes_core/dut/outH
+add wave -position end  sim:/testbench_aes_core/dut/outI
+add wave -position end  sim:/testbench_aes_core/dut/outJ
+run 500
+run 5000
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.round1to9_tb
+# End time: 16:24:00 on Oct 30,2024, Elapsed time: 0:14:24
+# Errors: 0, Warnings: 2
+# vsim -gui work.round1to9_tb 
+# Start time: 16:24:00 on Oct 30,2024
+# Loading sv_std.std
+# Loading work.round1to9_tb
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.addRoundKey
+add wave -position end  sim:/round1to9_tb/round
+add wave -position end  sim:/round1to9_tb/currKey
+add wave -position end  sim:/round1to9_tb/in
+add wave -position end  sim:/round1to9_tb/outOfRound
+add wave -position end  sim:/round1to9_tb/rKeyOut
+add wave -position end  sim:/round1to9_tb/rkeyexpected
+add wave -position end  sim:/round1to9_tb/outOfRoundExpected
+add wave -position end  sim:/round1to9_tb/clk
+vsim -gui work.testbench_aes_core
+# End time: 16:24:22 on Oct 30,2024, Elapsed time: 0:00:22
+# Errors: 0, Warnings: 1
+# vsim -gui work.testbench_aes_core 
+# Start time: 16:24:22 on Oct 30,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+add wave -position end  sim:/testbench_aes_core/dut/clk
+add wave -position end  sim:/testbench_aes_core/dut/load
+add wave -position end  sim:/testbench_aes_core/dut/key
+add wave -position end  sim:/testbench_aes_core/dut/plaintext
+add wave -position end  sim:/testbench_aes_core/dut/done
+add wave -position end  sim:/testbench_aes_core/dut/cyphertext
+add wave -position end  sim:/testbench_aes_core/dut/in
+add wave -position end  sim:/testbench_aes_core/dut/key0
+add wave -position end  sim:/testbench_aes_core/dut/key1
+add wave -position end  sim:/testbench_aes_core/dut/key2
+add wave -position end  sim:/testbench_aes_core/dut/key3
+add wave -position end  sim:/testbench_aes_core/dut/key4
+add wave -position end  sim:/testbench_aes_core/dut/key5
+add wave -position end  sim:/testbench_aes_core/dut/key6
+add wave -position end  sim:/testbench_aes_core/dut/key7
+add wave -position end  sim:/testbench_aes_core/dut/key8
+add wave -position end  sim:/testbench_aes_core/dut/key9
+add wave -position end  sim:/testbench_aes_core/dut/key10
+add wave -position end  sim:/testbench_aes_core/dut/outA
+add wave -position end  sim:/testbench_aes_core/dut/outB
+add wave -position end  sim:/testbench_aes_core/dut/outC
+add wave -position end  sim:/testbench_aes_core/dut/outD
+add wave -position end  sim:/testbench_aes_core/dut/outE
+add wave -position end  sim:/testbench_aes_core/dut/outF
+add wave -position end  sim:/testbench_aes_core/dut/outG
+add wave -position end  sim:/testbench_aes_core/dut/outH
+add wave -position end  sim:/testbench_aes_core/dut/outI
+add wave -position end  sim:/testbench_aes_core/dut/outJ
+add wave -position end  sim:/testbench_aes_core/dut/round
+run 5000
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_core
+# End time: 16:30:14 on Oct 30,2024, Elapsed time: 0:05:52
+# Errors: 0, Warnings: 2
+# vsim -gui work.testbench_aes_core 
+# Start time: 16:30:14 on Oct 30,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+add wave -position end  sim:/testbench_aes_core/dut/clk
+add wave -position end  sim:/testbench_aes_core/dut/load
+add wave -position end  sim:/testbench_aes_core/dut/key
+add wave -position end  sim:/testbench_aes_core/dut/plaintext
+add wave -position end  sim:/testbench_aes_core/dut/done
+add wave -position end  sim:/testbench_aes_core/dut/cyphertext
+add wave -position end  sim:/testbench_aes_core/dut/in
+add wave -position end  sim:/testbench_aes_core/dut/key0
+add wave -position end  sim:/testbench_aes_core/dut/key1
+add wave -position end  sim:/testbench_aes_core/dut/key2
+add wave -position end  sim:/testbench_aes_core/dut/key3
+add wave -position end  sim:/testbench_aes_core/dut/key4
+add wave -position end  sim:/testbench_aes_core/dut/key5
+add wave -position end  sim:/testbench_aes_core/dut/key6
+add wave -position end  sim:/testbench_aes_core/dut/key7
+add wave -position end  sim:/testbench_aes_core/dut/key8
+add wave -position end  sim:/testbench_aes_core/dut/key9
+add wave -position end  sim:/testbench_aes_core/dut/key10
+add wave -position end  sim:/testbench_aes_core/dut/outA
+add wave -position end  sim:/testbench_aes_core/dut/outB
+add wave -position end  sim:/testbench_aes_core/dut/outC
+add wave -position end  sim:/testbench_aes_core/dut/outD
+add wave -position end  sim:/testbench_aes_core/dut/outE
+add wave -position end  sim:/testbench_aes_core/dut/outF
+add wave -position end  sim:/testbench_aes_core/dut/outG
+add wave -position end  sim:/testbench_aes_core/dut/outH
+add wave -position end  sim:/testbench_aes_core/dut/outI
+add wave -position end  sim:/testbench_aes_core/dut/outJ
+add wave -position end  sim:/testbench_aes_core/dut/round
+run 50000
+
+run 50000
+run 50000
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_core
+# End time: 16:35:26 on Oct 30,2024, Elapsed time: 0:05:12
+# Errors: 0, Warnings: 2
+# vsim -gui work.testbench_aes_core 
+# Start time: 16:35:26 on Oct 30,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+# ** Fatal: (vsim-3365) Too many port connections. Expected 5, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r9 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 100
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 16:35:33 on Oct 30,2024, Elapsed time: 0:00:07
+# Errors: 1, Warnings: 1
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_core
+# vsim -gui work.testbench_aes_core 
+# Start time: 16:36:40 on Oct 30,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'out'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(227).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r9/a6 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
+# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(293).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r9/a7 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 128
+# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'out'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(294).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r9/a7 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 128
+# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'key'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(353).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r9/a8 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 129
+# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'rkey'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(356).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r9/a8 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 129
+# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(326).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r9/a9 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 130
+# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'roundKey'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(327).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r9/a9 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 130
+# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'out'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(328).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r9/a9 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 130
+# Error opening C:/Users/vparizot/E155/lab7mvp/(vsim-3015) [PCDPC] - Port size (128) does not match connection size 
+# Path name 'C:/Users/vparizot/E155/lab7mvp/(vsim-3015) [PCDPC] - Port size (128) does not match connection size ' doesn't exist.
+# Error opening C:/Users/vparizot/E155/lab7mvp/(vsim-3015) [PCDPC] - Port size (128) does not match connection size 
+# Path name 'C:/Users/vparizot/E155/lab7mvp/(vsim-3015) [PCDPC] - Port size (128) does not match connection size ' doesn't exist.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_core
+# End time: 16:40:03 on Oct 30,2024, Elapsed time: 0:03:23
+# Errors: 0, Warnings: 11
+# vsim -gui work.testbench_aes_core 
+# Start time: 16:40:03 on Oct 30,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+add wave -position end  sim:/testbench_aes_core/dut/clk
+add wave -position end  sim:/testbench_aes_core/dut/load
+add wave -position end  sim:/testbench_aes_core/dut/key
+add wave -position end  sim:/testbench_aes_core/dut/plaintext
+add wave -position end  sim:/testbench_aes_core/dut/done
+add wave -position end  sim:/testbench_aes_core/dut/cyphertext
+add wave -position end  sim:/testbench_aes_core/dut/in
+add wave -position end  sim:/testbench_aes_core/dut/key0
+add wave -position end  sim:/testbench_aes_core/dut/key1
+add wave -position end  sim:/testbench_aes_core/dut/key2
+add wave -position end  sim:/testbench_aes_core/dut/key3
+add wave -position end  sim:/testbench_aes_core/dut/key4
+add wave -position end  sim:/testbench_aes_core/dut/key5
+add wave -position end  sim:/testbench_aes_core/dut/key6
+add wave -position end  sim:/testbench_aes_core/dut/key7
+add wave -position end  sim:/testbench_aes_core/dut/key8
+add wave -position end  sim:/testbench_aes_core/dut/key9
+add wave -position end  sim:/testbench_aes_core/dut/key10
+add wave -position end  sim:/testbench_aes_core/dut/outA
+add wave -position end  sim:/testbench_aes_core/dut/outB
+add wave -position end  sim:/testbench_aes_core/dut/outC
+add wave -position end  sim:/testbench_aes_core/dut/outD
+add wave -position end  sim:/testbench_aes_core/dut/outE
+add wave -position end  sim:/testbench_aes_core/dut/outF
+add wave -position end  sim:/testbench_aes_core/dut/outG
+add wave -position end  sim:/testbench_aes_core/dut/outH
+add wave -position end  sim:/testbench_aes_core/dut/outI
+add wave -position end  sim:/testbench_aes_core/dut/outJ
+add wave -position end  sim:/testbench_aes_core/dut/round
+run 50000
+add wave -position 22  sim:/testbench_aes_core/expected
+restart
+run 50000

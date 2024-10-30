@@ -1,0 +1,47 @@
+# Current time Wed Oct 30 15:27:12 2024
+# ModelSim DE Stack Trace
+# Program = vish
+# Id = "2022.3"
+# Version = "2022.07"
+# Date = "Jul 18 2022"
+# Platform = win64pe
+
+Exception c0000005 has occurred at address 14047fa82. Traceback:
+# 0    0x14047fa82: 'Sqlite3_Unload + 0xa78c2'
+# 1    0x14048782f: 'Sqlite3_Unload + 0xaf66f'
+# 2    0x140488653: 'Sqlite3_Unload + 0xb0493'
+# 3    0x14048400d: 'Sqlite3_Unload + 0xabe4d'
+# 4    0x140480a04: 'Sqlite3_Unload + 0xa8844'
+# 5    0x140322a17: 'Mtirpc_Init + 0x1960d7'
+# 6    0x14012db7b: '<unknown (@0x14012db7b)>'
+# 7    0x67f75226: 'TclInvokeStringCommand + 0xc6'
+# 8    0x67f77103: 'TclNRRunCallbacks + 0x63'
+# 9    0x7fff5e9c0d9a: 'Itcl_EvalMemberCode + 0x3ba'
+# 10   0x7fff5e9c1f5b: 'Itcl_ExecMethod + 0x23b'
+# 11   0x67f77103: 'TclNRRunCallbacks + 0x63'
+# 12   0x7fff5e9c0d9a: 'Itcl_EvalMemberCode + 0x3ba'
+# 13   0x7fff5e9c1f5b: 'Itcl_ExecMethod + 0x23b'
+# 14   0x67f77103: 'TclNRRunCallbacks + 0x63'
+# 15   0x7fff5e9c0d9a: 'Itcl_EvalMemberCode + 0x3ba'
+# 16   0x7fff5e9c1f5b: 'Itcl_ExecMethod + 0x23b'
+# 17   0x7fff5e9c9a19: 'Itcl_EvalArgs + 0x1c9'
+# 18   0x7fff5e9c4cf1: 'Itcl_HandleInstance + 0x2c1'
+# 19   0x67f77103: 'TclNRRunCallbacks + 0x63'
+# 20   0x67f78974: 'Tcl_EvalEx + 0xa34'
+# 21   0x67f77f68: 'Tcl_EvalEx + 0x28'
+# 22   0x6814431a: 'Tk_BindEvent + 0x91a'
+# 23   0x6817bd41: 'TkBindEventProc + 0x291'
+# 24   0x6818c614: 'Tk_HandleEvent + 0x2f4'
+# 25   0x6818b2da: 'TkDeleteThreadExitHandler + 0x31a'
+# 26   0x6802a56d: 'Tcl_ServiceEvent + 0xed'
+# 27   0x6802a9e4: 'Tcl_DoOneEvent + 0x184'
+# 28   0x6818aee5: 'Tk_MainLoop + 0x25'
+# 29   0x681cd282: 'Tk_MainEx + 0x932'
+# 30   0x1401b0362: 'Mtirpc_Init + 0x23a22'
+# 31   0x1401b335e: 'Mtirpc_Init + 0x26a1e'
+# 32   0x14079c060: 'Tclsqlite3_Init + 0x1c000'
+# 33   0x7fff999f7374: 'BaseThreadInitThunk + 0x14'
+# 34   0x7fff9a07cc91: 'RtlUserThreadStart + 0x21'
+StackWalk failed 0
+# End of Stack Trace
+
