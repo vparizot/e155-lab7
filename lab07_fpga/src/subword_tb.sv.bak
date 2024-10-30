@@ -1,4 +1,4 @@
-module subWord_tb();
+module subword_tb();
 	logic [31:0] word, subWordOut, subWordOutExpected;
 	logic clk;
 	
@@ -7,14 +7,11 @@ module subWord_tb();
 		begin
 		clk = 1; #5;
 		clk = 0; #5;
-
 		end
 	initial
 		begin
 		word = 32'hcf4f3c09; #10;
 		subWordOutExpected = 32'h8a84eb01;
-
-
 		end
 
 

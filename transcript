@@ -920,3 +920,727 @@ run 500
 # Compile of shiftRows_tb.sv was successful.
 # Compile of subword_tb.sv was successful.
 # 11 compiles, 1 failed with 1 error.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv failed with 1 errors.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 1 failed with 1 error.
+vsim -gui work.shiftRows_tb
+# End time: 17:56:50 on Oct 29,2024, Elapsed time: 0:54:19
+# Errors: 0, Warnings: 3
+# vsim -gui work.shiftRows_tb 
+# Start time: 17:56:50 on Oct 29,2024
+# Loading sv_std.std
+# Loading work.shiftRows_tb
+# Loading work.shiftRows
+add wave -position end  sim:/shiftRows_tb/clk
+add wave -position end  sim:/shiftRows_tb/in
+add wave -position end  sim:/shiftRows_tb/out
+add wave -position end  sim:/shiftRows_tb/outExpected
+run 500
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv failed with 3 errors.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 1 failed with 3 errors.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv failed with 3 errors.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 1 failed with 3 errors.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv failed with 11 errors.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 1 failed with 11 errors.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv failed with 10 errors.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 1 failed with 10 errors.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv failed with 9 errors.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 1 failed with 9 errors.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv failed with 9 errors.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 1 failed with 9 errors.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv failed with 2 errors.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 1 failed with 2 errors.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv failed with 2 errors.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 1 failed with 2 errors.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful with warnings.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+vsim -gui work.keyExpansionRound_tb
+# End time: 18:37:08 on Oct 29,2024, Elapsed time: 0:40:18
+# Errors: 0, Warnings: 10
+# vsim -gui work.keyExpansionRound_tb 
+# Start time: 18:37:08 on Oct 29,2024
+# Loading sv_std.std
+# Loading work.keyExpansionRound_tb
+# Loading work.keyExpansionRound
+# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 331
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 332
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 335
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 336
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 339
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 340
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 343
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 344
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# Error loading design
+# End time: 18:37:15 on Oct 29,2024, Elapsed time: 0:00:07
+# Errors: 8, Warnings: 1
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful with warnings.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+vsim -gui work.keyExpansionRound_tb
+# vsim -gui work.keyExpansionRound_tb 
+# Start time: 18:39:21 on Oct 29,2024
+# Loading sv_std.std
+# Loading work.keyExpansionRound_tb
+# Loading work.keyExpansionRound
+# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 331
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 332
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 335
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 336
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 339
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 340
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 343
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 344
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# Error loading design
+# End time: 18:39:29 on Oct 29,2024, Elapsed time: 0:00:08
+# Errors: 8, Warnings: 1
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful with warnings.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+vsim -gui work.keyExpansionRound_tb
+# vsim -gui work.keyExpansionRound_tb 
+# Start time: 18:41:57 on Oct 29,2024
+# Loading sv_std.std
+# Loading work.keyExpansionRound_tb
+# Loading work.keyExpansionRound
+# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 331
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 332
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 335
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 336
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 339
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 340
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 343
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 344
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# Error loading design
+# End time: 18:42:04 on Oct 29,2024, Elapsed time: 0:00:07
+# Errors: 8, Warnings: 3
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful with warnings.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+vsim -gui work.keyExpansionRound_tb
+# vsim -gui work.keyExpansionRound_tb 
+# Start time: 18:43:36 on Oct 29,2024
+# Loading sv_std.std
+# Loading work.keyExpansionRound_tb
+# Loading work.keyExpansionRound
+# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 331
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 332
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 335
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 336
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 339
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 340
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 343
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 344
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# Error loading design
+# End time: 18:43:43 on Oct 29,2024, Elapsed time: 0:00:07
+# Errors: 8, Warnings: 2
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful with warnings.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful with warnings.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+vsim -gui work.keyExpansionRound_tb
+# vsim -gui work.keyExpansionRound_tb 
+# Start time: 18:45:13 on Oct 29,2024
+# Loading sv_std.std
+# Loading work.keyExpansionRound_tb
+# Loading work.keyExpansionRound
+# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 331
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 332
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 335
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 336
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 339
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 340
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# ** Error: (vsim-3033) Instantiation of 'rotword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 343
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# ** Error: (vsim-3033) Instantiation of 'subword' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 344
+#         Searched libraries:
+#             C:/Users/vparizot/E155/lab7mvp/work
+# Error loading design
+# End time: 18:45:20 on Oct 29,2024, Elapsed time: 0:00:07
+# Errors: 8, Warnings: 3
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful with warnings.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful with warnings.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful with warnings.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful with warnings.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+vsim -gui work.keyExpansionRound_tb
+# vsim -gui work.keyExpansionRound_tb 
+# Start time: 18:48:52 on Oct 29,2024
+# Loading sv_std.std
+# Loading work.keyExpansionRound_tb
+# Loading work.keyExpansionRound
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'rotWord'.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 340
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'subWord'.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 341
+# Error loading design
+# End time: 18:48:59 on Oct 29,2024, Elapsed time: 0:00:07
+# Errors: 2, Warnings: 6
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv failed with 2 errors.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 1 failed with 2 errors.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv failed with 2 errors.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 1 failed with 2 errors.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+vsim -gui work.keyExpansionRound_tb
+# vsim -gui work.keyExpansionRound_tb 
+# Start time: 18:50:50 on Oct 29,2024
+# Loading sv_std.std
+# Loading work.keyExpansionRound_tb
+# Loading work.keyExpansionRound
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'rotWord'.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 340
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'subWord'.
+#    Time: 0 ns  Iteration: 0  Instance: /keyExpansionRound_tb/dut File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 342
+# Error loading design
+# End time: 18:50:57 on Oct 29,2024, Elapsed time: 0:00:07
+# Errors: 2, Warnings: 4
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+vsim -gui work.keyExpansionRound_tb
+# vsim -gui work.keyExpansionRound_tb 
+# Start time: 18:51:34 on Oct 29,2024
+# Loading sv_std.std
+# Loading work.keyExpansionRound_tb
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.sbox_sync
+add wave -position end  sim:/keyExpansionRound_tb/round
+add wave -position end  sim:/keyExpansionRound_tb/key
+add wave -position end  sim:/keyExpansionRound_tb/rkey
+add wave -position end  sim:/keyExpansionRound_tb/rkeyexpected
+add wave -position end  sim:/keyExpansionRound_tb/clk
+run 500
+run 5000
+run 5000
+run 5000
+run 5000
+run 5000
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+vsim -gui work.keyExpansionRound_tb
+# End time: 18:52:43 on Oct 29,2024, Elapsed time: 0:01:09
+# Errors: 0, Warnings: 3
+# vsim -gui work.keyExpansionRound_tb 
+# Start time: 18:52:43 on Oct 29,2024
+# Loading sv_std.std
+# Loading work.keyExpansionRound_tb
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.sbox_sync
+add wave -position end  sim:/keyExpansionRound_tb/round
+add wave -position end  sim:/keyExpansionRound_tb/key
+add wave -position end  sim:/keyExpansionRound_tb/rkey
+add wave -position end  sim:/keyExpansionRound_tb/rkeyexpected
+add wave -position end  sim:/keyExpansionRound_tb/clk
+run 50000
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+vsim -gui work.keyExpansionRound_tb
+# End time: 19:00:42 on Oct 29,2024, Elapsed time: 0:07:59
+# Errors: 0, Warnings: 2
+# vsim -gui work.keyExpansionRound_tb 
+# Start time: 19:00:42 on Oct 29,2024
+# Loading sv_std.std
+# Loading work.keyExpansionRound_tb
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.sbox_sync
+add wave -position end  sim:/keyExpansionRound_tb/round
+add wave -position end  sim:/keyExpansionRound_tb/key
+add wave -position end  sim:/keyExpansionRound_tb/rkey
+add wave -position end  sim:/keyExpansionRound_tb/rkeyexpected
+add wave -position end  sim:/keyExpansionRound_tb/clk
+run 500
+# A time value could not be extracted from the current line
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+vsim -gui work.keyExpansionRound_tb
+# End time: 19:03:51 on Oct 29,2024, Elapsed time: 0:03:09
+# Errors: 0, Warnings: 2
+# vsim -gui work.keyExpansionRound_tb 
+# Start time: 19:03:51 on Oct 29,2024
+# Loading sv_std.std
+# Loading work.keyExpansionRound_tb
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.sbox_sync
+add wave -position end  sim:/keyExpansionRound_tb/round
+add wave -position end  sim:/keyExpansionRound_tb/key
+add wave -position end  sim:/keyExpansionRound_tb/rkey
+add wave -position end  sim:/keyExpansionRound_tb/rkeyexpected
+add wave -position end  sim:/keyExpansionRound_tb/clk
+run 100
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+vsim -gui work.keyExpansionRound_tb
+# End time: 19:05:08 on Oct 29,2024, Elapsed time: 0:01:17
+# Errors: 0, Warnings: 2
+# vsim -gui work.keyExpansionRound_tb 
+# Start time: 19:05:08 on Oct 29,2024
+# Loading sv_std.std
+# Loading work.keyExpansionRound_tb
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.sbox_sync
+add wave -position end  sim:/keyExpansionRound_tb/round
+add wave -position end  sim:/keyExpansionRound_tb/key
+add wave -position end  sim:/keyExpansionRound_tb/rkey
+add wave -position end  sim:/keyExpansionRound_tb/rkeyexpected
+add wave -position end  sim:/keyExpansionRound_tb/clk
+run 500
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv failed with 1 errors.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 1 failed with 1 error.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv failed with 1 errors.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 1 failed with 1 error.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+vsim -gui work.keyExpansionRound_tb
+# End time: 19:11:35 on Oct 29,2024, Elapsed time: 0:06:27
+# Errors: 0, Warnings: 4
+# vsim -gui work.keyExpansionRound_tb 
+# Start time: 19:11:35 on Oct 29,2024
+# Loading sv_std.std
+# Loading work.keyExpansionRound_tb
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.sbox_sync
+add wave -position end  sim:/keyExpansionRound_tb/round
+add wave -position end  sim:/keyExpansionRound_tb/key
+add wave -position end  sim:/keyExpansionRound_tb/rkey
+add wave -position end  sim:/keyExpansionRound_tb/rkeyexpected
+add wave -position end  sim:/keyExpansionRound_tb/clk
+run 500

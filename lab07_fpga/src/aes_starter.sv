@@ -24,6 +24,7 @@ endmodule
 //   Tricky cases to properly change sdo on negedge clk
 /////////////////////////////////////////////
 
+
 module aes_spi(input  logic sck, 
                input  logic sdi,
                output logic sdo,
@@ -245,6 +246,7 @@ endmodule
 //
 //   Equivalently, the values are packed into four words as given
 //        [127:96]  [95:64] [63:32] [31:0]      w[0]    w[1]    w[2]    w[3]
+// WORKS AS DESIRED IN TB
 module shiftRows(input  logic [127:0] in,
                  // input logic clk,
                  output logic [127:0] out);
@@ -273,6 +275,7 @@ module shiftRows(input  logic [127:0] in,
     assign out[7:0] = in[39:32];
 endmodule
 
+
 module addRoundKey(input  logic [127:0] in,
                    input  logic [127:0] roundKey,
                    input logic clk,
@@ -300,95 +303,58 @@ module addRoundKey(input  logic [127:0] in,
 endmodule
 
 module keyExpansionRound(input logic [127:0] key,
-                         input logic [3:0] j,
-                         output logic [31:0] rkey0, rkey1, rkey2, rkey3);
-    
+                    input logic [3:0] round, //i value
+		    input logic clk,
+                    output logic [127:0] rkey);
+
     logic [31:0] key0, key1, key2, key3; 
-    assign key0 = key[31:0];
-    assign key1 = key[63:32];
-    assign key2 = key[95:64];
-    assign key3 = key[127:96];
-    
-    //round constants
-    logic [320:0] Rcon;
-    assign Rcon[0] = 32'h01000000;
-    assign Rcon[1] = 32'h02000000;
-    assign Rcon[2] = 32'h04000000;
-    assign Rcon[3] = 32'h08000000;
-    assign Rcon[4] = 32'h10000000;
-    assign Rcon[5] = 32'h20000000;
-    assign Rcon[6] = 32'h40000000;
-    assign Rcon[7] = 32'h80000000;
-    assign Rcon[8] = 32'h1B000000;
-    assign Rcon[9] = 32'h36000000;
+    assign key3 = key[31:0];
+    assign key2 = key[63:32];
+    assign key1 = key[95:64];
+    assign key0 = key[127:96];
 
     // define words of roundkeys
     logic [31:0] swkey0, swkey1, swkey2, swkey3;
-    logic [31:0] rotkey0, rotkey1, rotkey2, rotkey3;
-    //logic [31:0] rkey0, rkey1, rkey2, rkey3;
+    logic [31:0] rotkey0, rotkey1, rotkey2, rotkey3, temp;
+    logic [31:0] Rcon;
+    logic [31:0] rkey0, rkey1, rkey2, rkey3;
+
+    always_ff @(posedge clk) begin
+        // Define round constants based on round
+        case (round)
+            1: Rcon <= 32'h01000000;
+            2: Rcon <= 32'h02000000;
+            3: Rcon <= 32'h04000000;
+            4: Rcon <= 32'h08000000;
+            5: Rcon <= 32'h10000000;
+            6: Rcon <= 32'h20000000;
+            7: Rcon <= 32'h40000000;
+            8: Rcon <= 32'h80000000;
+            9: Rcon <= 32'h1b000000;
+            10: Rcon <= 32'h36000000;
+            default: Rcon <= 32'h00000000; // Default case to handle invalid rounds
+        endcase
+    end
 
     // call subword, rot word (need to repeat for EACH Rcon)
-    rotword(key0, rotkey0);
-    subword(rotkey0, clk, swkey0);
-    assign rkey0 = key0 ^ swkey0 ^ Rcon[j];
+    rotWord r1(key3, rotkey0);
+    //assign temp = rotkey0;
+    subWord sw1(rotkey0, clk, swkey0);
+    assign rkey0 = key0 ^ swkey0 ^ Rcon;
 
-    rotword(key1, rotkey1);
-    subword(rotkey1, clk, swkey1);
+    //rotword(key1, rotkey1);
+    //subword(rotkey1, clk, swkey1);
     assign rkey1 = key1 ^ rkey0;
 
-    rotword(key2, rotkey2);
-    subword(rotkey2, clk, swkey2);
+    //rotword(key2, rotkey2);
+    //subword(rotkey2, clk, swkey2);
     assign rkey2 = key2 ^ rkey1;
 
-    rotword(key3, rotkey3);
-    subword(rotkey3, clk, swkey3);
+    //rotword(key3, rotkey3);
+    //subword(rotkey3, clk, swkey3);
     assign rkey3 = key3 ^ rkey2;
 
-
-endmodule
-
-
-// generate round key 
-// Expansion of the given cipher key into 11 partial keys
-module keyExpansion(input  logic [127:0] key,
-                    input  logic clk,
-                    output logic [127:0] roundKey);
-//        [127:120] [95:88] [63:56] [31:24]     S0,0    S0,1    S0,2    S0,3
-//        [119:112] [87:80] [55:48] [23:16]     S1,0    S1,1    S1,2    S1,3
-//        [111:104] [79:72] [47:40] [15:8]      S2,0    S2,1    S2,2    S2,3
-//        [103:96]  [71:64] [39:32] [7:0]       S3,0    S3,1    S3,2    S3,3
-  logic [3:0] j = 0; // keeps track of round
-  
-
-  always_ff @(posedge clk)
-    begin
-    if (j <= 9)
-      begin
-        //keyExpansionRound(key, j, rkey0, rkey1, rkey2, rkey3);
-      end
-
-    j <= j+1;
-    end
-  //assign roundkey = {rkey0, rkey1, rkey2, rkey3};
-
-
-
-    // i <- 0
-    // while i <= Nk - 1 do:
-      // w[i] <- key[4*i...4*i+3]
-      // i <- i +1
-    // end while
-    // whiel i <= 4*Nr+3 do
-      // temp <- w[i-1]
-      // if i mod Nk = 0 then
-        // temp <- SubWord(RotWord(temp)) XOR Rcon [i/Nk]
-      // else if Nk > 6 and i mod Nk = 4 then
-        // temp <- SubWord(temp)
-      // end if
-      // w[i] <- w[i - Nk] xor temp
-      // i <- i+1
-    // end while
-    // return w
+    assign rkey = {rkey0, rkey1, rkey2, rkey3};
 
 endmodule
 

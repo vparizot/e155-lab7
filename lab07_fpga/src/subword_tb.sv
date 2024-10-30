@@ -11,6 +11,7 @@ module subword_tb();
 	initial
 		begin
 		word = 32'hcf4f3c09; #10;
+
 		subWordOutExpected = 32'h8a84eb01;
 		end
 
