@@ -13,8 +13,6 @@ module subBytes_tb();
 		begin
 		in = 128'h193de3bea0f4e22b9ac68d2ae9f84808; #10;
 		outExpected = 128'hd42711aee0bf98f1b8b45de51e415230;
-
-
 		end
 
 endmodule

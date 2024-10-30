@@ -102,25 +102,28 @@ module aes_core(input  logic         clk,
     //out = state 
 endmodule
 
-
 /////////////////////////////////////////////
 // sbox
 //   Infamous AES byte substitutions with magic numbers
-//   Combinational version which is mapped to LUTs (logic cells)
+//   Synchronous version which is mapped to embedded block RAMs (EBR)
 //   Section 5.1.1, Figure 7
 /////////////////////////////////////////////
-
-module sbox(input  logic [7:0] a,
-            output logic [7:0] y);
+module sbox_sync(
+	input		logic [7:0] a,
+	input	 	logic 			clk,
+	output 	logic [7:0] y);
             
   // sbox implemented as a ROM
-  // This module is combinational and will be inferred using LUTs (logic cells)
-  logic [7:0] sbox[0:255];
+  // This module is synchronous and will be inferred using BRAMs (Block RAMs)
+  logic [7:0] sbox [0:255];
 
   initial   $readmemh("sbox.txt", sbox);
-  assign y = sbox[a];
+	
+	// Synchronous version
+	always_ff @(posedge clk) begin
+		y <= sbox[a];
+	end
 endmodule
-
 
 
 /////////////////////////////////////////////
@@ -182,11 +185,13 @@ module galoismult(input  logic [7:0] a,
     assign y = a[7] ? (ashift ^ 8'b00011011) : ashift;
 endmodule
 
+// WORKS AS DESIRED IN TB
 module subBytes(input  logic [127:0] in,
                 input logic clk,
                 output logic [127:0] out);
 	// logic [7:0] out1, out2, out3, out4, out5, out6, out7, out8, out9, out10, out11, out12, out12, out14, out15, out16;
-    // call sbox_sync                       16*x+y
+    
+// call sbox_sync                       16*x+y
     sbox_sync sboxsync1(in[7:0], clk, out[7:0]);
     sbox_sync sboxsync2(in[15:8], clk, out[15:8]);
     sbox_sync sboxsync3(in[23:16], clk, out[23:16]);
@@ -205,6 +210,31 @@ module subBytes(input  logic [127:0] in,
     sbox_sync sboxsync16(in[127:120], clk, out[127:120]);
 
 endmodule
+
+
+// WORKS AS DESIRED IN TB
+module subWord(input logic [31:0] word,
+               input logic clk,
+               output logic [31:0] subWordOut);
+
+    logic [7:0] subWordOut0, subWordOut1, subWordOut2, subWordOut3;
+    //assign {word0, word1, word2, word3} = word;
+
+    sbox_sync sboxsyncsw1(word[7:0], clk, subWordOut0);
+    sbox_sync sboxsyncsw2(word[15:8], clk, subWordOut1);
+    sbox_sync sboxsyncsw3(word[23:16], clk, subWordOut2);
+    sbox_sync sboxsyncsw4(word[31:24], clk, subWordOut3);
+    assign subWordOut = {subWordOut3, subWordOut2, subWordOut1, subWordOut0};
+
+endmodule
+
+// WORKS AS DESIRED IN TB
+module rotWord(input logic [31:0] word,
+               output logic [31:0] rotWordOut);
+
+    assign rotWordOut = {word[23:0], word[31:24]}; 
+endmodule
+
 
 //   The key and message are 128-bit values packed into an array of 16 bytes as
 //   shown below
@@ -362,47 +392,4 @@ module keyExpansion(input  logic [127:0] key,
 
 endmodule
 
-module subWord(input logic [31:0] word,
-               input logic clk,
-               output logic [31:0] subWordOut);
 
-    logic [7:0] subWordOut0, subWordOut1, subWordOut2, subWordOut3;
-    //assign {word0, word1, word2, word3} = word;
-
-    sbox_sync sboxsyncsw1(word[7:0], clk, subWordOut0);
-    sbox_sync sboxsyncsw2(word[15:8], clk, subWordOut1);
-    sbox_sync sboxsyncsw3(word[23:16], clk, subWordOut2);
-    sbox_sync sboxsyncsw4(word[31:24], clk, subWordOut3);
-    assign subWordOut = {subWordOut0, subWordOut1, subWordOut2, subWordOut3};
-
-endmodule
-
-// WORKS AS DESIRED IN TB
-module rotWord(input logic [31:0] word,
-               output logic [31:0] rotWordOut);
-
-    assign rotWordOut = {word[23:0], word[31:24]}; 
-endmodule
-
-/////////////////////////////////////////////
-// sbox
-//   Infamous AES byte substitutions with magic numbers
-//   Synchronous version which is mapped to embedded block RAMs (EBR)
-//   Section 5.1.1, Figure 7
-/////////////////////////////////////////////
-module sbox_sync(
-	input		logic [7:0] a,
-	input	 	logic 			clk,
-	output 	logic [7:0] y);
-            
-  // sbox implemented as a ROM
-  // This module is synchronous and will be inferred using BRAMs (Block RAMs)
-  logic [7:0] sbox [0:255];
-
-  initial   $readmemh("sbox.txt", sbox);
-	
-	// Synchronous version
-	always_ff @(posedge clk) begin
-		y <= sbox[a];
-	end
-endmodule

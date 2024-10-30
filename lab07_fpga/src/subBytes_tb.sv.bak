@@ -5,8 +5,8 @@ module subBytes_tb();
 	subBytes dut( .in(in), .clk(clk), .out(out));
 	always
 		begin
-		clk = 5; #5;
-		clk = 5; #5;
+		clk = 0; #5;
+		clk = 1; #5;
 
 		end
 	initial
