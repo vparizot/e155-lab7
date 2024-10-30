@@ -9,152 +9,152 @@ z2
 !i10f 100
 cModel Technology
 dC:/Users/vparizot/E155/lab7_mvp
-vaddRoundKey
-Z0 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z1 !s110 1730267744
-!i10b 1
-!s100 BDAjEEBMNLS9G@7]kdF5X2
-Igo]WXbj9TGP>=VL>T1<La3
-S1
-Z2 dC:/Users/vparizot/E155/lab7mvp
-Z3 w1730267415
-Z4 8C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv
-Z5 FC:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv
-!i122 611
-L0 284 26
-Z6 VDg1SIo80bB@j0V0VzS_@n1
-Z7 OP;L;2022.3;75
-r1
-!s85 0
-31
-Z8 !s108 1730267744.000000
-Z9 !s107 C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv|
-Z10 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv|
-!i113 1
-Z11 o-work work -sv
-Z12 tCvgOpt 0
-nadd@round@key
 vAddRoundKey
-R0
+Z0 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
 !s110 1730241369
 !i10b 1
 !s100 E[k>jzP>cPYF8RKQT1>S:1
 IDa;QA[lF8ZJa1Q7gQ8PZS3
 S1
-R2
+Z1 dC:/Users/vparizot/E155/lab7mvp
 w1730240742
-R4
-R5
+Z2 8C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv
+Z3 FC:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv
 !i122 103
 L0 266 25
-R6
-R7
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OP;L;2022.3;75
 r1
 !s85 0
 31
 !s108 1730241369.000000
-R9
-R10
+Z6 !s107 C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv|
+Z7 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv|
 !i113 1
-R11
-R12
+Z8 o-work work -sv
+Z9 tCvgOpt 0
 n@add@round@key
+vaddRoundKey
+R0
+Z10 !s110 1730270842
+!i10b 1
+!s100 T;@_^SkVZbm@`HZdjUe:Z3
+I=?XHl=Y1Ie59c:M8XT2F;3
+S1
+R1
+Z11 w1730270840
+R2
+R3
+!i122 638
+L0 323 26
+R4
+R5
+r1
+!s85 0
+31
+Z12 !s108 1730270842.000000
+R6
+R7
+!i113 1
+R8
+R9
+nadd@round@key
 vaes
 R0
-R1
+R10
 !i10b 1
 !s100 S24VoMQKzYN<<e849=NH?3
 I4?B_WHmK@AnR?]BK0VjIz1
 S1
+R1
+R11
 R2
 R3
+!i122 638
+L0 6 13
 R4
 R5
-!i122 611
-L0 6 13
-R6
-R7
 r1
 !s85 0
 31
+R12
+R6
+R7
+!i113 1
 R8
 R9
-R10
-!i113 1
-R11
-R12
 vaes_core
 R0
-R1
+R10
 !i10b 1
-!s100 K3gjCSX?:UiBinK7ZbKI11
-IWT8dc;a<KAl?58Lm4lLS?0
+!s100 >i<S^o3Ie4di41;GE8=oV2
+IOVV1LBg0f?:oO]10fWAf:2
 S1
+R1
+R11
 R2
 R3
+!i122 638
+L0 77 46
 R4
 R5
-!i122 611
-L0 77 33
-R6
-R7
 r1
 !s85 0
 31
+R12
+R6
+R7
+!i113 1
 R8
 R9
-R10
-!i113 1
-R11
-R12
 vaes_spi
 R0
-R1
+R10
 !i10b 1
 !s100 AEiCN`6b22^KJ[b1Xncc<2
 IDYiQD7^d>N:3[J:ZZ>0<@2
 S1
+R1
+R11
 R2
 R3
+!i122 638
+L0 28 29
 R4
 R5
-!i122 611
-L0 28 29
-R6
-R7
 r1
 !s85 0
 31
+R12
+R6
+R7
+!i113 1
 R8
 R9
-R10
-!i113 1
-R11
-R12
 vgaloismult
 R0
-R1
+R10
 !i10b 1
-!s100 E0<VTWRgC=T:go;ClhzU23
-I>CRif`>m7zbART^l`Sl`n1
+!s100 MV^?n3LCIIPZmV@C=D;W41
+ICUg89nzOG=?EoRC^AVC5k1
 S1
+R1
+R11
 R2
 R3
+!i122 638
+L0 224 8
 R4
 R5
-!i122 611
-L0 185 8
-R6
-R7
 r1
 !s85 0
 31
+R12
+R6
+R7
+!i113 1
 R8
 R9
-R10
-!i113 1
-R11
-R12
 vkeyExpansion
 R0
 !s110 1730253899
@@ -162,172 +162,220 @@ R0
 !s100 F>X:BcEONJA=AAi@jj`7z2
 IQa<mKbG_m>>@NgKzYGXU92
 S1
-R2
+R1
 w1730253897
-R4
-R5
+R2
+R3
 !i122 505
 L0 365 41
-R6
-R7
+R4
+R5
 r1
 !s85 0
 31
 !s108 1730253899.000000
-R9
-R10
+R6
+R7
 !i113 1
-R11
-R12
+R8
+R9
 nkey@expansion
 vkeyExpansionRound
 R0
-R1
+R10
 !i10b 1
-!s100 >SZT8TAWMnYJg6jS?<MFB2
-IfZ1V7A=9K`?2F@_=P?_910
+!s100 HiNQa8@c_YgkZKmm1m^hQ3
+IX@=O7B5=>Vl_9deT@O`9:1
 S1
+R1
+R11
 R2
 R3
+!i122 638
+L0 350 55
 R4
 R5
-!i122 611
-L0 311 55
-R6
-R7
 r1
 !s85 0
 31
+R12
+R6
+R7
+!i113 1
 R8
 R9
-R10
-!i113 1
-R11
-R12
 nkey@expansion@round
 vkeyExpansionRound_tb
 R0
-R1
+R10
 !i10b 1
 !s100 gc6XC]Ne3l47Fih8FTN[T2
 I_Kz<886E0E2i?cI36a:o43
 S1
-R2
+R1
 w1730267632
 8C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/keyExpansionRound_tb.sv
 FC:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/keyExpansionRound_tb.sv
-!i122 613
+!i122 640
 L0 1 34
-R6
-R7
+R4
+R5
 r1
 !s85 0
 31
-R8
+R12
 !s107 C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/keyExpansionRound_tb.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/keyExpansionRound_tb.sv|
 !i113 1
-R11
-R12
+R8
+R9
 nkey@expansion@round_tb
 vmixcolumn
 R0
-R1
+R10
 !i10b 1
-!s100 1l3bJ<aWcaH15LJMT=m2^1
-IZ06mn[]zJT>zPMbEDIfNJ2
+!s100 dT`Y0U]G^7=dl268FaOVV0
+Im6D@fzHA^<`6EiZR07O_?1
 S1
+R1
+R11
 R2
 R3
+!i122 638
+L0 197 19
 R4
 R5
-!i122 611
-L0 158 19
-R6
-R7
 r1
 !s85 0
 31
+R12
+R6
+R7
+!i113 1
 R8
 R9
-R10
-!i113 1
-R11
-R12
 vmixcolumns
 R0
-R1
+R10
 !i10b 1
-!s100 <DR;H>c_[JdAO9o:co<Wf0
-IE2c<59;2DJ_aEUF_0j6N82
+!s100 K6X]zVJGFA]hBPh4d8bWb1
+I`mWY]nz;;z`l8dkCLgQ7_1
 S1
+R1
+R11
 R2
 R3
+!i122 638
+L0 181 8
 R4
 R5
-!i122 611
-L0 142 8
-R6
-R7
 r1
 !s85 0
 31
+R12
+R6
+R7
+!i113 1
 R8
 R9
-R10
-!i113 1
-R11
-R12
 vrotWord
 R0
-R1
+R10
 !i10b 1
-!s100 :02A[mPIC;9m:<92WB82i3
-I7oDD[2;mmemL^F_Ec<C993
+!s100 LQgX@2M[aBQcBa]Nl1>hY2
+I]5X`TjQ2MzX:;3@jQI8z@2
 S1
+R1
+R11
 R2
 R3
+!i122 638
+L0 277 5
 R4
 R5
-!i122 611
-L0 238 5
-R6
-R7
 r1
 !s85 0
 31
+R12
+R6
+R7
+!i113 1
 R8
 R9
-R10
-!i113 1
-R11
-R12
 nrot@word
 vrotWord_tb
 R0
-R1
+R10
 !i10b 1
 !s100 MoJ5<4L<1S_;hiN?]QZkV1
 I1[>BQ_><Sa]oXkGdCO?U>2
 S1
-R2
+R1
 w1730242602
 8C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/rotWord_tb.sv
 FC:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/rotWord_tb.sv
-!i122 614
+!i122 641
 L0 1 23
-R6
-R7
+R4
+R5
 r1
 !s85 0
 31
-R8
+R12
 !s107 C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/rotWord_tb.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/rotWord_tb.sv|
 !i113 1
-R11
-R12
+R8
+R9
 nrot@word_tb
+vround10
+R0
+R10
+!i10b 1
+!s100 h^_1]^4R``QPJ6dBR>m6b2
+IFJWChJBlk@J`RE`AK<V:X1
+S1
+R1
+R11
+R2
+R3
+!i122 638
+L0 138 11
+R4
+R5
+r1
+!s85 0
+31
+R12
+R6
+R7
+!i113 1
+R8
+R9
+vround1to9
+R0
+R10
+!i10b 1
+!s100 0jXZJd3J[;iPR?T<Sm9<?3
+IF:idBccaJLc6C9A>BSFEJ3
+S1
+R1
+R11
+R2
+R3
+!i122 638
+L0 124 13
+R4
+R5
+r1
+!s85 0
+31
+R12
+R6
+R7
+!i113 1
+R8
+R9
 vsbox
 R0
 !s110 1730246372
@@ -335,196 +383,172 @@ R0
 !s100 =z3_@<cQBlfL[8D<L5?500
 I2Bd23;ZD?[m<kD5jK?;jV2
 S1
-R2
+R1
 w1730245940
-R4
-R5
+R2
+R3
 !i122 235
 L0 113 10
-R6
-R7
+R4
+R5
 r1
 !s85 0
 31
 !s108 1730246372.000000
-R9
-R10
+R6
+R7
 !i113 1
-R11
-R12
+R8
+R9
 vsbox_sync
 R0
-R1
+R10
 !i10b 1
-!s100 JZ4dmA2J@C_^mm;aObfBJ2
-I2OW[DE5hOK9cFTAQ;Vm<X1
+!s100 aZXo5TcASa94CTWE2?F2o3
+Iz6YIYOS8XV9_?4Jez@Ca50
 S1
+R1
+R11
 R2
 R3
+!i122 638
+L0 156 16
 R4
 R5
-!i122 611
-L0 117 16
-R6
-R7
 r1
 !s85 0
 31
+R12
+R6
+R7
+!i113 1
 R8
 R9
-R10
-!i113 1
-R11
-R12
 vshiftRows
 R0
-R1
+R10
 !i10b 1
-!s100 U>dEz57OV=7:l?nJ2zT<b3
-IOF7jbe5[]aLbRTY6_>cjQ2
+!s100 Lk8O`WIbWZDXVDlZKJzUk3
+I2_8?N<M4[i<@m3zzOlfXB2
 S1
+R1
+R11
 R2
 R3
+!i122 638
+L0 294 27
 R4
 R5
-!i122 611
-L0 255 27
-R6
-R7
 r1
 !s85 0
 31
+R12
+R6
+R7
+!i113 1
 R8
 R9
-R10
-!i113 1
-R11
-R12
 nshift@rows
 vshiftRows_tb
 R0
-R1
+R10
 !i10b 1
 !s100 MAJ60IjNQ`VVdNSJ_@VXP1
 IR<jC3Sn^6BD:CZl;Ln=aU2
 S1
-R2
+R1
 w1730249797
 8C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/shiftRows_tb.sv
 FC:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/shiftRows_tb.sv
-!i122 615
+!i122 642
 Z13 L0 1 18
-R6
-R7
+R4
+R5
 r1
 !s85 0
 31
-R8
+R12
 !s107 C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/shiftRows_tb.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/shiftRows_tb.sv|
 !i113 1
-R11
-R12
+R8
+R9
 nshift@rows_tb
 vsubBytes
 R0
-R1
+R10
 !i10b 1
-!s100 P_@74P>IRjcddhdQ5lFS73
-I=P6BTNa^8?V^gCf=mOK>70
+!s100 5kQCN1dS6jefTZ^SOzW=73
+I@F5^JM19^;HbBoXN=HoGc0
 S1
+R1
+R11
 R2
 R3
+!i122 638
+L0 234 24
 R4
 R5
-!i122 611
-L0 195 24
-R6
-R7
 r1
 !s85 0
 31
+R12
+R6
+R7
+!i113 1
 R8
 R9
-R10
-!i113 1
-R11
-R12
 nsub@bytes
 vsubBytes_tb
 R0
-R1
+R10
 !i10b 1
 !s100 @JTUJMJzA>lOo>>:1PMl53
 IE1zNogNLP<l6cH;5NTS=T3
 S1
-R2
+R1
 w1730245942
 8C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/subBytes_tb.sv
 FC:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/subBytes_tb.sv
-!i122 612
+!i122 639
 R13
-R6
-R7
+R4
+R5
 r1
 !s85 0
 31
-R8
+R12
 !s107 C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/subBytes_tb.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/subBytes_tb.sv|
 !i113 1
-R11
-R12
+R8
+R9
 nsub@bytes_tb
 vsubWord
 R0
-R1
+R10
 !i10b 1
-!s100 a:i=@b^::GDKSI`7>F=fa1
-I;33PR?kaZz^Y;Wlak06zH3
+!s100 _LJ?@29JCmKZ52jP3fJDo1
+IWVCgU;[jL>5STaGDP33NU2
 S1
+R1
+R11
 R2
 R3
+!i122 638
+L0 261 14
 R4
 R5
-!i122 611
-L0 222 14
-R6
-R7
 r1
 !s85 0
 31
+R12
+R6
+R7
+!i113 1
 R8
 R9
-R10
-!i113 1
-R11
-R12
 nsub@word
-vsubword_tb
-R0
-R1
-!i10b 1
-!s100 8Jh><3C35UFmh:n9hN1lC0
-ILo:gZai^D21gf<4]n1X8j3
-S1
-R2
-w1730252704
-Z14 8C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/subword_tb.sv
-Z15 FC:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/subword_tb.sv
-!i122 616
-L0 1 20
-R6
-R7
-r1
-!s85 0
-31
-R8
-Z16 !s107 C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/subword_tb.sv|
-Z17 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/subword_tb.sv|
-!i113 1
-R11
-R12
 vsubWord_tb
 R0
 !s110 1730243446
@@ -532,93 +556,117 @@ R0
 !s100 CPXAo2U787zRoz>4:2KI^0
 IZdkQW^INgk]_cak:n=A<I2
 S1
-R2
+R1
 w1730243092
-R14
-R15
+Z14 8C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/subword_tb.sv
+Z15 FC:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/subword_tb.sv
 !i122 161
 L0 1 22
-R6
-R7
+R4
+R5
 r1
 !s85 0
 31
 !s108 1730243446.000000
-R16
-R17
+!s107 C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/subword_tb.sv|
+Z16 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/subword_tb.sv|
 !i113 1
-R11
-R12
+R8
+R9
 nsub@word_tb
+vsubword_tb
+R0
+R10
+!i10b 1
+!s100 8Jh><3C35UFmh:n9hN1lC0
+ILo:gZai^D21gf<4]n1X8j3
+S1
+R1
+w1730252704
+R14
+R15
+!i122 643
+L0 1 20
+R4
+R5
+r1
+!s85 0
+31
+R12
+Z17 !s107 C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/subword_tb.sv|
+R16
+!i113 1
+R8
+R9
 vtestbench_aes_core
 R0
-R1
+R10
 !i10b 1
 !s100 aD<7_IY:C]X`2c6i`[Pa<0
 Ig3YN2G@A3G@Q1=;8;PbZ?3
 S1
-R2
+R1
 Z18 w1729995431
 8C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv
 FC:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv
-!i122 608
+!i122 635
 L0 11 42
-R6
-R7
+R4
+R5
 r1
 !s85 0
 31
-R8
+R12
 !s107 C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv|
 !i113 1
-R11
-R12
+R8
+R9
 vtestbench_aes_sbox
 R0
-R1
+R10
 !i10b 1
 !s100 Nmef5zQfeg8YD40R?7AW03
 IJ6jd7f]0[8of64dXRzK<I0
 S1
-R2
+R1
 R18
 8C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_sbox_tb.sv
 FC:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_sbox_tb.sv
-!i122 609
+!i122 636
 L0 7 67
-R6
-R7
+R4
+R5
 r1
 !s85 0
 31
-R8
+R12
 !s107 C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_sbox_tb.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_sbox_tb.sv|
 !i113 1
-R11
-R12
+R8
+R9
 vtestbench_aes_spi
 R0
-R1
+R10
 !i10b 1
 !s100 PcFFUBNWE;M`BnY_zj0Uj2
 ImV3h5E3;M9@?SoPcG?NR`3
 S1
-R2
+R1
 R18
 8C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv
 FC:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv
-!i122 610
+!i122 637
 L0 8 73
-R6
-R7
+R4
+R5
 r1
 !s85 0
 31
-R8
+R12
 !s107 C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv|
 !i113 1
-R11
-R12
+R8
+R9

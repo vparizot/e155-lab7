@@ -83,14 +83,25 @@ module aes_core(input  logic         clk,
     // TODO: Your code goes here
 
     // Define internal variables
-    logic [127:0] prevKey, currKey, rkprev, rkcurr;
+    logic [127:0] key1, key2, key3, key4, key5, key6, key7, key8, key9, key10, key11;
+    logic [127:0] outA, outB, outC, outD, outE, outF, outG, outH, outI, outJ;
     logic [3:0] round = 1;
 
 
-    addRoundKey ark1(plaintext, roundKey, clk, currKey);
+    addRoundKey ark1(plaintext, roundKey, clk, key1);
 
-    round1to9 r0(clk, );
+    round1to9 r0(clk, 1, key1, in, outA, key2);
+    round1to9 r1(clk, 2, key2, outA, outB, key3);
+    round1to9 r2(clk, 3, key3, outB, outC, key4);
+    round1to9 r3(clk, 3, key4, outC, outD, key5);
+    round1to9 r4(clk, 3, key5, outD, outE, key6);
+    round1to9 r5(clk, 3, key6, outE, outF, key7);
+    round1to9 r6(clk, 3, key7, outF, outG, key8);
+    round1to9 r7(clk, 3, key8, outG, outH, key9);
+    round1to9 r8(clk, 3, key9, outH, outI, key10);
+    round10 r9(clk, 3, key10, outI, outJ, key11);
 
+    assign cyphertext = outJ;
 	
     // call submodules 
     
@@ -111,14 +122,29 @@ module aes_core(input  logic         clk,
 endmodule
 
 module round1to9( input logic clk, 
-		  input logic [127:0] prevKey, in,
-		  output logic [127:0] out);
-	subBytes();
-	shiftRows();
-	mixColumns();
-	keyExpansionRound();
-	
+		  input logic [3:0] round,
+		  input logic [127:0] currKey, in,
+		  output logic [127:0] outOfRound, rKeyOut);
+	subBytes a1(in, clk, out1);
+	shiftRows a2(clk, out1, out2); // TODO: ADD CLK
+	mixColumns a3(clk, out2, out3); //TODO:add clk
+	keyExpansionRound a4(currKey, round, clk, rKeyOut);
+	addRoundKey a5(out3, rKeyOut, clk, outOfRound);
+ 
 
+	
+endmodule
+
+module round10( input logic clk, 
+		  input logic [3:0] round,
+		  input logic [127:0] currKey, in,
+		  output logic [127:0] outFinal);
+	subBytes a6(in, clk, out1);
+	shiftRows a7(clk, out1, out2); // TODO: ADD CLK
+	keyExpansionRound a8(prevKey, round, clk, rkey);
+	addRoundKey a9(out3, rKeyOut, clk, outOfRound);
+	
+	
 endmodule
 
 /////////////////////////////////////////////
