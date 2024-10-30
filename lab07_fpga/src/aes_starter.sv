@@ -80,26 +80,24 @@ module aes_core(input  logic         clk,
                 input  logic [127:0] plaintext, 
                 output logic         done, 
                 output logic [127:0] cyphertext);
-    // TODO: Your code goes here
 
     // Define internal variables
-    logic [127:0] key1, key2, key3, key4, key5, key6, key7, key8, key9, key10, key11;
+    logic [127:0] key0, key1, key2, key3, key4, key5, key6, key7, key8, key9, key10;
     logic [127:0] outA, outB, outC, outD, outE, outF, outG, outH, outI, outJ;
     logic [3:0] round = 1;
+    assign in = plaintext;
 
-
-    addRoundKey ark1(plaintext, roundKey, clk, key1);
-
-    round1to9 r0(clk, 1, key1, in, outA, key2);
-    round1to9 r1(clk, 2, key2, outA, outB, key3);
-    round1to9 r2(clk, 3, key3, outB, outC, key4);
-    round1to9 r3(clk, 3, key4, outC, outD, key5);
-    round1to9 r4(clk, 3, key5, outD, outE, key6);
-    round1to9 r5(clk, 3, key6, outE, outF, key7);
-    round1to9 r6(clk, 3, key7, outF, outG, key8);
-    round1to9 r7(clk, 3, key8, outG, outH, key9);
-    round1to9 r8(clk, 3, key9, outH, outI, key10);
-    round10 r9(clk, 3, key10, outI, outJ, key11);
+    addRoundKey ark1(plaintext, roundKey, clk, key0);
+    round1to9 r0(clk, 1, key0, in, outA, key1);
+    round1to9 r1(clk, 2, key1, outA, outB, key2);
+    round1to9 r2(clk, 3, key2, outB, outC, key3);
+    round1to9 r3(clk, 4, key3, outC, outD, key4);
+    round1to9 r4(clk, 5, key4, outD, outE, key5);
+    round1to9 r5(clk, 6, key5, outE, outF, key6);
+    round1to9 r6(clk, 7, key6, outF, outG, key7);
+    round1to9 r7(clk, 8, key7, outG, outH, key8);
+    round1to9 r8(clk, 9, key8, outH, outI, key9); // clock, round, keyin, textin, text out, nextround key
+    round10 r9(clk, 10, key9, outI, outJ, key10); // clock, round, keyin, textin, text out, nextround key
 
     assign cyphertext = outJ;
 	
@@ -117,7 +115,6 @@ module aes_core(input  logic         clk,
     //subBytes (state);
     //ShiftRows (state);
     //AddRoundKey (state, w);
-
     //out = state 
 endmodule
 
@@ -125,14 +122,17 @@ module round1to9( input logic clk,
 		  input logic [3:0] round,
 		  input logic [127:0] currKey, in,
 		  output logic [127:0] outOfRound, rKeyOut);
+  logic [127:0] out, keyOut;
+
 	subBytes a1(in, clk, out1);
 	shiftRows a2(clk, out1, out2); // TODO: ADD CLK
 	mixColumns a3(clk, out2, out3); //TODO:add clk
-	keyExpansionRound a4(currKey, round, clk, rKeyOut);
-	addRoundKey a5(out3, rKeyOut, clk, outOfRound);
- 
+	keyExpansionRound a4(currKey, round, clk, keyOut);
+	addRoundKey a5(out3, keyOut, clk, out);
+  // out = out3^roundkey
 
-	
+  assign outOfRound = out;
+  assign rkeyOut = keyOut;
 endmodule
 
 module round10( input logic clk, 
@@ -143,8 +143,6 @@ module round10( input logic clk,
 	shiftRows a7(clk, out1, out2); // TODO: ADD CLK
 	keyExpansionRound a8(prevKey, round, clk, rkey);
 	addRoundKey a9(out3, rKeyOut, clk, outOfRound);
-	
-	
 endmodule
 
 /////////////////////////////////////////////
@@ -179,12 +177,13 @@ endmodule
 /////////////////////////////////////////////
 
 module mixcolumns(input  logic [127:0] a,
+                  input clk, // added clock input
                   output logic [127:0] y);
 
-  mixcolumn mc0(a[127:96], y[127:96]);
-  mixcolumn mc1(a[95:64],  y[95:64]);
-  mixcolumn mc2(a[63:32],  y[63:32]);
-  mixcolumn mc3(a[31:0],   y[31:0]);
+  mixcolumn mc0(clk, a[127:96], y[127:96]);
+  mixcolumn mc1(clk, a[95:64],  y[95:64]);
+  mixcolumn mc2(clk, a[63:32],  y[63:32]);
+  mixcolumn mc3(clk, a[31:0],   y[31:0]);
 endmodule
 
 /////////////////////////////////////////////
@@ -194,7 +193,8 @@ endmodule
 //   for this hardware implementation
 /////////////////////////////////////////////
 
-module mixcolumn(input  logic [31:0] a,
+module mixcolumn(input clk, // added clk signa;
+                 input  logic [31:0] a,
                  output logic [31:0] y);
                       
         logic [7:0] a0, a1, a2, a3, y0, y1, y2, y3, t0, t1, t2, t3, tmp;
@@ -211,7 +211,13 @@ module mixcolumn(input  logic [31:0] a,
         assign y1 = a1 ^ tmp ^ t1;
         assign y2 = a2 ^ tmp ^ t2;
         assign y3 = a3 ^ tmp ^ t3;
-        assign y = {y0, y1, y2, y3};    
+        //assign y = {y0, y1, y2, y3};    
+
+        //NOTE: I added always_ff loop
+        always_ff @(posedge clk)
+        begin
+          y <= {y0, y1, y2, y3};   
+        end 
 endmodule
 
 /////////////////////////////////////////////
@@ -235,24 +241,29 @@ module subBytes(input  logic [127:0] in,
                 input logic clk,
                 output logic [127:0] out);
 	// logic [7:0] out1, out2, out3, out4, out5, out6, out7, out8, out9, out10, out11, out12, out12, out14, out15, out16;
-    
+    logic [127:0] outtemp;
 // call sbox_sync                       16*x+y
-    sbox_sync sboxsync1(in[7:0], clk, out[7:0]);
-    sbox_sync sboxsync2(in[15:8], clk, out[15:8]);
-    sbox_sync sboxsync3(in[23:16], clk, out[23:16]);
-    sbox_sync sboxsync4(in[31:24], clk, out[31:24]);
-    sbox_sync sboxsync5(in[39:32], clk, out[39:32]);
-    sbox_sync sboxsync6(in[47:40], clk, out[47:40]);
-    sbox_sync sboxsync7(in[55:48], clk, out[55:48]);
-    sbox_sync sboxsync8(in[63:56], clk, out[63:56]);
-    sbox_sync sboxsync9(in[71:64], clk, out[71:64]);
-    sbox_sync sboxsync10(in[79:72], clk, out[79:72]);
-    sbox_sync sboxsync11(in[87:80], clk, out[87:80]);
-    sbox_sync sboxsync12(in[95:88], clk, out[95:88]);
-    sbox_sync sboxsync13(in[103:96], clk, out[103:96]);
-    sbox_sync sboxsync14(in[111:104], clk, out[111:104]);
-    sbox_sync sboxsync15(in[119:112], clk, out[119:112]);
-    sbox_sync sboxsync16(in[127:120], clk, out[127:120]);
+    sbox_sync sboxsync1(in[7:0], clk, outtemp[7:0]);
+    sbox_sync sboxsync2(in[15:8], clk, outtemp[15:8]);
+    sbox_sync sboxsync3(in[23:16], clk, outtemp[23:16]);
+    sbox_sync sboxsync4(in[31:24], clk, outtemp[31:24]);
+    sbox_sync sboxsync5(in[39:32], clk, outtemp[39:32]);
+    sbox_sync sboxsync6(in[47:40], clk, outtemp[47:40]);
+    sbox_sync sboxsync7(in[55:48], clk, outtemp[55:48]);
+    sbox_sync sboxsync8(in[63:56], clk, outtemp[63:56]);
+    sbox_sync sboxsync9(in[71:64], clk, outtemp[71:64]);
+    sbox_sync sboxsync10(in[79:72], clk, outtemp[79:72]);
+    sbox_sync sboxsync11(in[87:80], clk, outtemp[87:80]);
+    sbox_sync sboxsync12(in[95:88], clk, outtemp[95:88]);
+    sbox_sync sboxsync13(in[103:96], clk, outtemp[103:96]);
+    sbox_sync sboxsync14(in[111:104], clk, outtemp[111:104]);
+    sbox_sync sboxsync15(in[119:112], clk, outtemp[119:112]);
+    sbox_sync sboxsync16(in[127:120], clk, outtemp[127:120]);
+
+    always_ff @(posedge clk)
+    begin
+      out <= outtemp
+    end
 
 endmodule
 
@@ -292,31 +303,34 @@ endmodule
 //        [127:96]  [95:64] [63:32] [31:0]      w[0]    w[1]    w[2]    w[3]
 // WORKS AS DESIRED IN TB
 module shiftRows(input  logic [127:0] in,
-                 // input logic clk,
+                 input logic clk,
                  output logic [127:0] out);
-    // row 0 unshifted
-    assign out[127:120] = in[127:120];
-    assign out[95:88] = in[95:88];
-    assign out[63:56] = in[63:56];
-    assign out[31:24] = in[31:24];
+    always_ff @(posedge clk)
+    begin
+      // row 0 unshifted
+      assign out[127:120] <= in[127:120];
+      assign out[95:88] <= in[95:88];
+      assign out[63:56] <= in[63:56];
+      assign out[31:24] <= in[31:24];
 
-    // row 1 shifted by 1
-    assign out[119:112] = in[87:80];
-    assign out[87:80] = in[55:48];
-    assign out[55:48] = in[23:16];
-    assign out[23:16] = in[119:112];
+      // row 1 shifted by 1
+      assign out[119:112] <= in[87:80];
+      assign out[87:80] <= in[55:48];
+      assign out[55:48] <= in[23:16];
+      assign out[23:16] <= in[119:112];
 
-    // row 2 shifted by 2
-    assign out[111:104] = in[47:40];
-    assign out[79:72] = in[15:8];
-    assign out[47:40] = in[111:104];
-    assign out[15:8] = in[79:72];
+      // row 2 shifted by 2
+      assign out[111:104] <= in[47:40];
+      assign out[79:72] <= in[15:8];
+      assign out[47:40] <= in[111:104];
+      assign out[15:8] <= in[79:72];
 
-    // row 3 shifted by 3
-    assign out[103:96] = in[7:0];
-    assign out[71:64] = in[103:96];
-    assign out[39:32] = in[71:64];
-    assign out[7:0] = in[39:32];
+      // row 3 shifted by 3
+      assign out[103:96] <= in[7:0];
+      assign out[71:64] <= in[103:96];
+      assign out[39:32] <= in[71:64];
+      assign out[7:0] <= in[39:32];
+    end
 endmodule
 
 
@@ -349,7 +363,7 @@ endmodule
 
 module keyExpansionRound(input logic [127:0] key,
                     input logic [3:0] round, //i value
-		    input logic clk,
+		                input logic clk,
                     output logic [127:0] rkey);
 
     logic [31:0] key0, key1, key2, key3; 
