@@ -83,11 +83,18 @@ module aes_core(input  logic         clk,
     // TODO: Your code goes here
 
     // Define internal variables
-    logic [127:0] out1, out2, out3, out4, out5;
-    
+    logic [127:0] prevKey, currKey, rkprev, rkcurr;
+    logic [3:0] round = 1;
+
+
+    addRoundKey ark1(plaintext, roundKey, clk, currKey);
+
+    round1to9 r0(clk, );
+
+	
     // call submodules 
     
-    //AddRoundKey(state, key);
+   // AddRoundKey(state, key);
 
     //for round = 1 step 1 to 9 // psuedo code for 9 rounds
     //  subBytes(state);
@@ -101,6 +108,17 @@ module aes_core(input  logic         clk,
     //AddRoundKey (state, w);
 
     //out = state 
+endmodule
+
+module round1to9( input logic clk, 
+		  input logic [127:0] prevKey, in,
+		  output logic [127:0] out);
+	subBytes();
+	shiftRows();
+	mixColumns();
+	keyExpansionRound();
+	
+
 endmodule
 
 /////////////////////////////////////////////
@@ -280,6 +298,7 @@ module addRoundKey(input  logic [127:0] in,
                    input  logic [127:0] roundKey,
                    input logic clk,
                    output logic [127:0] out);
+ 
 
   //internal variable
   // logic [31:0] in0, in1, in2, in3;
@@ -334,12 +353,12 @@ module keyExpansionRound(input logic [127:0] key,
             10: Rcon <= 32'h36000000;
             default: Rcon <= 32'h00000000; // Default case to handle invalid rounds
         endcase
-    end
+        end
 
     // call subword, rot word (need to repeat for EACH Rcon)
     rotWord r1(key3, rotkey0);
-    //assign temp = rotkey0;
-    subWord sw1(rotkey0, clk, swkey0);
+    assign temp = rotkey0;
+    subWord sw1(temp, clk, swkey0);
     assign rkey0 = key0 ^ swkey0 ^ Rcon;
 
     //rotword(key1, rotkey1);

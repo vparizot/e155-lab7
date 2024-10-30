@@ -84,10 +84,15 @@ module aes_core(input  logic         clk,
 
     // Define internal variables
     logic [127:0] out1, out2, out3, out4, out5;
+
+    //always_ff @(posedge clk)
+
+
+
     
     // call submodules 
     
-    //AddRoundKey(state, key);
+   // AddRoundKey(state, key);
 
     //for round = 1 step 1 to 9 // psuedo code for 9 rounds
     //  subBytes(state);
@@ -280,6 +285,7 @@ module addRoundKey(input  logic [127:0] in,
                    input  logic [127:0] roundKey,
                    input logic clk,
                    output logic [127:0] out);
+ 
 
   //internal variable
   // logic [31:0] in0, in1, in2, in3;
@@ -334,12 +340,12 @@ module keyExpansionRound(input logic [127:0] key,
             10: Rcon <= 32'h36000000;
             default: Rcon <= 32'h00000000; // Default case to handle invalid rounds
         endcase
-    end
+        end
 
     // call subword, rot word (need to repeat for EACH Rcon)
     rotWord r1(key3, rotkey0);
-    //assign temp = rotkey0;
-    subWord sw1(rotkey0, clk, swkey0);
+    assign temp = rotkey0;
+    subWord sw1(temp, clk, swkey0);
     assign rkey0 = key0 ^ swkey0 ^ Rcon;
 
     //rotword(key1, rotkey1);
@@ -355,52 +361,6 @@ module keyExpansionRound(input logic [127:0] key,
     assign rkey3 = key3 ^ rkey2;
 
     assign rkey = {rkey0, rkey1, rkey2, rkey3};
-
-
-endmodule
-
-
-// generate round key 
-// Expansion of the given cipher key into 11 partial keys
-module keyExpansion(input  logic [127:0] key,
-                    input  logic clk,
-                    output logic [127:0] roundKey);
-//        [127:120] [95:88] [63:56] [31:24]     S0,0    S0,1    S0,2    S0,3
-//        [119:112] [87:80] [55:48] [23:16]     S1,0    S1,1    S1,2    S1,3
-//        [111:104] [79:72] [47:40] [15:8]      S2,0    S2,1    S2,2    S2,3
-//        [103:96]  [71:64] [39:32] [7:0]       S3,0    S3,1    S3,2    S3,3
-  logic [3:0] j = 0; // keeps track of round
-  
-
-  always_ff @(posedge clk)
-    begin
-    if (j <= 9)
-      begin
-        //keyExpansionRound(key, j, rkey0, rkey1, rkey2, rkey3);
-      end
-
-    j <= j+1;
-    end
-  //assign roundkey = {rkey0, rkey1, rkey2, rkey3};
-
-
-
-    // i <- 0
-    // while i <= Nk - 1 do:
-      // w[i] <- key[4*i...4*i+3]
-      // i <- i +1
-    // end while
-    // whiel i <= 4*Nr+3 do
-      // temp <- w[i-1]
-      // if i mod Nk = 0 then
-        // temp <- SubWord(RotWord(temp)) XOR Rcon [i/Nk]
-      // else if Nk > 6 and i mod Nk = 4 then
-        // temp <- SubWord(temp)
-      // end if
-      // w[i] <- w[i - Nk] xor temp
-      // i <- i+1
-    // end while
-    // return w
 
 endmodule
 

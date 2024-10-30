@@ -1644,3 +1644,338 @@ add wave -position end  sim:/keyExpansionRound_tb/rkey
 add wave -position end  sim:/keyExpansionRound_tb/rkeyexpected
 add wave -position end  sim:/keyExpansionRound_tb/clk
 run 500
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+vsim -gui work.keyExpansionRound_tb
+# End time: 21:59:36 on Oct 29,2024, Elapsed time: 2:48:01
+# Errors: 0, Warnings: 2
+# vsim -gui work.keyExpansionRound_tb 
+# Start time: 21:59:36 on Oct 29,2024
+# Loading sv_std.std
+# Loading work.keyExpansionRound_tb
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.sbox_sync
+add wave -position end  sim:/keyExpansionRound_tb/round
+add wave -position end  sim:/keyExpansionRound_tb/key
+add wave -position end  sim:/keyExpansionRound_tb/rkey
+add wave -position end  sim:/keyExpansionRound_tb/rkeyexpected
+add wave -position end  sim:/keyExpansionRound_tb/clk
+run 500
+run 5000
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+vsim -gui work.keyExpansionRound_tb
+# End time: 22:33:19 on Oct 29,2024, Elapsed time: 0:33:43
+# Errors: 0, Warnings: 2
+# vsim -gui work.keyExpansionRound_tb 
+# Start time: 22:33:19 on Oct 29,2024
+# Loading sv_std.std
+# Loading work.keyExpansionRound_tb
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.sbox_sync
+add wave -position end  sim:/keyExpansionRound_tb/round
+add wave -position end  sim:/keyExpansionRound_tb/key
+add wave -position end  sim:/keyExpansionRound_tb/rkey
+add wave -position end  sim:/keyExpansionRound_tb/rkeyexpected
+add wave -position end  sim:/keyExpansionRound_tb/clk
+run 500
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv failed with 1 errors.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 1 failed with 1 error.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv failed with 1 errors.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 1 failed with 1 error.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv failed with 3 errors.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 1 failed with 3 errors.
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6303 0 785 1730267030 0x10b:0x101)
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/sbox_sync/_primary.dbs (75:75 1:1 6463 0 433 1730267071 0x10b:0x101)
+vsim -gui work.keyExpansionRound_tb
+# End time: 22:44:39 on Oct 29,2024, Elapsed time: 0:11:20
+# Errors: 0, Warnings: 5
+# vsim -gui work.keyExpansionRound_tb 
+# Start time: 22:44:39 on Oct 29,2024
+# Loading sv_std.std
+# Loading work.keyExpansionRound_tb
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.sbox_sync
+add wave -position end  sim:/keyExpansionRound_tb/round
+add wave -position end  sim:/keyExpansionRound_tb/key
+add wave -position end  sim:/keyExpansionRound_tb/rkey
+add wave -position end  sim:/keyExpansionRound_tb/rkeyexpected
+add wave -position end  sim:/keyExpansionRound_tb/clk
+run 500
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+vsim -gui work.keyExpansionRound_tb
+# End time: 22:50:23 on Oct 29,2024, Elapsed time: 0:05:44
+# Errors: 0, Warnings: 2
+# vsim -gui work.keyExpansionRound_tb 
+# Start time: 22:50:23 on Oct 29,2024
+# Loading sv_std.std
+# Loading work.keyExpansionRound_tb
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.sbox_sync
+add wave -position end  sim:/keyExpansionRound_tb/round
+add wave -position end  sim:/keyExpansionRound_tb/key
+add wave -position end  sim:/keyExpansionRound_tb/rkey
+add wave -position end  sim:/keyExpansionRound_tb/rkeyexpected
+add wave -position end  sim:/keyExpansionRound_tb/clk
+run 500
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+vsim -gui work.keyExpansionRound_tb
+# End time: 22:54:00 on Oct 29,2024, Elapsed time: 0:03:37
+# Errors: 0, Warnings: 2
+# vsim -gui work.keyExpansionRound_tb 
+# Start time: 22:54:00 on Oct 29,2024
+# Loading sv_std.std
+# Loading work.keyExpansionRound_tb
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.sbox_sync
+add wave -position end  sim:/keyExpansionRound_tb/dut/key
+add wave -position end  sim:/keyExpansionRound_tb/dut/round
+add wave -position end  sim:/keyExpansionRound_tb/dut/clk
+add wave -position end  sim:/keyExpansionRound_tb/dut/rkey
+add wave -position end  sim:/keyExpansionRound_tb/dut/key0
+add wave -position end  sim:/keyExpansionRound_tb/dut/key1
+add wave -position end  sim:/keyExpansionRound_tb/dut/key2
+add wave -position end  sim:/keyExpansionRound_tb/dut/key3
+add wave -position end  sim:/keyExpansionRound_tb/dut/swkey0
+add wave -position end  sim:/keyExpansionRound_tb/dut/swkey1
+add wave -position end  sim:/keyExpansionRound_tb/dut/swkey2
+add wave -position end  sim:/keyExpansionRound_tb/dut/swkey3
+add wave -position end  sim:/keyExpansionRound_tb/dut/rotkey0
+add wave -position end  sim:/keyExpansionRound_tb/dut/rotkey1
+add wave -position end  sim:/keyExpansionRound_tb/dut/rotkey2
+add wave -position end  sim:/keyExpansionRound_tb/dut/rotkey3
+add wave -position end  sim:/keyExpansionRound_tb/dut/temp
+add wave -position end  sim:/keyExpansionRound_tb/dut/Rcon
+add wave -position end  sim:/keyExpansionRound_tb/dut/rkey0
+add wave -position end  sim:/keyExpansionRound_tb/dut/rkey1
+add wave -position end  sim:/keyExpansionRound_tb/dut/rkey2
+add wave -position end  sim:/keyExpansionRound_tb/dut/rkey3
+run 500
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+add wave -position end  sim:/keyExpansionRound_tb/round
+add wave -position end  sim:/keyExpansionRound_tb/key
+add wave -position end  sim:/keyExpansionRound_tb/rkey
+add wave -position end  sim:/keyExpansionRound_tb/rkeyexpected
+add wave -position end  sim:/keyExpansionRound_tb/clk
+run 500
+run 500
+run 500
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.keyExpansionRound_tb
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.sbox_sync
+run 1000
