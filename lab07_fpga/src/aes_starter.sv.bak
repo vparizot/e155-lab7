@@ -3,7 +3,7 @@
 //   Top level module with SPI interface and SPI core
 /////////////////////////////////////////////
 
-module aes(//input  logic clk,
+module aes(input  logic clk,
            input  logic sck, 
            input  logic sdi,
            output logic sdo,
@@ -12,7 +12,7 @@ module aes(//input  logic clk,
              
     logic [127:0] key, plaintext, cyphertext;
     //logic clksig;
-    HSOSC hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(clk));
+    //HSOSC hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(clk));
             
     aes_spi spi(sck, sdi, sdo, done, key, plaintext, cyphertext);   
     aes_core core(clk, load, key, plaintext, done, cyphertext);
@@ -122,6 +122,7 @@ module aes_core(input  logic         clk,
 		end 
 	else if (counter == 0 && round == 10) 
 		begin
+		// skip mixcolumns
 		
 		keyIn10 <= keyOut;
 		textIn10 <= textOut;
@@ -134,8 +135,14 @@ module aes_core(input  logic         clk,
     end
 	
     addRoundKey ark1(clk, textIn0, keyIn0, textOut0);
-    round1to9 r0(clk, round, keyIn, textIn, textOut, keyOut);
-    round10 r10(clk, round, keyIn10, textIn10, textOut10);
+    subBytes a1(clk, in, out1);
+    shiftRows a2(clk, out1, out2); 
+    mixcolumns a3(clk, out2, out3);
+    keyExpansionRound a4(clk, currKey, round, keyOut);
+    addRoundKey ark1(clk, out3, keyOutTemp, out);
+
+    //round1to9 r0(clk, round, keyIn, textIn, textOut, keyOut);
+    //round10 r10(clk, round, keyIn10, textIn10, textOut10);
 
     
 endmodule

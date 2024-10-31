@@ -2684,3 +2684,89 @@ run 500000
 # ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv(75)
 #    Time: 52850 ns  Iteration: 1  Instance: /testbench_aes_spi
 # Break in Module testbench_aes_spi at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv line 75
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_core
+# End time: 16:43:05 on Oct 31,2024, Elapsed time: 0:17:26
+# Errors: 0, Warnings: 2
+# vsim -gui work.testbench_aes_core 
+# Start time: 16:43:05 on Oct 31,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+add wave -position end  sim:/testbench_aes_core/clk
+add wave -position end  sim:/testbench_aes_core/load
+add wave -position end  sim:/testbench_aes_core/done
+add wave -position end  sim:/testbench_aes_core/key
+add wave -position end  sim:/testbench_aes_core/plaintext
+add wave -position end  sim:/testbench_aes_core/cyphertext
+add wave -position end  sim:/testbench_aes_core/expected
+run 50000
+# Testbench ran successfully
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 13550 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+vsim -gui work.testbench_aes_spi
+# End time: 16:44:50 on Oct 31,2024, Elapsed time: 0:01:45
+# Errors: 0, Warnings: 1
+# vsim -gui work.testbench_aes_spi 
+# Start time: 16:44:50 on Oct 31,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_spi
+# Loading work.aes
+# Loading work.aes_spi
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+add wave -position end  sim:/testbench_aes_spi/clk
+add wave -position end  sim:/testbench_aes_spi/load
+add wave -position end  sim:/testbench_aes_spi/done
+add wave -position end  sim:/testbench_aes_spi/sck
+add wave -position end  sim:/testbench_aes_spi/sdi
+add wave -position end  sim:/testbench_aes_spi/sdo
+add wave -position end  sim:/testbench_aes_spi/key
+add wave -position end  sim:/testbench_aes_spi/plaintext
+add wave -position end  sim:/testbench_aes_spi/cyphertext
+add wave -position end  sim:/testbench_aes_spi/expected
+add wave -position end  sim:/testbench_aes_spi/comb
+add wave -position end  sim:/testbench_aes_spi/i
+add wave -position end  sim:/testbench_aes_spi/delay
+run 50000
+run 50000
+# Testbench ran successfully
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv(75)
+#    Time: 52850 ns  Iteration: 1  Instance: /testbench_aes_spi
+# Break in Module testbench_aes_spi at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv line 75
