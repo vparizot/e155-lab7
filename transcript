@@ -683,3 +683,1329 @@ run 500000
 # ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv(75)
 #    Time: 43950 ns  Iteration: 1  Instance: /testbench_aes_spi
 # Break in Module testbench_aes_spi at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv line 75
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_core
+# End time: 19:38:51 on Oct 30,2024, Elapsed time: 0:23:22
+# Errors: 0, Warnings: 2
+# vsim -gui work.testbench_aes_core 
+# Start time: 19:38:51 on Oct 30,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+add wave -position end  sim:/testbench_aes_core/clk
+add wave -position end  sim:/testbench_aes_core/load
+add wave -position end  sim:/testbench_aes_core/done
+add wave -position end  sim:/testbench_aes_core/key
+add wave -position end  sim:/testbench_aes_core/plaintext
+add wave -position end  sim:/testbench_aes_core/cyphertext
+add wave -position end  sim:/testbench_aes_core/expected
+run 5000
+# Testbench ran successfully
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 4650 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv failed with 1 errors.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 1 failed with 1 error.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_core
+# End time: 20:29:30 on Oct 30,2024, Elapsed time: 0:50:39
+# Errors: 0, Warnings: 3
+# vsim -gui work.testbench_aes_core 
+# Start time: 20:29:30 on Oct 30,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'roundKey'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(379).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/ark1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 121
+# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'out'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(380).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/ark1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 121
+add wave -position end  sim:/testbench_aes_core/dut/clk
+add wave -position end  sim:/testbench_aes_core/dut/load
+add wave -position end  sim:/testbench_aes_core/dut/key
+add wave -position end  sim:/testbench_aes_core/dut/plaintext
+add wave -position end  sim:/testbench_aes_core/dut/done
+add wave -position end  sim:/testbench_aes_core/dut/cyphertext
+add wave -position end  sim:/testbench_aes_core/dut/keyIn
+add wave -position end  sim:/testbench_aes_core/dut/keyOut
+add wave -position end  sim:/testbench_aes_core/dut/textIn
+add wave -position end  sim:/testbench_aes_core/dut/textOut
+add wave -position end  sim:/testbench_aes_core/dut/round
+add wave -position end  sim:/testbench_aes_core/dut/key0
+add wave -position end  sim:/testbench_aes_core/dut/inA
+run 5000
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv failed with 2 errors.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 1 failed with 2 errors.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_core
+# End time: 20:41:22 on Oct 30,2024, Elapsed time: 0:11:52
+# Errors: 0, Warnings: 5
+# vsim -gui work.testbench_aes_core 
+# Start time: 20:41:22 on Oct 30,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'out'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(394).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/ark1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 135
+# ** Error (suppressible): (vsim-3839) Variable '/testbench_aes_core/dut/textOut', driven via a port connection, is multiply driven. See C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(136).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r10 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 137
+# Error loading design
+# End time: 20:41:29 on Oct 30,2024, Elapsed time: 0:00:07
+# Errors: 1, Warnings: 2
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_core
+# vsim -gui work.testbench_aes_core 
+# Start time: 20:43:34 on Oct 30,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'out'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(394).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/ark1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 135
+# ** Error (suppressible): (vsim-3839) Variable '/testbench_aes_core/dut/textOut', driven via a port connection, is multiply driven. See C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(136).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r10 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 137
+# Error loading design
+# End time: 20:43:41 on Oct 30,2024, Elapsed time: 0:00:07
+# Errors: 1, Warnings: 3
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_core
+# vsim -gui work.testbench_aes_core 
+# Start time: 20:44:37 on Oct 30,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+# ** Error (suppressible): (vsim-3839) Variable '/testbench_aes_core/dut/textOut', driven via a port connection, is multiply driven. See C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(136).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r10 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 137
+# Error loading design
+# End time: 20:44:44 on Oct 30,2024, Elapsed time: 0:00:07
+# Errors: 1, Warnings: 2
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv failed with 2 errors.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 1 failed with 2 errors.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_core
+# vsim -gui work.testbench_aes_core 
+# Start time: 20:51:52 on Oct 30,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+# ** Error (suppressible): (vsim-3839) Variable '/testbench_aes_core/dut/textOut', driven via a port connection, is multiply driven. See C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(134).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r10 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 135
+# Error loading design
+# End time: 20:51:59 on Oct 30,2024, Elapsed time: 0:00:07
+# Errors: 1, Warnings: 3
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv failed with 1 errors.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 1 failed with 1 error.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_core
+# vsim -gui work.testbench_aes_core 
+# Start time: 20:54:14 on Oct 30,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+add wave -position end  sim:/testbench_aes_core/dut/clk
+add wave -position end  sim:/testbench_aes_core/dut/load
+add wave -position end  sim:/testbench_aes_core/dut/key
+add wave -position end  sim:/testbench_aes_core/dut/plaintext
+add wave -position end  sim:/testbench_aes_core/dut/done
+add wave -position end  sim:/testbench_aes_core/dut/cyphertext
+add wave -position end  sim:/testbench_aes_core/dut/keyIn
+add wave -position end  sim:/testbench_aes_core/dut/keyOut
+add wave -position end  sim:/testbench_aes_core/dut/textIn
+add wave -position end  sim:/testbench_aes_core/dut/textOut
+add wave -position end  sim:/testbench_aes_core/dut/textIn0
+add wave -position end  sim:/testbench_aes_core/dut/keyIn0
+add wave -position end  sim:/testbench_aes_core/dut/textOut0
+add wave -position end  sim:/testbench_aes_core/dut/keyOut0
+add wave -position end  sim:/testbench_aes_core/dut/textIn10
+add wave -position end  sim:/testbench_aes_core/dut/keyIn10
+add wave -position end  sim:/testbench_aes_core/dut/textOut10
+add wave -position end  sim:/testbench_aes_core/dut/round
+run 5000
+# Error: cyphertext = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 1450 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+run 500000
+# Error: cyphertext = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 1550 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+run 500000
+# Error: cyphertext = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 1650 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+run 500000
+# Error: cyphertext = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 1750 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+run 500000
+# Error: cyphertext = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 1850 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv failed with 1 errors.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 1 failed with 1 error.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_core
+# End time: 21:02:10 on Oct 30,2024, Elapsed time: 0:07:56
+# Errors: 0, Warnings: 5
+# vsim -gui work.testbench_aes_core 
+# Start time: 21:02:10 on Oct 30,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+add wave -position end  sim:/testbench_aes_core/dut/clk
+add wave -position end  sim:/testbench_aes_core/dut/load
+add wave -position end  sim:/testbench_aes_core/dut/key
+add wave -position end  sim:/testbench_aes_core/dut/plaintext
+add wave -position end  sim:/testbench_aes_core/dut/done
+add wave -position end  sim:/testbench_aes_core/dut/cyphertext
+add wave -position end  sim:/testbench_aes_core/dut/keyIn
+add wave -position end  sim:/testbench_aes_core/dut/keyOut
+add wave -position end  sim:/testbench_aes_core/dut/textIn
+add wave -position end  sim:/testbench_aes_core/dut/textOut
+add wave -position end  sim:/testbench_aes_core/dut/textIn0
+add wave -position end  sim:/testbench_aes_core/dut/keyIn0
+add wave -position end  sim:/testbench_aes_core/dut/textOut0
+add wave -position end  sim:/testbench_aes_core/dut/keyOut0
+add wave -position end  sim:/testbench_aes_core/dut/textIn10
+add wave -position end  sim:/testbench_aes_core/dut/keyIn10
+add wave -position end  sim:/testbench_aes_core/dut/textOut10
+add wave -position end  sim:/testbench_aes_core/dut/round
+add wave -position end  sim:/testbench_aes_core/dut/counter
+run 500000
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_core
+# End time: 21:03:17 on Oct 30,2024, Elapsed time: 0:01:07
+# Errors: 0, Warnings: 2
+# vsim -gui work.testbench_aes_core 
+# Start time: 21:03:17 on Oct 30,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+add wave -position end  sim:/testbench_aes_core/dut/clk
+add wave -position end  sim:/testbench_aes_core/dut/load
+add wave -position end  sim:/testbench_aes_core/dut/key
+add wave -position end  sim:/testbench_aes_core/dut/plaintext
+add wave -position end  sim:/testbench_aes_core/dut/done
+add wave -position end  sim:/testbench_aes_core/dut/cyphertext
+add wave -position end  sim:/testbench_aes_core/dut/keyIn
+add wave -position end  sim:/testbench_aes_core/dut/keyOut
+add wave -position end  sim:/testbench_aes_core/dut/textIn
+add wave -position end  sim:/testbench_aes_core/dut/textOut
+add wave -position end  sim:/testbench_aes_core/dut/textIn0
+add wave -position end  sim:/testbench_aes_core/dut/keyIn0
+add wave -position end  sim:/testbench_aes_core/dut/textOut0
+add wave -position end  sim:/testbench_aes_core/dut/keyOut0
+add wave -position end  sim:/testbench_aes_core/dut/textIn10
+add wave -position end  sim:/testbench_aes_core/dut/keyIn10
+add wave -position end  sim:/testbench_aes_core/dut/textOut10
+add wave -position end  sim:/testbench_aes_core/dut/round
+add wave -position end  sim:/testbench_aes_core/dut/counter
+run 5000
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_core
+# End time: 21:06:39 on Oct 30,2024, Elapsed time: 0:03:22
+# Errors: 0, Warnings: 2
+# vsim -gui work.testbench_aes_core 
+# Start time: 21:06:39 on Oct 30,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+add wave -position end  sim:/testbench_aes_core/dut/clk
+add wave -position end  sim:/testbench_aes_core/dut/load
+add wave -position end  sim:/testbench_aes_core/dut/key
+add wave -position end  sim:/testbench_aes_core/dut/plaintext
+add wave -position end  sim:/testbench_aes_core/dut/done
+add wave -position end  sim:/testbench_aes_core/dut/cyphertext
+add wave -position end  sim:/testbench_aes_core/dut/keyIn
+add wave -position end  sim:/testbench_aes_core/dut/keyOut
+add wave -position end  sim:/testbench_aes_core/dut/textIn
+add wave -position end  sim:/testbench_aes_core/dut/textOut
+add wave -position end  sim:/testbench_aes_core/dut/textIn0
+add wave -position end  sim:/testbench_aes_core/dut/keyIn0
+add wave -position end  sim:/testbench_aes_core/dut/textOut0
+add wave -position end  sim:/testbench_aes_core/dut/keyOut0
+add wave -position end  sim:/testbench_aes_core/dut/textIn10
+add wave -position end  sim:/testbench_aes_core/dut/keyIn10
+add wave -position end  sim:/testbench_aes_core/dut/textOut10
+add wave -position end  sim:/testbench_aes_core/dut/round
+add wave -position end  sim:/testbench_aes_core/dut/counter
+run 50000
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_core
+# End time: 21:08:04 on Oct 30,2024, Elapsed time: 0:01:25
+# Errors: 0, Warnings: 2
+# vsim -gui work.testbench_aes_core 
+# Start time: 21:08:04 on Oct 30,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+add wave -position end  sim:/testbench_aes_core/dut/clk
+add wave -position end  sim:/testbench_aes_core/dut/load
+add wave -position end  sim:/testbench_aes_core/dut/key
+add wave -position end  sim:/testbench_aes_core/dut/plaintext
+add wave -position end  sim:/testbench_aes_core/dut/done
+add wave -position end  sim:/testbench_aes_core/dut/cyphertext
+add wave -position end  sim:/testbench_aes_core/dut/keyIn
+add wave -position end  sim:/testbench_aes_core/dut/keyOut
+add wave -position end  sim:/testbench_aes_core/dut/textIn
+add wave -position end  sim:/testbench_aes_core/dut/textOut
+add wave -position end  sim:/testbench_aes_core/dut/textIn0
+add wave -position end  sim:/testbench_aes_core/dut/keyIn0
+add wave -position end  sim:/testbench_aes_core/dut/textOut0
+add wave -position end  sim:/testbench_aes_core/dut/keyOut0
+add wave -position end  sim:/testbench_aes_core/dut/textIn10
+add wave -position end  sim:/testbench_aes_core/dut/keyIn10
+add wave -position end  sim:/testbench_aes_core/dut/textOut10
+add wave -position end  sim:/testbench_aes_core/dut/round
+add wave -position end  sim:/testbench_aes_core/dut/counter
+run 50000
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_core
+# End time: 21:14:45 on Oct 30,2024, Elapsed time: 0:06:41
+# Errors: 0, Warnings: 2
+# vsim -gui work.testbench_aes_core 
+# Start time: 21:14:45 on Oct 30,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+add wave -position end  sim:/testbench_aes_core/dut/clk
+add wave -position end  sim:/testbench_aes_core/dut/load
+add wave -position end  sim:/testbench_aes_core/dut/key
+add wave -position end  sim:/testbench_aes_core/dut/plaintext
+add wave -position end  sim:/testbench_aes_core/dut/done
+add wave -position end  sim:/testbench_aes_core/dut/cyphertext
+add wave -position end  sim:/testbench_aes_core/dut/keyIn
+add wave -position end  sim:/testbench_aes_core/dut/keyOut
+add wave -position end  sim:/testbench_aes_core/dut/textIn
+add wave -position end  sim:/testbench_aes_core/dut/textOut
+add wave -position end  sim:/testbench_aes_core/dut/textIn0
+add wave -position end  sim:/testbench_aes_core/dut/keyIn0
+add wave -position end  sim:/testbench_aes_core/dut/textOut0
+add wave -position end  sim:/testbench_aes_core/dut/keyOut0
+add wave -position end  sim:/testbench_aes_core/dut/textIn10
+add wave -position end  sim:/testbench_aes_core/dut/keyIn10
+add wave -position end  sim:/testbench_aes_core/dut/textOut10
+add wave -position end  sim:/testbench_aes_core/dut/round
+add wave -position end  sim:/testbench_aes_core/dut/counter
+run 500
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv failed with 1 errors.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 1 failed with 1 error.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_core
+# End time: 21:23:36 on Oct 30,2024, Elapsed time: 0:08:51
+# Errors: 0, Warnings: 3
+# vsim -gui work.testbench_aes_core 
+# Start time: 21:23:36 on Oct 30,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+add wave -position end  sim:/testbench_aes_core/dut/clk
+add wave -position end  sim:/testbench_aes_core/dut/load
+add wave -position end  sim:/testbench_aes_core/dut/key
+add wave -position end  sim:/testbench_aes_core/dut/plaintext
+add wave -position end  sim:/testbench_aes_core/dut/done
+add wave -position end  sim:/testbench_aes_core/dut/cyphertext
+add wave -position end  sim:/testbench_aes_core/dut/keyIn
+add wave -position end  sim:/testbench_aes_core/dut/keyOut
+add wave -position end  sim:/testbench_aes_core/dut/textIn
+add wave -position end  sim:/testbench_aes_core/dut/textOut
+add wave -position end  sim:/testbench_aes_core/dut/textIn0
+add wave -position end  sim:/testbench_aes_core/dut/keyIn0
+add wave -position end  sim:/testbench_aes_core/dut/textOut0
+add wave -position end  sim:/testbench_aes_core/dut/keyOut0
+add wave -position end  sim:/testbench_aes_core/dut/textIn10
+add wave -position end  sim:/testbench_aes_core/dut/keyIn10
+add wave -position end  sim:/testbench_aes_core/dut/textOut10
+add wave -position end  sim:/testbench_aes_core/dut/round
+add wave -position end  sim:/testbench_aes_core/dut/counter
+run 5000
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_core
+# End time: 21:26:48 on Oct 30,2024, Elapsed time: 0:03:12
+# Errors: 0, Warnings: 2
+# vsim -gui work.testbench_aes_core 
+# Start time: 21:26:48 on Oct 30,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+add wave -position end  sim:/testbench_aes_core/dut/clk
+add wave -position end  sim:/testbench_aes_core/dut/load
+add wave -position end  sim:/testbench_aes_core/dut/key
+add wave -position end  sim:/testbench_aes_core/dut/plaintext
+add wave -position end  sim:/testbench_aes_core/dut/done
+add wave -position end  sim:/testbench_aes_core/dut/cyphertext
+add wave -position end  sim:/testbench_aes_core/dut/keyIn
+add wave -position end  sim:/testbench_aes_core/dut/keyOut
+add wave -position end  sim:/testbench_aes_core/dut/textIn
+add wave -position end  sim:/testbench_aes_core/dut/textOut
+add wave -position end  sim:/testbench_aes_core/dut/textIn0
+add wave -position end  sim:/testbench_aes_core/dut/keyIn0
+add wave -position end  sim:/testbench_aes_core/dut/textOut0
+add wave -position end  sim:/testbench_aes_core/dut/keyOut0
+add wave -position end  sim:/testbench_aes_core/dut/textIn10
+add wave -position end  sim:/testbench_aes_core/dut/keyIn10
+add wave -position end  sim:/testbench_aes_core/dut/textOut10
+add wave -position end  sim:/testbench_aes_core/dut/round
+add wave -position end  sim:/testbench_aes_core/dut/counter
+run 50000
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv failed with 3 errors.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 1 failed with 3 errors.
+vsim -gui work.testbench_aes_core
+# End time: 21:41:56 on Oct 30,2024, Elapsed time: 0:15:08
+# Errors: 0, Warnings: 2
+# vsim -gui work.testbench_aes_core 
+# Start time: 21:41:56 on Oct 30,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+add wave -position end  sim:/testbench_aes_core/dut/clk
+add wave -position end  sim:/testbench_aes_core/dut/load
+add wave -position end  sim:/testbench_aes_core/dut/key
+add wave -position end  sim:/testbench_aes_core/dut/plaintext
+add wave -position end  sim:/testbench_aes_core/dut/done
+add wave -position end  sim:/testbench_aes_core/dut/cyphertext
+add wave -position end  sim:/testbench_aes_core/dut/keyIn
+add wave -position end  sim:/testbench_aes_core/dut/keyOut
+add wave -position end  sim:/testbench_aes_core/dut/textIn
+add wave -position end  sim:/testbench_aes_core/dut/textOut
+add wave -position end  sim:/testbench_aes_core/dut/textIn0
+add wave -position end  sim:/testbench_aes_core/dut/keyIn0
+add wave -position end  sim:/testbench_aes_core/dut/textOut0
+add wave -position end  sim:/testbench_aes_core/dut/keyOut0
+add wave -position end  sim:/testbench_aes_core/dut/textIn10
+add wave -position end  sim:/testbench_aes_core/dut/keyIn10
+add wave -position end  sim:/testbench_aes_core/dut/textOut10
+add wave -position end  sim:/testbench_aes_core/dut/round
+add wave -position end  sim:/testbench_aes_core/dut/counter
+run 50000
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv failed with 3 errors.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 1 failed with 3 errors.
+# Load canceled
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_core
+# End time: 21:47:35 on Oct 30,2024, Elapsed time: 0:05:39
+# Errors: 0, Warnings: 3
+# vsim -gui work.testbench_aes_core 
+# Start time: 21:47:35 on Oct 30,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+add wave -position end  sim:/testbench_aes_core/dut/clk
+add wave -position end  sim:/testbench_aes_core/dut/load
+add wave -position end  sim:/testbench_aes_core/dut/key
+add wave -position end  sim:/testbench_aes_core/dut/plaintext
+add wave -position end  sim:/testbench_aes_core/dut/done
+add wave -position end  sim:/testbench_aes_core/dut/cyphertext
+add wave -position end  sim:/testbench_aes_core/dut/keyIn
+add wave -position end  sim:/testbench_aes_core/dut/keyOut
+add wave -position end  sim:/testbench_aes_core/dut/textIn
+add wave -position end  sim:/testbench_aes_core/dut/textOut
+add wave -position end  sim:/testbench_aes_core/dut/textIn0
+add wave -position end  sim:/testbench_aes_core/dut/keyIn0
+add wave -position end  sim:/testbench_aes_core/dut/textOut0
+add wave -position end  sim:/testbench_aes_core/dut/keyOut0
+add wave -position end  sim:/testbench_aes_core/dut/textIn10
+add wave -position end  sim:/testbench_aes_core/dut/keyIn10
+add wave -position end  sim:/testbench_aes_core/dut/textOut10
+add wave -position end  sim:/testbench_aes_core/dut/round
+add wave -position end  sim:/testbench_aes_core/dut/counter
+run 50000
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_core
+# End time: 22:03:13 on Oct 30,2024, Elapsed time: 0:15:38
+# Errors: 0, Warnings: 2
+# vsim -gui work.testbench_aes_core 
+# Start time: 22:03:13 on Oct 30,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+add wave -position end  sim:/testbench_aes_core/dut/clk
+add wave -position end  sim:/testbench_aes_core/dut/load
+add wave -position end  sim:/testbench_aes_core/dut/key
+add wave -position end  sim:/testbench_aes_core/dut/plaintext
+add wave -position end  sim:/testbench_aes_core/dut/done
+add wave -position end  sim:/testbench_aes_core/dut/cyphertext
+add wave -position end  sim:/testbench_aes_core/dut/keyIn
+add wave -position end  sim:/testbench_aes_core/dut/keyOut
+add wave -position end  sim:/testbench_aes_core/dut/textIn
+add wave -position end  sim:/testbench_aes_core/dut/textOut
+add wave -position end  sim:/testbench_aes_core/dut/textIn0
+add wave -position end  sim:/testbench_aes_core/dut/keyIn0
+add wave -position end  sim:/testbench_aes_core/dut/textOut0
+add wave -position end  sim:/testbench_aes_core/dut/keyOut0
+add wave -position end  sim:/testbench_aes_core/dut/textIn10
+add wave -position end  sim:/testbench_aes_core/dut/keyIn10
+add wave -position end  sim:/testbench_aes_core/dut/textOut10
+add wave -position end  sim:/testbench_aes_core/dut/round
+add wave -position end  sim:/testbench_aes_core/dut/counter
+run 50000
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_core
+# End time: 22:06:40 on Oct 30,2024, Elapsed time: 0:03:27
+# Errors: 0, Warnings: 2
+# vsim -gui work.testbench_aes_core 
+# Start time: 22:06:40 on Oct 30,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+add wave -position end  sim:/testbench_aes_core/clk
+add wave -position end  sim:/testbench_aes_core/load
+add wave -position end  sim:/testbench_aes_core/done
+add wave -position end  sim:/testbench_aes_core/key
+add wave -position end  sim:/testbench_aes_core/plaintext
+add wave -position end  sim:/testbench_aes_core/cyphertext
+add wave -position end  sim:/testbench_aes_core/expected
+run 5000
+run 5000
+run 5000
+# Testbench ran successfully
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 12450 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+vsim -gui work.testbench_aes_spi
+# End time: 22:07:37 on Oct 30,2024, Elapsed time: 0:00:57
+# Errors: 0, Warnings: 1
+# vsim -gui work.testbench_aes_spi 
+# Start time: 22:07:37 on Oct 30,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_spi
+# Loading work.aes
+# Loading work.aes_spi
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+add wave -position end  sim:/testbench_aes_spi/clk
+add wave -position end  sim:/testbench_aes_spi/load
+add wave -position end  sim:/testbench_aes_spi/done
+add wave -position end  sim:/testbench_aes_spi/sck
+add wave -position end  sim:/testbench_aes_spi/sdi
+add wave -position end  sim:/testbench_aes_spi/sdo
+add wave -position end  sim:/testbench_aes_spi/key
+add wave -position end  sim:/testbench_aes_spi/plaintext
+add wave -position end  sim:/testbench_aes_spi/cyphertext
+add wave -position end  sim:/testbench_aes_spi/expected
+add wave -position end  sim:/testbench_aes_spi/comb
+add wave -position end  sim:/testbench_aes_spi/i
+add wave -position end  sim:/testbench_aes_spi/delay
+run 5000000
+# Error: cyphertext = 0f25841d34dc09fbea1185972f6a0b32, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv(75)
+#    Time: 51750 ns  Iteration: 1  Instance: /testbench_aes_spi
+# Break in Module testbench_aes_spi at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv line 75
+run 5000000
+# Error: cyphertext = 0f25841d34dc09fbea1185972f6a0b32, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv(75)
+#    Time: 51850 ns  Iteration: 1  Instance: /testbench_aes_spi
+# Break in Module testbench_aes_spi at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv line 75
+run 5000000
+# Error: cyphertext = 0f25841d34dc09fbea1185972f6a0b32, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv(75)
+#    Time: 51950 ns  Iteration: 1  Instance: /testbench_aes_spi
+# Break in Module testbench_aes_spi at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv line 75
+run 5000000
+# Error: cyphertext = 0f25841d34dc09fbea1185972f6a0b32, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv(75)
+#    Time: 52050 ns  Iteration: 1  Instance: /testbench_aes_spi
+# Break in Module testbench_aes_spi at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv line 75
+run 5000000
+# Error: cyphertext = 0f25841d34dc09fbea1185972f6a0b32, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv(75)
+#    Time: 52150 ns  Iteration: 1  Instance: /testbench_aes_spi
+# Break in Module testbench_aes_spi at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv line 75
+run 5000000
+# Error: cyphertext = 0f25841d34dc09fbea1185972f6a0b32, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv(75)
+#    Time: 52250 ns  Iteration: 1  Instance: /testbench_aes_spi
+# Break in Module testbench_aes_spi at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv line 75
+run 5000000
+# Error: cyphertext = 0f25841d34dc09fbea1185972f6a0b32, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv(75)
+#    Time: 52350 ns  Iteration: 1  Instance: /testbench_aes_spi
+# Break in Module testbench_aes_spi at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv line 75
+run 5000000
+# Error: cyphertext = 0f25841d34dc09fbea1185972f6a0b32, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv(75)
+#    Time: 52450 ns  Iteration: 1  Instance: /testbench_aes_spi
+# Break in Module testbench_aes_spi at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv line 75
+run 5000000
+# Error: cyphertext = 0f25841d34dc09fbea1185972f6a0b32, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv(75)
+#    Time: 52550 ns  Iteration: 1  Instance: /testbench_aes_spi
+# Break in Module testbench_aes_spi at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv line 75
+run 5000000
+# Error: cyphertext = 0f25841d34dc09fbea1185972f6a0b32, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv(75)
+#    Time: 52650 ns  Iteration: 1  Instance: /testbench_aes_spi
+# Break in Module testbench_aes_spi at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv line 75
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_core
+# End time: 22:10:55 on Oct 30,2024, Elapsed time: 0:03:18
+# Errors: 0, Warnings: 2
+# vsim -gui work.testbench_aes_core 
+# Start time: 22:10:55 on Oct 30,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+add wave -position end  sim:/testbench_aes_core/clk
+add wave -position end  sim:/testbench_aes_core/load
+add wave -position end  sim:/testbench_aes_core/done
+add wave -position end  sim:/testbench_aes_core/key
+add wave -position end  sim:/testbench_aes_core/plaintext
+add wave -position end  sim:/testbench_aes_core/cyphertext
+add wave -position end  sim:/testbench_aes_core/expected
+run 50000
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_spi
+# End time: 22:12:56 on Oct 30,2024, Elapsed time: 0:02:01
+# Errors: 0, Warnings: 2
+# vsim -gui work.testbench_aes_spi 
+# Start time: 22:12:56 on Oct 30,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_spi
+# Loading work.aes
+# Loading work.aes_spi
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+add wave -position end  sim:/testbench_aes_spi/clk
+add wave -position end  sim:/testbench_aes_spi/load
+add wave -position end  sim:/testbench_aes_spi/done
+add wave -position end  sim:/testbench_aes_spi/sck
+add wave -position end  sim:/testbench_aes_spi/sdi
+add wave -position end  sim:/testbench_aes_spi/sdo
+add wave -position end  sim:/testbench_aes_spi/key
+add wave -position end  sim:/testbench_aes_spi/plaintext
+add wave -position end  sim:/testbench_aes_spi/cyphertext
+add wave -position end  sim:/testbench_aes_spi/expected
+add wave -position end  sim:/testbench_aes_spi/comb
+add wave -position end  sim:/testbench_aes_spi/i
+add wave -position end  sim:/testbench_aes_spi/delay
+run 5000
+run 50000
+run 50000
+run 50000
+run 50000
+run 50000
+run 50000
+run 50000
+run 50000
+run 50000
+run 50000
+run 5000000
+vsim -gui work.testbench_aes_core
+# End time: 22:14:34 on Oct 30,2024, Elapsed time: 0:01:38
+# Errors: 0, Warnings: 1
+# vsim -gui work.testbench_aes_core 
+# Start time: 22:14:34 on Oct 30,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+add wave -position end  sim:/testbench_aes_core/dut/clk
+add wave -position end  sim:/testbench_aes_core/dut/load
+add wave -position end  sim:/testbench_aes_core/dut/key
+add wave -position end  sim:/testbench_aes_core/dut/plaintext
+add wave -position end  sim:/testbench_aes_core/dut/done
+add wave -position end  sim:/testbench_aes_core/dut/cyphertext
+add wave -position end  sim:/testbench_aes_core/dut/keyIn
+add wave -position end  sim:/testbench_aes_core/dut/keyOut
+add wave -position end  sim:/testbench_aes_core/dut/textIn
+add wave -position end  sim:/testbench_aes_core/dut/textOut
+add wave -position end  sim:/testbench_aes_core/dut/textIn0
+add wave -position end  sim:/testbench_aes_core/dut/keyIn0
+add wave -position end  sim:/testbench_aes_core/dut/textOut0
+add wave -position end  sim:/testbench_aes_core/dut/keyOut0
+add wave -position end  sim:/testbench_aes_core/dut/textIn10
+add wave -position end  sim:/testbench_aes_core/dut/keyIn10
+add wave -position end  sim:/testbench_aes_core/dut/textOut10
+add wave -position end  sim:/testbench_aes_core/dut/round
+add wave -position end  sim:/testbench_aes_core/dut/counter
+run 50000
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv failed with 2 errors.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 1 failed with 2 errors.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_core
+# End time: 22:16:54 on Oct 30,2024, Elapsed time: 0:02:20
+# Errors: 0, Warnings: 3
+# vsim -gui work.testbench_aes_core 
+# Start time: 22:16:54 on Oct 30,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+add wave -position end  sim:/testbench_aes_core/dut/clk
+add wave -position end  sim:/testbench_aes_core/dut/load
+add wave -position end  sim:/testbench_aes_core/dut/key
+add wave -position end  sim:/testbench_aes_core/dut/plaintext
+add wave -position end  sim:/testbench_aes_core/dut/done
+add wave -position end  sim:/testbench_aes_core/dut/cyphertext
+add wave -position end  sim:/testbench_aes_core/dut/keyIn
+add wave -position end  sim:/testbench_aes_core/dut/keyOut
+add wave -position end  sim:/testbench_aes_core/dut/textIn
+add wave -position end  sim:/testbench_aes_core/dut/textOut
+add wave -position end  sim:/testbench_aes_core/dut/textIn0
+add wave -position end  sim:/testbench_aes_core/dut/keyIn0
+add wave -position end  sim:/testbench_aes_core/dut/textOut0
+add wave -position end  sim:/testbench_aes_core/dut/keyOut0
+add wave -position end  sim:/testbench_aes_core/dut/textIn10
+add wave -position end  sim:/testbench_aes_core/dut/keyIn10
+add wave -position end  sim:/testbench_aes_core/dut/textOut10
+add wave -position end  sim:/testbench_aes_core/dut/round
+add wave -position end  sim:/testbench_aes_core/dut/counter
+run 5000
+run 5000
+run 50000
+# Testbench ran successfully
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 13550 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+vsim -gui work.testbench_aes_spi
+# End time: 22:18:07 on Oct 30,2024, Elapsed time: 0:01:13
+# Errors: 0, Warnings: 1
+# vsim -gui work.testbench_aes_spi 
+# Start time: 22:18:07 on Oct 30,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_spi
+# Loading work.aes
+# Loading work.aes_spi
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+add wave -position end  sim:/testbench_aes_spi/clk
+add wave -position end  sim:/testbench_aes_spi/load
+add wave -position end  sim:/testbench_aes_spi/done
+add wave -position end  sim:/testbench_aes_spi/sck
+add wave -position end  sim:/testbench_aes_spi/sdi
+add wave -position end  sim:/testbench_aes_spi/sdo
+add wave -position end  sim:/testbench_aes_spi/key
+add wave -position end  sim:/testbench_aes_spi/plaintext
+add wave -position end  sim:/testbench_aes_spi/cyphertext
+add wave -position end  sim:/testbench_aes_spi/expected
+add wave -position end  sim:/testbench_aes_spi/comb
+add wave -position end  sim:/testbench_aes_spi/i
+add wave -position end  sim:/testbench_aes_spi/delay
+run 5000000
+# Testbench ran successfully
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv(75)
+#    Time: 52850 ns  Iteration: 1  Instance: /testbench_aes_spi
+# Break in Module testbench_aes_spi at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv line 75

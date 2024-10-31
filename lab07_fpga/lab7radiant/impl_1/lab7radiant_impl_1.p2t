@@ -1,0 +1,9 @@
+-w
+-gui
+-msgset "C:/Users/vparizot/E155/lab7mvp/lab07_fpga/lab7radiant/promote.xml"
+-n 1
+-t 1
+-s 1
+-cores 1
+-hsp m
+-exp parPathBased=ON

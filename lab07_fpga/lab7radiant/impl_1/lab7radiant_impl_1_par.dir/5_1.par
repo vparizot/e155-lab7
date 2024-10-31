@@ -1,0 +1,249 @@
+
+Lattice Place and Route Report for Design "lab7radiant_impl_1_map.udb"
+Wed Oct 30 22:54:48 2024
+
+PAR: Place And Route Radiant Software (64-bit) 2024.1.0.34.2.
+Command Line: par -w -t 1 -cores 1 -hsp m -exp parPathBased=ON \
+	lab7radiant_impl_1_map.udb lab7radiant_impl_1_par.dir/5_1.udb 
+
+Loading lab7radiant_impl_1_map.udb ...
+Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/2024.1/ispfpga.
+Package Status:                     Preliminary    Version 1.5.
+Performance Hardware Data Status:   Advanced       Version 1.0.
+
+
+
+Design:  aes
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:   High-Performance_1.2V
+
+Constraint Summary
+   Total number of constraints: 6
+   Total number of constraints dropped: 0
+
+Number of Signals: 7188
+Number of Connections: 19701
+Device utilization summary:
+
+   SLICE (est.)    2413/2640         91% used
+     LUT           4796/5280         91% used
+     REG           2113/5280         40% used
+   PIO                5/56            9% used
+                      5/36           13% bonded
+   IOLOGIC            1/56            2% used
+   DSP                0/8             0% used
+   I2C                0/2             0% used
+   HFOSC              1/1           100% used
+   LFOSC              0/1             0% used
+   LEDDA_IP           0/1             0% used
+   RGBA_DRV           0/1             0% used
+   FILTER             0/2             0% used
+   SRAM               0/4             0% used
+   WARMBOOT           0/1             0% used
+   SPI                0/2             0% used
+   EBR               30/30          100% used
+   PLL                0/1             0% used
+   RGBOUTBUF          0/3             0% used
+   I3C                0/2             0% used
+   OPENDRAIN          0/3             0% used
+
+Pin Constraint Summary:
+   5 out of 5 pins locked (100% locked).
+
+Finished Placer Phase 0 (HIER). CPU time: 8 secs , REAL time: 9 secs 
+
+
+................
+Finished Placer Phase 0 (AP).  CPU time: 12 secs , REAL time: 13 secs 
+
+Starting Placer Phase 1. CPU time: 12 secs , REAL time: 13 secs 
+..  ..
+....................
+
+Placer score = 1283502.
+
+Device SLICE utilization summary after final SLICE packing:
+   SLICE           2424/2640         91% used
+
+Finished Placer Phase 1. CPU time: 22 secs , REAL time: 22 secs 
+
+Starting Placer Phase 2.
+.
+
+Placer score =  1501503
+Finished Placer Phase 2.  CPU time: 23 secs , REAL time: 24 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clocks :
+  PRIMARY "hsosc.int_osc" from comp "hsosc.hf_osc" on site "HFOSC_R1C32", clk load = 13, ce load = 0, sr load = 0
+  PRIMARY "clk" from Q1 on comp "hsosc.SLICE_15" on site "R14C3D", clk load = 887, ce load = 0, sr load = 0
+  PRIMARY "sck_c" from comp "sck" on PIO site "21 (PL19B)", clk load = 195, ce load = 0, sr load = 0
+  PRIMARY "load_c" from comp "load" on PIO site "26 (PR19A)", clk load = 0, ce load = 128, sr load = 3
+  PRIMARY "n6824" from F0 on comp "SLICE_2652" on site "R13C2A", clk load = 0, ce load = 128, sr load = 0
+  PRIMARY "core.n1055" from F0 on comp "core.SLICE_2651" on site "R8C31C", clk load = 0, ce load = 64, sr load = 0
+
+  PRIMARY  : 6 out of 8 (75%)
+
+--------------- End of Clock Report ---------------
+
+
+I/O Usage Summary (final):
+   5 out of 56 (8.9%) I/O sites used.
+   5 out of 36 (13.9%) bonded I/O sites used.
+   Number of I/O components: 5; differential: 0
+   Number of Vref pins used: 0
+
+I/O Bank Usage Summary:
++----------+---------------+------------+------------+------------+
+| I/O Bank | Usage         | Bank Vccio | Bank Vref1 | Bank Vref2 |
++----------+---------------+------------+------------+------------+
+| 0        | 2 / 14 ( 14%) | 3.3V       |            |            |
+| 1        | 3 / 14 ( 21%) | 3.3V       |            |            |
+| 2        | 0 / 8 (  0%)  | OFF        |            |            |
++----------+---------------+------------+------------+------------+
+
+Total Placer CPU time: 23 secs , REAL time: 24 secs 
+
+
+Checksum -- place: bb28f7b39b95932f9fdaf5e5c8c2d4213de33543
+Writing design to file lab7radiant_impl_1_par.dir/5_1.udb ...
+
+
+Start NBR router at 22:55:13 10/30/24
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in timing report. You should always run the timing    
+      tool to verify your design.                                
+*****************************************************************
+
+Starting routing resource preassignment
+Preassignment Summary:
+--------------------------------------------------------------------------------
+4 global clock signals routed
+2550 connections routed (of 18347 total) (13.90%)
+---------------------------------------------------------
+Clock routing summary:
+Primary clocks (6 used out of 8 available):
+#0  Signal "clk"
+       Clock   loads: 0     out of   887 routed (  0.00%)
+       Data    loads: 0     out of     2 routed (  0.00%)
+#1  Signal "load_c"
+       Control loads: 0     out of   131 routed (  0.00%)
+       Data    loads: 0     out of     6 routed (  0.00%)
+#3  Signal "core.n1055"
+       Control loads: 64    out of    64 routed (100.00%)
+#4  Signal "hsosc.int_osc"
+       Clock   loads: 13    out of    13 routed (100.00%)
+#5  Signal "n6824"
+       Control loads: 128   out of   128 routed (100.00%)
+#7  Signal "sck_c"
+       Clock   loads: 195   out of   195 routed (100.00%)
+---------------------------------------------------------
+--------------------------------------------------------------------------------
+Completed routing resource preassignment
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Routing in Serial Mode ......
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Start NBR section for initial routing at 22:55:14 10/30/24
+Level 4, iteration 1
+761(0.29%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 7.284ns/0.000ns; real time: 13 secs 
+
+Info: Initial congestion level at 75.00% usage is 0
+Info: Initial congestion area  at 75.00% usage is 0 (0.00%)
+
+Start NBR section for normal routing at 22:55:26 10/30/24
+Level 4, iteration 1
+291(0.11%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 6.689ns/0.000ns; real time: 15 secs 
+Level 4, iteration 2
+200(0.08%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 6.689ns/0.000ns; real time: 16 secs 
+Level 4, iteration 3
+108(0.04%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 6.689ns/0.000ns; real time: 17 secs 
+Level 4, iteration 4
+73(0.03%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 6.689ns/0.000ns; real time: 17 secs 
+Level 4, iteration 5
+74(0.03%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 6.689ns/0.000ns; real time: 18 secs 
+Level 4, iteration 6
+40(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 6.689ns/0.000ns; real time: 18 secs 
+Level 4, iteration 7
+13(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 6.689ns/0.000ns; real time: 18 secs 
+Level 4, iteration 8
+5(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 6.689ns/0.000ns; real time: 18 secs 
+Level 4, iteration 9
+3(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 6.689ns/0.000ns; real time: 18 secs 
+Level 4, iteration 10
+3(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 6.689ns/0.000ns; real time: 18 secs 
+Level 4, iteration 11
+5(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 6.689ns/0.000ns; real time: 19 secs 
+Level 4, iteration 12
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 6.689ns/0.000ns; real time: 19 secs 
+Level 4, iteration 13
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 6.689ns/0.000ns; real time: 19 secs 
+
+Start NBR section for setup/hold timing optimization with effort level 3 at 22:55:32 10/30/24
+
+Start NBR section for post-routing at 22:55:33 10/30/24
+
+End NBR router with 0 unrouted connection(s)
+
+Checksum -- route: 4b3388caa4259eacba6df726f4281886acb1714a
+
+Total CPU time 22 secs 
+Total REAL time: 23 secs 
+Completely routed.
+End of route.  18347 routed (100.00%); 0 unrouted.
+
+Writing design to file lab7radiant_impl_1_par.dir/5_1.udb ...
+
+
+All signals are completely routed.
+
+
+PAR_SUMMARY::Run status = Completed
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Estimated worst slack<setup/<ns>> = 7.163
+PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
+PAR_SUMMARY::Estimated worst slack<hold/<ns>> = 1.913
+PAR_SUMMARY::Timing score<hold/<ns>> = 0.000
+PAR_SUMMARY::Number of errors = 0
+
+Note: user must run 'timing' for timing closure signoff.
+
+Total CPU  Time: 47 secs 
+Total REAL Time: 48 secs 
+Peak Memory Usage: 243.73 MB
+
+
+par done!
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.

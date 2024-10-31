@@ -82,49 +82,72 @@ module aes_core(input  logic         clk,
                 output logic [127:0] cyphertext);
 
     // Define internal variables
-    logic [127:0] in, inA, key0, key1, key2, key3, key4, key5, key6, key7, key8, key9, key10;
-    logic [127:0] outA, outB, outC, outD, outE, outF, outG, outH, outI, outJ;
-    logic [3:0] round = 4'd1;
+    logic [127:0] keyIn, keyOut, textIn, textOut, textIn0, keyIn0, textOut0, keyOut0, textIn10, keyIn10, textOut10; //in, inA, key0, key1, key2, key3, key4, key5, key6, key7, key8, key9, key10;
+    //logic [127:0] outA, outB, outC, outD, outE, outF, outG, outH, outI, outJ;
+    logic [3:0] round;
     logic [10:0] counter;
+    //logic processing;
     //logic doneTemp = 1'b0;
     //assign in = plaintext;
 
     always_ff @(posedge clk) begin
 	counter <= counter + 1;
+	
 	if (load) begin
 		counter <= 0; 
-		in <= plaintext;
-		key0 <= key;
+		textIn0 <= plaintext;
+		keyIn0 <= key;
+		done <= 0;
+		round <= 0;
 		//processing <= 1; // set processing signal to true
-		
 	end
-	else if (counter > 42) begin
+	else if (round = 12) begin
+	//	cyphertext <= out;
 		done <= 1;
-	
-	end
-		
-
-	
-
+	end	
+	else if (counter == 10) begin
+		counter <= 0;
+		round <= round + 1;
+		end
+	else if (counter == 0 && round == 1)
+		begin
+		//round <= round + 1;
+		keyIn <= keyIn0;
+		textIn <= textOut0;
+		end
+	else if (counter == 0 && round < 10) 
+		begin
+		//round <= round + 1;
+		keyIn <= keyOut;
+		textIn <= textOut;
+		end 
+	else if (counter == 0 && round == 10) 
+		begin
+		//round <= round + 1;
+		keyIn10 <= keyOut;
+		textIn10 <= textOut;
+		end 
+	else if (counter == 0 && round > 10)
+		begin
+		cyphertext <= textOut10;
+		//done <= 1;
+		end
     end
+	
+    addRoundKey ark1(clk, textIn0, keyIn0, textOut0);
+    round1to9 r0(clk, round, keyIn, textIn, textOut, keyOut);
+    round10 r10(clk, round, keyIn10, textIn10, textOut10);
 
-   
-
-    addRoundKey ark1(clk, plaintext, key0, inA);
-    round1to9 r0(clk, 4'd1, key0, inA, outA, key1);
-    round1to9 r1(clk, 4'd2, key1, outA, outB, key2);
-    round1to9 r2(clk, 4'd3, key2, outB, outC, key3);
-    round1to9 r3(clk, 4'd4, key3, outC, outD, key4);
-    round1to9 r4(clk, 4'd5, key4, outD, outE, key5);
-    round1to9 r5(clk, 4'd6, key5, outE, outF, key6);
-    round1to9 r6(clk, 4'd7, key6, outF, outG, key7);
-    round1to9 r7(clk, 4'd8, key7, outG, outH, key8);
-    round1to9 r8(clk, 4'd9, key8, outH, outI, key9); // clock, round, keyin, textin, text out, nextround key
-    round10 r9(clk, 4'd10, key9, outI, outJ); // clock, round, keyin, textin, text out, nextround key
-
-    assign cyphertext = outJ;
-    //assign done = doneTemp;
-    
+    //round1to9 r1(clk, 4'd2, key1, outA, outB, key2);
+    //round1to9 r2(clk, 4'd3, key2, outB, outC, key3);
+    //round1to9 r3(clk, 4'd4, key3, outC, outD, key4);
+    //round1to9 r4(clk, 4'd5, key4, outD, outE, key5);
+    //round1to9 r5(clk, 4'd6, key5, outE, outF, key6);
+    //round1to9 r6(clk, 4'd7, key6, outF, outG, key7);
+    //round1to9 r7(clk, 4'd8, key7, outG, outH, key8);
+    //round1to9 r8(clk, 4'd9, key8, outH, outI, key9); // clock, round, keyin, textin, text out, nextround key
+    //round10 r9(clk, 4'd10, key9, outI, outJ); // clock, round, keyin, textin, text out, nextround key
+    //assign cyphertext = outJ;    
 endmodule
 
 module round1to9( input logic clk, 
@@ -138,6 +161,7 @@ module round1to9( input logic clk,
 	shiftRows a2(clk, out1, out2); // TODO: ADD CLK
 	mixcolumns a3(clk, out2, out3); //TODO:add clk
 	keyExpansionRound a4(clk, currKey, round, keyOut);
+	
 	assign keyOutTemp = keyOut;
 	addRoundKey a5(clk, out3, keyOutTemp, out);
 
@@ -160,6 +184,7 @@ module round10( input logic clk,
 	//assign done = 1'b1;
 
 endmodule
+
 
 /////////////////////////////////////////////
 // sbox
@@ -184,7 +209,15 @@ module sbox_sync(
 	end
 endmodule
 
-
+module sbox(input  logic [7:0] a,
+            output logic [7:0] y);
+            
+  // sbox implemented as a ROM
+  // This module is combinational and will be inferred using LUTs (logic cells)
+  logic [7:0] sbox[0:255];
+  initial   $readmemh("sbox.txt", sbox);
+  assign y = sbox[a];
+endmodule
 /////////////////////////////////////////////
 // mixcolumns
 //   Even funkier action on columns
@@ -296,6 +329,7 @@ module subWord(input logic clk,
     sbox_sync sboxsyncsw2(word[15:8], clk, subWordOut1);
     sbox_sync sboxsyncsw3(word[23:16], clk, subWordOut2);
     sbox_sync sboxsyncsw4(word[31:24], clk, subWordOut3);
+	
     assign subWordOut = {subWordOut3, subWordOut2, subWordOut1, subWordOut0};
 
 endmodule
@@ -305,7 +339,7 @@ module rotWord(input logic clk,
 	       input logic [31:0] word,
                output logic [31:0] rotWordOut);
     always_ff @(posedge clk) begin
-    	assign rotWordOut = {word[23:0], word[31:24]}; 
+    	rotWordOut <= {word[23:0], word[31:24]}; 
     end
 endmodule
 
@@ -420,16 +454,9 @@ module keyExpansionRound(input logic clk,
     assign temp = rotkey0;
     subWord sw1(clk, temp, swkey0);
     assign rkey0 = key0 ^ swkey0 ^ Rcon;
-
-
     assign rkey1 = key1 ^ rkey0;
-
-
     assign rkey2 = key2 ^ rkey1;
-
-
     assign rkey3 = key3 ^ rkey2;
-
     assign rkey = {rkey0, rkey1, rkey2, rkey3};
 
 endmodule
