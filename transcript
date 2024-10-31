@@ -9,10 +9,11 @@
 # Compile of rotWord_tb.sv was successful.
 # Compile of shiftRows_tb.sv was successful.
 # Compile of subword_tb.sv was successful.
-# 11 compiles, 0 failed with no errors.
-vsim -gui work.testbench_aes_core
-# vsim -gui work.testbench_aes_core 
-# Start time: 15:31:10 on Oct 30,2024
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_spi
+# vsim -gui work.testbench_aes_spi 
+# Start time: 17:02:51 on Oct 30,2024
 # //  ModelSim DE-64 2022.3 Jul 18 2022
 # //
 # //  Copyright 1991-2022 Mentor Graphics Corporation
@@ -27,7 +28,9 @@ vsim -gui work.testbench_aes_core
 # //  18 U.S.C. Section 1905.
 # //
 # Loading sv_std.std
-# Loading work.testbench_aes_core
+# Loading work.testbench_aes_spi
+# Loading work.aes
+# Loading work.aes_spi
 # Loading work.aes_core
 # Loading work.addRoundKey
 # Loading work.round1to9
@@ -41,67 +44,37 @@ vsim -gui work.testbench_aes_core
 # Loading work.rotWord
 # Loading work.subWord
 # Loading work.round10
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'clk'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(339).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/ark1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 90
-# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'roundKey'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(341).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/ark1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 90
-# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(241).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r0/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'clk'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(242).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r0/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
-# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(241).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r1/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'clk'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(242).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r1/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
-# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(241).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r2/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'clk'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(242).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r2/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
-# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(241).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r3/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'clk'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(242).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r3/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
-# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(241).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r4/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'clk'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(242).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r4/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
-# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(241).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r5/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'clk'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(242).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r5/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
-# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(241).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r6/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'clk'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(242).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r6/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
-# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(241).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r7/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'clk'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(242).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r7/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
-# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(241).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r8/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'clk'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(242).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r8/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
-# ** Fatal: (vsim-3365) Too many port connections. Expected 5, found 6.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r9 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 100
-# FATAL ERROR while loading design
-# Error loading design
-# End time: 15:31:21 on Oct 30,2024, Elapsed time: 0:00:11
-# Errors: 1, Warnings: 22
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 0 failed with no errors.
+add wave -position end  sim:/testbench_aes_spi/clk
+add wave -position end  sim:/testbench_aes_spi/load
+add wave -position end  sim:/testbench_aes_spi/done
+add wave -position end  sim:/testbench_aes_spi/sck
+add wave -position end  sim:/testbench_aes_spi/sdi
+add wave -position end  sim:/testbench_aes_spi/sdo
+add wave -position end  sim:/testbench_aes_spi/key
+add wave -position end  sim:/testbench_aes_spi/plaintext
+add wave -position end  sim:/testbench_aes_spi/cyphertext
+add wave -position end  sim:/testbench_aes_spi/expected
+add wave -position end  sim:/testbench_aes_spi/comb
+add wave -position end  sim:/testbench_aes_spi/i
+add wave -position end  sim:/testbench_aes_spi/delay
+run 5000
+run 5000
+run 5000
+run 500000
+# Error: cyphertext = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxX, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv(75)
+#    Time: 39450 ns  Iteration: 1  Instance: /testbench_aes_spi
+# Break in Module testbench_aes_spi at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv line 75
+run 5000
+# Error: cyphertext = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxX, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv(75)
+#    Time: 39550 ns  Iteration: 1  Instance: /testbench_aes_spi
+# Break in Module testbench_aes_spi at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv line 75
 vsim -gui work.testbench_aes_core
+# End time: 17:04:31 on Oct 30,2024, Elapsed time: 0:01:40
+# Errors: 0, Warnings: 2
 # vsim -gui work.testbench_aes_core 
-# Start time: 15:33:18 on Oct 30,2024
+# Start time: 17:04:31 on Oct 30,2024
 # Loading sv_std.std
 # Loading work.testbench_aes_core
 # Loading work.aes_core
@@ -117,113 +90,6 @@ vsim -gui work.testbench_aes_core
 # Loading work.rotWord
 # Loading work.subWord
 # Loading work.round10
-# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(241).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r0/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'clk'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(242).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r0/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
-# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(241).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r1/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'clk'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(242).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r1/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
-# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(241).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r2/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'clk'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(242).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r2/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
-# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(241).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r3/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'clk'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(242).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r3/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
-# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(241).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r4/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'clk'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(242).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r4/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
-# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(241).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r5/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'clk'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(242).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r5/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
-# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(241).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r6/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'clk'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(242).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r6/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
-# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(241).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r7/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'clk'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(242).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r7/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
-# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(241).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r8/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'clk'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(242).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r8/a1 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
-# ** Fatal: (vsim-3365) Too many port connections. Expected 5, found 6.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r9 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 100
-# FATAL ERROR while loading design
-# Error loading design
-# End time: 15:33:21 on Oct 30,2024, Elapsed time: 0:00:03
-# Errors: 1, Warnings: 20
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 0 failed with no errors.
-vsim -gui work.testbench_aes_core
-# vsim -gui work.testbench_aes_core 
-# Start time: 15:34:03 on Oct 30,2024
-# Loading sv_std.std
-# Loading work.testbench_aes_core
-# Loading work.aes_core
-# Loading work.addRoundKey
-# Loading work.round1to9
-# Loading work.subBytes
-# Loading work.sbox_sync
-# Loading work.shiftRows
-# Loading work.mixcolumns
-# Loading work.mixcolumn
-# Loading work.galoismult
-# Loading work.keyExpansionRound
-# Loading work.rotWord
-# Loading work.subWord
-# Loading work.round10
-# ** Fatal: (vsim-3365) Too many port connections. Expected 5, found 6.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r9 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 100
-# FATAL ERROR while loading design
-# Error loading design
-# End time: 15:34:10 on Oct 30,2024, Elapsed time: 0:00:07
-# Errors: 1, Warnings: 2
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# 11 compiles, 0 failed with no errors.
-vsim -gui work.testbench_aes_core
-# vsim -gui work.testbench_aes_core 
-# Start time: 15:35:01 on Oct 30,2024
-# Loading sv_std.std
-# Loading work.testbench_aes_core
-# Loading work.aes_core
-# Loading work.addRoundKey
-# Loading work.round1to9
-# Loading work.subBytes
-# Loading work.sbox_sync
-# Loading work.shiftRows
-# Loading work.mixcolumns
-# Loading work.mixcolumn
-# Loading work.galoismult
-# Loading work.keyExpansionRound
-# Loading work.rotWord
-# Loading work.subWord
 add wave -position end  sim:/testbench_aes_core/clk
 add wave -position end  sim:/testbench_aes_core/load
 add wave -position end  sim:/testbench_aes_core/done
@@ -231,42 +97,11 @@ add wave -position end  sim:/testbench_aes_core/key
 add wave -position end  sim:/testbench_aes_core/plaintext
 add wave -position end  sim:/testbench_aes_core/cyphertext
 add wave -position end  sim:/testbench_aes_core/expected
-run 500
-run 500
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-add wave -position end  sim:/testbench_aes_core/clk
-add wave -position end  sim:/testbench_aes_core/load
-add wave -position end  sim:/testbench_aes_core/done
-add wave -position end  sim:/testbench_aes_core/key
-add wave -position end  sim:/testbench_aes_core/plaintext
-add wave -position end  sim:/testbench_aes_core/cyphertext
-add wave -position end  sim:/testbench_aes_core/expected
-add wave -position end  sim:/testbench_aes_core/dut/key0
-add wave -position end  sim:/testbench_aes_core/dut/key1
-add wave -position end  sim:/testbench_aes_core/dut/key2
-add wave -position end  sim:/testbench_aes_core/dut/key3
-add wave -position end  sim:/testbench_aes_core/dut/key4
-add wave -position end  sim:/testbench_aes_core/dut/key5
-add wave -position end  sim:/testbench_aes_core/dut/key6
-add wave -position end  sim:/testbench_aes_core/dut/key7
-add wave -position end  sim:/testbench_aes_core/dut/key8
-add wave -position end  sim:/testbench_aes_core/dut/key9
-add wave -position end  sim:/testbench_aes_core/dut/key10
-add wave -position end  sim:/testbench_aes_core/dut/outA
-add wave -position end  sim:/testbench_aes_core/dut/outB
-add wave -position end  sim:/testbench_aes_core/dut/outC
-add wave -position end  sim:/testbench_aes_core/dut/outD
-add wave -position end  sim:/testbench_aes_core/dut/outE
-add wave -position end  sim:/testbench_aes_core/dut/outF
-add wave -position end  sim:/testbench_aes_core/dut/outG
-add wave -position end  sim:/testbench_aes_core/dut/outH
-add wave -position end  sim:/testbench_aes_core/dut/outI
-add wave -position end  sim:/testbench_aes_core/dut/outJ
-run 500
-run 500
-run 1000
 run 50000
+# Error: cyphertext = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 50 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
 # Compile of aes_core_tb.sv was successful.
 # Compile of aes_sbox_tb.sv was successful.
 # Compile of aes_spi_tb.sv was successful.
@@ -280,165 +115,110 @@ run 50000
 # Compile of subword_tb.sv was successful.
 # Compile of round1to9_tb.sv was successful.
 # 12 compiles, 0 failed with no errors.
-vsim -gui work.round1to9_tb
-# End time: 15:52:46 on Oct 30,2024, Elapsed time: 0:17:45
+vsim -gui work.testbench_aes_core
+# End time: 17:05:44 on Oct 30,2024, Elapsed time: 0:01:13
+# Errors: 0, Warnings: 2
+# vsim -gui work.testbench_aes_core 
+# Start time: 17:05:44 on Oct 30,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+add wave -position end  sim:/testbench_aes_core/clk
+add wave -position end  sim:/testbench_aes_core/load
+add wave -position end  sim:/testbench_aes_core/done
+add wave -position end  sim:/testbench_aes_core/key
+add wave -position end  sim:/testbench_aes_core/plaintext
+add wave -position end  sim:/testbench_aes_core/cyphertext
+add wave -position end  sim:/testbench_aes_core/expected
+run 5000
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_core
+# End time: 17:07:05 on Oct 30,2024, Elapsed time: 0:01:21
+# Errors: 0, Warnings: 2
+# vsim -gui work.testbench_aes_core 
+# Start time: 17:07:05 on Oct 30,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+add wave -position end  sim:/testbench_aes_core/clk
+add wave -position end  sim:/testbench_aes_core/load
+add wave -position end  sim:/testbench_aes_core/done
+add wave -position end  sim:/testbench_aes_core/key
+add wave -position end  sim:/testbench_aes_core/plaintext
+add wave -position end  sim:/testbench_aes_core/cyphertext
+add wave -position end  sim:/testbench_aes_core/expected
+run 5000
+# Error: cyphertext = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 50 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv failed with 1 errors.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 1 failed with 1 error.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_core
+# End time: 17:10:21 on Oct 30,2024, Elapsed time: 0:03:16
 # Errors: 0, Warnings: 3
-# vsim -gui work.round1to9_tb 
-# Start time: 15:52:46 on Oct 30,2024
-# Loading sv_std.std
-# Loading work.round1to9_tb
-# Loading work.round1to9
-# Loading work.subBytes
-# Loading work.sbox_sync
-# Loading work.shiftRows
-# Loading work.mixcolumns
-# Loading work.mixcolumn
-# Loading work.galoismult
-# Loading work.keyExpansionRound
-# Loading work.rotWord
-# Loading work.subWord
-# Loading work.addRoundKey
-add wave -position end  sim:/round1to9_tb/round
-add wave -position end  sim:/round1to9_tb/currKey
-add wave -position end  sim:/round1to9_tb/in
-add wave -position end  sim:/round1to9_tb/outOfRound
-add wave -position end  sim:/round1to9_tb/rKeyOut
-add wave -position end  sim:/round1to9_tb/rkeyexpected
-add wave -position end  sim:/round1to9_tb/outOfRoundExpected
-add wave -position end  sim:/round1to9_tb/clk
-run 500
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# Compile of round1to9_tb.sv was successful.
-# 12 compiles, 0 failed with no errors.
-vsim -gui work.round1to9_tb
-# End time: 15:56:35 on Oct 30,2024, Elapsed time: 0:03:49
-# Errors: 0, Warnings: 2
-# vsim -gui work.round1to9_tb 
-# Start time: 15:56:35 on Oct 30,2024
-# Loading sv_std.std
-# Loading work.round1to9_tb
-# Loading work.round1to9
-# Loading work.subBytes
-# Loading work.sbox_sync
-# Loading work.shiftRows
-# Loading work.mixcolumns
-# Loading work.mixcolumn
-# Loading work.galoismult
-# Loading work.keyExpansionRound
-# Loading work.rotWord
-# Loading work.subWord
-# Loading work.addRoundKey
-add wave -position end  sim:/round1to9_tb/round
-add wave -position end  sim:/round1to9_tb/currKey
-add wave -position end  sim:/round1to9_tb/in
-add wave -position end  sim:/round1to9_tb/outOfRound
-add wave -position end  sim:/round1to9_tb/rKeyOut
-add wave -position end  sim:/round1to9_tb/rkeyexpected
-add wave -position end  sim:/round1to9_tb/outOfRoundExpected
-add wave -position end  sim:/round1to9_tb/clk
-run 500
-run 500
-run 5000
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# Compile of round1to9_tb.sv was successful.
-# 12 compiles, 0 failed with no errors.
-vsim -gui work.round1to9_tb
-# End time: 16:05:31 on Oct 30,2024, Elapsed time: 0:08:56
-# Errors: 0, Warnings: 2
-# vsim -gui work.round1to9_tb 
-# Start time: 16:05:31 on Oct 30,2024
-# Loading sv_std.std
-# Loading work.round1to9_tb
-# Loading work.round1to9
-# Loading work.subBytes
-# Loading work.sbox_sync
-# Loading work.shiftRows
-# Loading work.mixcolumns
-# Loading work.mixcolumn
-# Loading work.galoismult
-# Loading work.keyExpansionRound
-# Loading work.rotWord
-# Loading work.subWord
-# Loading work.addRoundKey
-add wave -position end  sim:/round1to9_tb/round
-add wave -position end  sim:/round1to9_tb/currKey
-add wave -position end  sim:/round1to9_tb/in
-add wave -position end  sim:/round1to9_tb/outOfRound
-add wave -position end  sim:/round1to9_tb/rKeyOut
-add wave -position end  sim:/round1to9_tb/rkeyexpected
-add wave -position end  sim:/round1to9_tb/outOfRoundExpected
-add wave -position end  sim:/round1to9_tb/clk
-run 500
-add wave -position end  sim:/round1to9_tb/dut/keyOut
-add wave -position end  sim:/round1to9_tb/dut/keyOutTemp
-add wave -position end  sim:/round1to9_tb/dut/rkeyOut
-restart
-run 500
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# Compile of round1to9_tb.sv was successful.
-# 12 compiles, 0 failed with no errors.
-vsim -gui work.round1to9_tb
-# End time: 16:08:49 on Oct 30,2024, Elapsed time: 0:03:18
-# Errors: 0, Warnings: 2
-# vsim -gui work.round1to9_tb 
-# Start time: 16:08:49 on Oct 30,2024
-# Loading sv_std.std
-# Loading work.round1to9_tb
-# Loading work.round1to9
-# Loading work.subBytes
-# Loading work.sbox_sync
-# Loading work.shiftRows
-# Loading work.mixcolumns
-# Loading work.mixcolumn
-# Loading work.galoismult
-# Loading work.keyExpansionRound
-# Loading work.rotWord
-# Loading work.subWord
-# Loading work.addRoundKey
-add wave -position end  sim:/round1to9_tb/round
-add wave -position end  sim:/round1to9_tb/currKey
-add wave -position end  sim:/round1to9_tb/in
-add wave -position end  sim:/round1to9_tb/outOfRound
-add wave -position end  sim:/round1to9_tb/rKeyOut
-add wave -position end  sim:/round1to9_tb/rkeyexpected
-add wave -position end  sim:/round1to9_tb/outOfRoundExpected
-add wave -position end  sim:/round1to9_tb/clk
-run 500
-vsim -gui work.testbench_aes_core
-# End time: 16:09:36 on Oct 30,2024, Elapsed time: 0:00:47
-# Errors: 0, Warnings: 1
 # vsim -gui work.testbench_aes_core 
-# Start time: 16:09:36 on Oct 30,2024
+# Start time: 17:10:21 on Oct 30,2024
 # Loading sv_std.std
 # Loading work.testbench_aes_core
 # Loading work.aes_core
@@ -453,6 +233,48 @@ vsim -gui work.testbench_aes_core
 # Loading work.keyExpansionRound
 # Loading work.rotWord
 # Loading work.subWord
+# Loading work.round10
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'done'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(130).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r9 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 102
+# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'outFinal'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(131).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r9 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 102
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_core
+# End time: 17:11:42 on Oct 30,2024, Elapsed time: 0:01:21
+# Errors: 0, Warnings: 4
+# vsim -gui work.testbench_aes_core 
+# Start time: 17:11:42 on Oct 30,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (128) for port 'done'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(130).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r9 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 102
+# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'outFinal'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(131).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r9 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 102
 add wave -position end  sim:/testbench_aes_core/clk
 add wave -position end  sim:/testbench_aes_core/load
 add wave -position end  sim:/testbench_aes_core/done
@@ -460,336 +282,135 @@ add wave -position end  sim:/testbench_aes_core/key
 add wave -position end  sim:/testbench_aes_core/plaintext
 add wave -position end  sim:/testbench_aes_core/cyphertext
 add wave -position end  sim:/testbench_aes_core/expected
-add wave -position end  sim:/testbench_aes_core/dut/in
-add wave -position end  sim:/testbench_aes_core/dut/key0
-add wave -position end  sim:/testbench_aes_core/dut/key1
-add wave -position end  sim:/testbench_aes_core/dut/key2
-add wave -position end  sim:/testbench_aes_core/dut/key3
-add wave -position end  sim:/testbench_aes_core/dut/key4
-add wave -position end  sim:/testbench_aes_core/dut/key5
-add wave -position end  sim:/testbench_aes_core/dut/key6
-add wave -position end  sim:/testbench_aes_core/dut/key7
-add wave -position end  sim:/testbench_aes_core/dut/key8
-add wave -position end  sim:/testbench_aes_core/dut/key9
-add wave -position end  sim:/testbench_aes_core/dut/key10
-add wave -position end  sim:/testbench_aes_core/dut/outA
-add wave -position end  sim:/testbench_aes_core/dut/outB
-add wave -position end  sim:/testbench_aes_core/dut/outC
-add wave -position end  sim:/testbench_aes_core/dut/outD
-add wave -position end  sim:/testbench_aes_core/dut/outE
-add wave -position end  sim:/testbench_aes_core/dut/outF
-add wave -position end  sim:/testbench_aes_core/dut/outG
-add wave -position end  sim:/testbench_aes_core/dut/outH
-add wave -position end  sim:/testbench_aes_core/dut/outI
-add wave -position end  sim:/testbench_aes_core/dut/outJ
+run 5000
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_core
+# End time: 17:13:30 on Oct 30,2024, Elapsed time: 0:01:48
+# Errors: 0, Warnings: 4
+# vsim -gui work.testbench_aes_core 
+# Start time: 17:13:30 on Oct 30,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+add wave -position end  sim:/testbench_aes_core/clk
+add wave -position end  sim:/testbench_aes_core/load
+add wave -position end  sim:/testbench_aes_core/done
+add wave -position end  sim:/testbench_aes_core/key
+add wave -position end  sim:/testbench_aes_core/plaintext
+add wave -position end  sim:/testbench_aes_core/cyphertext
+add wave -position end  sim:/testbench_aes_core/expected
+run 500
+# Error: cyphertext = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 50 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv failed with 3 errors.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 1 failed with 3 errors.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv failed with 3 errors.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 1 failed with 3 errors.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv failed with 2 errors.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 1 failed with 2 errors.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_core
+# End time: 17:29:49 on Oct 30,2024, Elapsed time: 0:16:19
+# Errors: 0, Warnings: 5
+# vsim -gui work.testbench_aes_core 
+# Start time: 17:29:49 on Oct 30,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+add wave -position end  sim:/testbench_aes_core/clk
+add wave -position end  sim:/testbench_aes_core/load
+add wave -position end  sim:/testbench_aes_core/done
+add wave -position end  sim:/testbench_aes_core/key
+add wave -position end  sim:/testbench_aes_core/plaintext
+add wave -position end  sim:/testbench_aes_core/cyphertext
+add wave -position end  sim:/testbench_aes_core/expected
+run 5000
 run 500
 run 5000
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# Compile of round1to9_tb.sv was successful.
-# 12 compiles, 0 failed with no errors.
-vsim -gui work.round1to9_tb
-# End time: 16:24:00 on Oct 30,2024, Elapsed time: 0:14:24
-# Errors: 0, Warnings: 2
-# vsim -gui work.round1to9_tb 
-# Start time: 16:24:00 on Oct 30,2024
-# Loading sv_std.std
-# Loading work.round1to9_tb
-# Loading work.round1to9
-# Loading work.subBytes
-# Loading work.sbox_sync
-# Loading work.shiftRows
-# Loading work.mixcolumns
-# Loading work.mixcolumn
-# Loading work.galoismult
-# Loading work.keyExpansionRound
-# Loading work.rotWord
-# Loading work.subWord
-# Loading work.addRoundKey
-add wave -position end  sim:/round1to9_tb/round
-add wave -position end  sim:/round1to9_tb/currKey
-add wave -position end  sim:/round1to9_tb/in
-add wave -position end  sim:/round1to9_tb/outOfRound
-add wave -position end  sim:/round1to9_tb/rKeyOut
-add wave -position end  sim:/round1to9_tb/rkeyexpected
-add wave -position end  sim:/round1to9_tb/outOfRoundExpected
-add wave -position end  sim:/round1to9_tb/clk
-vsim -gui work.testbench_aes_core
-# End time: 16:24:22 on Oct 30,2024, Elapsed time: 0:00:22
-# Errors: 0, Warnings: 1
-# vsim -gui work.testbench_aes_core 
-# Start time: 16:24:22 on Oct 30,2024
-# Loading sv_std.std
-# Loading work.testbench_aes_core
-# Loading work.aes_core
-# Loading work.addRoundKey
-# Loading work.round1to9
-# Loading work.subBytes
-# Loading work.sbox_sync
-# Loading work.shiftRows
-# Loading work.mixcolumns
-# Loading work.mixcolumn
-# Loading work.galoismult
-# Loading work.keyExpansionRound
-# Loading work.rotWord
-# Loading work.subWord
-add wave -position end  sim:/testbench_aes_core/dut/clk
-add wave -position end  sim:/testbench_aes_core/dut/load
-add wave -position end  sim:/testbench_aes_core/dut/key
-add wave -position end  sim:/testbench_aes_core/dut/plaintext
-add wave -position end  sim:/testbench_aes_core/dut/done
-add wave -position end  sim:/testbench_aes_core/dut/cyphertext
-add wave -position end  sim:/testbench_aes_core/dut/in
-add wave -position end  sim:/testbench_aes_core/dut/key0
-add wave -position end  sim:/testbench_aes_core/dut/key1
-add wave -position end  sim:/testbench_aes_core/dut/key2
-add wave -position end  sim:/testbench_aes_core/dut/key3
-add wave -position end  sim:/testbench_aes_core/dut/key4
-add wave -position end  sim:/testbench_aes_core/dut/key5
-add wave -position end  sim:/testbench_aes_core/dut/key6
-add wave -position end  sim:/testbench_aes_core/dut/key7
-add wave -position end  sim:/testbench_aes_core/dut/key8
-add wave -position end  sim:/testbench_aes_core/dut/key9
-add wave -position end  sim:/testbench_aes_core/dut/key10
-add wave -position end  sim:/testbench_aes_core/dut/outA
-add wave -position end  sim:/testbench_aes_core/dut/outB
-add wave -position end  sim:/testbench_aes_core/dut/outC
-add wave -position end  sim:/testbench_aes_core/dut/outD
-add wave -position end  sim:/testbench_aes_core/dut/outE
-add wave -position end  sim:/testbench_aes_core/dut/outF
-add wave -position end  sim:/testbench_aes_core/dut/outG
-add wave -position end  sim:/testbench_aes_core/dut/outH
-add wave -position end  sim:/testbench_aes_core/dut/outI
-add wave -position end  sim:/testbench_aes_core/dut/outJ
-add wave -position end  sim:/testbench_aes_core/dut/round
-run 5000
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# Compile of round1to9_tb.sv was successful.
-# 12 compiles, 0 failed with no errors.
-vsim -gui work.testbench_aes_core
-# End time: 16:30:14 on Oct 30,2024, Elapsed time: 0:05:52
-# Errors: 0, Warnings: 2
-# vsim -gui work.testbench_aes_core 
-# Start time: 16:30:14 on Oct 30,2024
-# Loading sv_std.std
-# Loading work.testbench_aes_core
-# Loading work.aes_core
-# Loading work.addRoundKey
-# Loading work.round1to9
-# Loading work.subBytes
-# Loading work.sbox_sync
-# Loading work.shiftRows
-# Loading work.mixcolumns
-# Loading work.mixcolumn
-# Loading work.galoismult
-# Loading work.keyExpansionRound
-# Loading work.rotWord
-# Loading work.subWord
-add wave -position end  sim:/testbench_aes_core/dut/clk
-add wave -position end  sim:/testbench_aes_core/dut/load
-add wave -position end  sim:/testbench_aes_core/dut/key
-add wave -position end  sim:/testbench_aes_core/dut/plaintext
-add wave -position end  sim:/testbench_aes_core/dut/done
-add wave -position end  sim:/testbench_aes_core/dut/cyphertext
-add wave -position end  sim:/testbench_aes_core/dut/in
-add wave -position end  sim:/testbench_aes_core/dut/key0
-add wave -position end  sim:/testbench_aes_core/dut/key1
-add wave -position end  sim:/testbench_aes_core/dut/key2
-add wave -position end  sim:/testbench_aes_core/dut/key3
-add wave -position end  sim:/testbench_aes_core/dut/key4
-add wave -position end  sim:/testbench_aes_core/dut/key5
-add wave -position end  sim:/testbench_aes_core/dut/key6
-add wave -position end  sim:/testbench_aes_core/dut/key7
-add wave -position end  sim:/testbench_aes_core/dut/key8
-add wave -position end  sim:/testbench_aes_core/dut/key9
-add wave -position end  sim:/testbench_aes_core/dut/key10
-add wave -position end  sim:/testbench_aes_core/dut/outA
-add wave -position end  sim:/testbench_aes_core/dut/outB
-add wave -position end  sim:/testbench_aes_core/dut/outC
-add wave -position end  sim:/testbench_aes_core/dut/outD
-add wave -position end  sim:/testbench_aes_core/dut/outE
-add wave -position end  sim:/testbench_aes_core/dut/outF
-add wave -position end  sim:/testbench_aes_core/dut/outG
-add wave -position end  sim:/testbench_aes_core/dut/outH
-add wave -position end  sim:/testbench_aes_core/dut/outI
-add wave -position end  sim:/testbench_aes_core/dut/outJ
-add wave -position end  sim:/testbench_aes_core/dut/round
-run 50000
-
-run 50000
-run 50000
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# Compile of round1to9_tb.sv was successful.
-# 12 compiles, 0 failed with no errors.
-vsim -gui work.testbench_aes_core
-# End time: 16:35:26 on Oct 30,2024, Elapsed time: 0:05:12
-# Errors: 0, Warnings: 2
-# vsim -gui work.testbench_aes_core 
-# Start time: 16:35:26 on Oct 30,2024
-# Loading sv_std.std
-# Loading work.testbench_aes_core
-# Loading work.aes_core
-# Loading work.addRoundKey
-# Loading work.round1to9
-# Loading work.subBytes
-# Loading work.sbox_sync
-# Loading work.shiftRows
-# Loading work.mixcolumns
-# Loading work.mixcolumn
-# Loading work.galoismult
-# Loading work.keyExpansionRound
-# Loading work.rotWord
-# Loading work.subWord
-# Loading work.round10
-# ** Fatal: (vsim-3365) Too many port connections. Expected 5, found 6.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r9 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 100
-# FATAL ERROR while loading design
-# Error loading design
-# End time: 16:35:33 on Oct 30,2024, Elapsed time: 0:00:07
-# Errors: 1, Warnings: 1
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# Compile of round1to9_tb.sv was successful.
-# 12 compiles, 0 failed with no errors.
-vsim -gui work.testbench_aes_core
-# vsim -gui work.testbench_aes_core 
-# Start time: 16:36:40 on Oct 30,2024
-# Loading sv_std.std
-# Loading work.testbench_aes_core
-# Loading work.aes_core
-# Loading work.addRoundKey
-# Loading work.round1to9
-# Loading work.subBytes
-# Loading work.sbox_sync
-# Loading work.shiftRows
-# Loading work.mixcolumns
-# Loading work.mixcolumn
-# Loading work.galoismult
-# Loading work.keyExpansionRound
-# Loading work.rotWord
-# Loading work.subWord
-# Loading work.round10
-# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'out'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(227).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r9/a6 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 127
-# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(293).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r9/a7 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 128
-# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'out'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(294).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r9/a7 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 128
-# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'key'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(353).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r9/a8 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 129
-# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'rkey'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(356).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r9/a8 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 129
-# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'in'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(326).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r9/a9 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 130
-# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'roundKey'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(327).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r9/a9 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 130
-# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (1) for port 'out'. The port definition is at: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv(328).
-#    Time: 0 ns  Iteration: 0  Instance: /testbench_aes_core/dut/r9/a9 File: C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_starter.sv Line: 130
-# Error opening C:/Users/vparizot/E155/lab7mvp/(vsim-3015) [PCDPC] - Port size (128) does not match connection size 
-# Path name 'C:/Users/vparizot/E155/lab7mvp/(vsim-3015) [PCDPC] - Port size (128) does not match connection size ' doesn't exist.
-# Error opening C:/Users/vparizot/E155/lab7mvp/(vsim-3015) [PCDPC] - Port size (128) does not match connection size 
-# Path name 'C:/Users/vparizot/E155/lab7mvp/(vsim-3015) [PCDPC] - Port size (128) does not match connection size ' doesn't exist.
-# Compile of aes_core_tb.sv was successful.
-# Compile of aes_sbox_tb.sv was successful.
-# Compile of aes_spi_tb.sv was successful.
-# Compile of aes_starter.sv was successful.
-# Compile of subBytes_tb.sv was successful.
-# Compile of addRoundKey_tb.sv was successful.
-# Compile of keyExpansion_tb.sv was successful.
-# Compile of keyExpansionRound_tb.sv was successful.
-# Compile of rotWord_tb.sv was successful.
-# Compile of shiftRows_tb.sv was successful.
-# Compile of subword_tb.sv was successful.
-# Compile of round1to9_tb.sv was successful.
-# 12 compiles, 0 failed with no errors.
-vsim -gui work.testbench_aes_core
-# End time: 16:40:03 on Oct 30,2024, Elapsed time: 0:03:23
-# Errors: 0, Warnings: 11
-# vsim -gui work.testbench_aes_core 
-# Start time: 16:40:03 on Oct 30,2024
-# Loading sv_std.std
-# Loading work.testbench_aes_core
-# Loading work.aes_core
-# Loading work.addRoundKey
-# Loading work.round1to9
-# Loading work.subBytes
-# Loading work.sbox_sync
-# Loading work.shiftRows
-# Loading work.mixcolumns
-# Loading work.mixcolumn
-# Loading work.galoismult
-# Loading work.keyExpansionRound
-# Loading work.rotWord
-# Loading work.subWord
-# Loading work.round10
-add wave -position end  sim:/testbench_aes_core/dut/clk
-add wave -position end  sim:/testbench_aes_core/dut/load
-add wave -position end  sim:/testbench_aes_core/dut/key
-add wave -position end  sim:/testbench_aes_core/dut/plaintext
-add wave -position end  sim:/testbench_aes_core/dut/done
-add wave -position end  sim:/testbench_aes_core/dut/cyphertext
-add wave -position end  sim:/testbench_aes_core/dut/in
-add wave -position end  sim:/testbench_aes_core/dut/key0
-add wave -position end  sim:/testbench_aes_core/dut/key1
-add wave -position end  sim:/testbench_aes_core/dut/key2
-add wave -position end  sim:/testbench_aes_core/dut/key3
-add wave -position end  sim:/testbench_aes_core/dut/key4
-add wave -position end  sim:/testbench_aes_core/dut/key5
-add wave -position end  sim:/testbench_aes_core/dut/key6
-add wave -position end  sim:/testbench_aes_core/dut/key7
-add wave -position end  sim:/testbench_aes_core/dut/key8
-add wave -position end  sim:/testbench_aes_core/dut/key9
-add wave -position end  sim:/testbench_aes_core/dut/key10
-add wave -position end  sim:/testbench_aes_core/dut/outA
-add wave -position end  sim:/testbench_aes_core/dut/outB
-add wave -position end  sim:/testbench_aes_core/dut/outC
-add wave -position end  sim:/testbench_aes_core/dut/outD
-add wave -position end  sim:/testbench_aes_core/dut/outE
-add wave -position end  sim:/testbench_aes_core/dut/outF
-add wave -position end  sim:/testbench_aes_core/dut/outG
-add wave -position end  sim:/testbench_aes_core/dut/outH
-add wave -position end  sim:/testbench_aes_core/dut/outI
-add wave -position end  sim:/testbench_aes_core/dut/outJ
-add wave -position end  sim:/testbench_aes_core/dut/round
-run 50000
-add wave -position 22  sim:/testbench_aes_core/expected
-restart
-run 50000
+# Testbench ran successfully
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 10450 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48

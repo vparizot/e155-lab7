@@ -82,13 +82,35 @@ module aes_core(input  logic         clk,
                 output logic [127:0] cyphertext);
 
     // Define internal variables
-    logic [127:0] in, key0, key1, key2, key3, key4, key5, key6, key7, key8, key9, key10;
+    logic [127:0] in, inA, key0, key1, key2, key3, key4, key5, key6, key7, key8, key9, key10;
     logic [127:0] outA, outB, outC, outD, outE, outF, outG, outH, outI, outJ;
     logic [3:0] round = 4'd1;
+    //logic doneTemp = 1'b0;
     //assign in = plaintext;
 
-    addRoundKey ark1(clk, plaintext, key, in);
-    round1to9 r0(clk, 4'd1, key, in, outA, key1);
+    always_ff @(posedge clk) begin
+	counter <= counter + 1;
+	if (load) begin
+		counter <= 0; 
+		in <= plaintext;
+		key0 <= key;
+		processing <= 1; // set processing signal to true
+		
+	end
+	else if (counter > 100) begin
+		done <= 1;
+	
+	end
+		
+
+	
+
+    end
+
+   
+
+    addRoundKey ark1(clk, plaintext, key0, inA);
+    round1to9 r0(clk, 4'd1, key0, inA, outA, key1);
     round1to9 r1(clk, 4'd2, key1, outA, outB, key2);
     round1to9 r2(clk, 4'd3, key2, outB, outC, key3);
     round1to9 r3(clk, 4'd4, key3, outC, outD, key4);
@@ -100,6 +122,8 @@ module aes_core(input  logic         clk,
     round10 r9(clk, 4'd10, key9, outI, outJ); // clock, round, keyin, textin, text out, nextround key
 
     assign cyphertext = outJ;
+    //assign done = doneTemp;
+    
 endmodule
 
 module round1to9( input logic clk, 
@@ -123,14 +147,16 @@ endmodule
 module round10( input logic clk, 
 		  input logic [3:0] round,
 		  input logic [127:0] currKey, in,
+		  
 		  output logic [127:0] outFinal);
-	logic [127:0] out1, out2, rkey, rkeyOut outOfRound;
+	logic [127:0] out1, out2, rkey,  outOfRound;
 
 	subBytes a6(clk, in, out1);
 	shiftRows a7(clk, out1, out2); // TODO: ADD CLK
-	keyExpansionRound a8(clk, prevKey, round, rkey);
+	keyExpansionRound a8(clk, currKey, round, rkey);
 	addRoundKey a9(clk, out2, rkey, outOfRound);
 	assign outFinal = outOfRound;
+	//assign done = 1'b1;
 
 endmodule
 
