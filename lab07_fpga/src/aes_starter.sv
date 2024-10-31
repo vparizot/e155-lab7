@@ -95,17 +95,12 @@ module aes_core(input  logic         clk,
 		counter <= 0; 
 		in <= plaintext;
 		key0 <= key;
+		done <= 0;
 		//processing <= 1; // set processing signal to true
-		
 	end
-	else if (counter > 100) begin
+	else if (counter > 42) begin
 		done <= 1;
-	
-	end
-		
-
-	
-
+	end	
     end
 
    

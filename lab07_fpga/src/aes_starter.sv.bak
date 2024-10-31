@@ -85,6 +85,7 @@ module aes_core(input  logic         clk,
     logic [127:0] in, inA, key0, key1, key2, key3, key4, key5, key6, key7, key8, key9, key10;
     logic [127:0] outA, outB, outC, outD, outE, outF, outG, outH, outI, outJ;
     logic [3:0] round = 4'd1;
+    logic [10:0] counter;
     //logic doneTemp = 1'b0;
     //assign in = plaintext;
 
@@ -94,10 +95,10 @@ module aes_core(input  logic         clk,
 		counter <= 0; 
 		in <= plaintext;
 		key0 <= key;
-		processing <= 1; // set processing signal to true
+		//processing <= 1; // set processing signal to true
 		
 	end
-	else if (counter > 100) begin
+	else if (counter > 42) begin
 		done <= 1;
 	
 	end
