@@ -4,57 +4,55 @@ Report for cell aes
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                  IOLGC	       1.00        100.0
-                                  LUT4	       4796        100.0
-                               LUTGATE	       4758        100.0
-                                LUTCCU	         38        100.0
+                                  LUT4	       4140        100.0
+                               LUTGATE	       4128        100.0
+                                LUTCCU	         12        100.0
                                  IOREG	          1        100.0
                                  IOBUF	          5        100.0
-                                PFUREG	       2113        100.0
+                                PFUREG	       1384        100.0
                                    EBR	         30        100.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                              aes_core	          1        71.7
-                               aes_spi	          1         2.7
-                           hsoscEnable	          1         0.7
+                              aes_core	          1        82.9
+                               aes_spi	          1         3.1
 ---------------------------------------------------
 Report for cell aes_spi
    Instance path: aes/spi
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                  IOLGC	       1.00        100.0
-                                  LUT4	        128         2.7
-                               LUTGATE	        128         2.7
+                                  LUT4	        128         3.1
+                               LUTGATE	        128         3.1
                                  IOREG	          1        100.0
-                                PFUREG	        384        18.2
+                                PFUREG	        384        27.7
 ---------------------------------------------------
 Report for cell aes_core
    Instance path: aes/core
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	       3438        71.7
-                               LUTGATE	       3426        72.0
-                                LUTCCU	         12        31.6
-                                PFUREG	       1704        80.6
+                                  LUT4	       3433        82.9
+                               LUTGATE	       3421        82.9
+                                LUTCCU	         12        100.0
+                                PFUREG	       1000        72.3
                                    EBR	         30        100.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                               round10	          1        49.1
-                             round1to9	          1         8.5
+                               round10	          1        57.1
+                             round1to9	          1         9.3
 ---------------------------------------------------
 Report for cell round10
    Instance path: aes/core/r10
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	       2353        49.1
-                               LUTGATE	       2353        49.5
-                                PFUREG	        368        17.4
+                                  LUT4	       2366        57.1
+                               LUTGATE	       2366        57.3
+                                PFUREG	         80         5.8
                                    EBR	         10        33.3
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
                            addRoundKey	          1         0.2
-                     keyExpansionRound	          1         2.7
-                             shiftRows	          1         0.0
-                              subBytes	          1        46.2
+                     keyExpansionRound	          1         3.1
+                              subBytes	          1        53.9
 ---------------------------------------------------
 Report for cell addRoundKey
    Instance path: aes/core/r10/a9
@@ -67,13 +65,11 @@ Report for cell keyExpansionRound
    Instance path: aes/core/r10/a8
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	        128         2.7
-                               LUTGATE	        128         2.7
-                                PFUREG	         32         1.5
+                                  LUT4	        128         3.1
+                               LUTGATE	        128         3.1
                                    EBR	          4        13.3
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                               rotWord	          1         0.0
                                subWord	          1         0.0
 ---------------------------------------------------
 Report for cell subWord
@@ -112,25 +108,13 @@ Report for cell sbox_sync_U2
                                   cell	      count    Res Usage(%)
                                    EBR	          1         3.3
 ---------------------------------------------------
-Report for cell rotWord
-   Instance path: aes/core/r10/a8/r1
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                PFUREG	         32         1.5
----------------------------------------------------
-Report for cell shiftRows
-   Instance path: aes/core/r10/a7
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                PFUREG	        128         6.1
----------------------------------------------------
 Report for cell subBytes
    Instance path: aes/core/r10/a6
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	       2217        46.2
-                               LUTGATE	       2217        46.6
-                                PFUREG	        208         9.8
+                                  LUT4	       2230        53.9
+                               LUTGATE	       2230        54.0
+                                PFUREG	         80         5.8
                                    EBR	          6        20.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
@@ -139,41 +123,39 @@ SUB MODULES
                          sbox_sync_U12	          1         0.0
                          sbox_sync_U13	          1         0.0
                          sbox_sync_U14	          1         0.0
-                         sbox_sync_U15	          1         0.0
-                         sbox_sync_U16	          1         4.4
-                         sbox_sync_U17	          1         4.5
-                         sbox_sync_U18	          1         4.8
-                         sbox_sync_U19	          1         4.7
-                         sbox_sync_U20	          1         4.8
-                         sbox_sync_U21	          1         4.7
-                         sbox_sync_U22	          1         4.4
-                          sbox_sync_U7	          1         4.7
-                          sbox_sync_U8	          1         4.7
-                          sbox_sync_U9	          1         4.6
+                         sbox_sync_U15	          1         5.5
+                         sbox_sync_U16	          1         5.3
+                         sbox_sync_U17	          1         5.5
+                         sbox_sync_U18	          1         5.2
+                         sbox_sync_U19	          1         5.5
+                         sbox_sync_U20	          1         5.6
+                         sbox_sync_U21	          1         5.1
+                         sbox_sync_U22	          1         5.5
+                          sbox_sync_U7	          1         5.4
+                          sbox_sync_U8	          1         5.2
+                          sbox_sync_U9	          1         0.0
 ---------------------------------------------------
 Report for cell sbox_sync_U7
    Instance path: aes/core/r10/a6/sboxsync9
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	        225         4.7
-                               LUTGATE	        225         4.7
-                                PFUREG	          8         0.4
+                                  LUT4	        225         5.4
+                               LUTGATE	        225         5.5
+                                PFUREG	          8         0.6
 ---------------------------------------------------
 Report for cell sbox_sync_U8
    Instance path: aes/core/r10/a6/sboxsync8
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	        226         4.7
-                               LUTGATE	        226         4.7
-                                PFUREG	          8         0.4
+                                  LUT4	        216         5.2
+                               LUTGATE	        216         5.2
+                                PFUREG	          8         0.6
 ---------------------------------------------------
 Report for cell sbox_sync_U9
    Instance path: aes/core/r10/a6/sboxsync7
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	        219         4.6
-                               LUTGATE	        219         4.6
-                                PFUREG	          8         0.4
+                                   EBR	          1         3.3
 ---------------------------------------------------
 Report for cell sbox_sync_U10
    Instance path: aes/core/r10/a6/sboxsync6
@@ -209,98 +191,90 @@ Report for cell sbox_sync_U15
    Instance path: aes/core/r10/a6/sboxsync1
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                   EBR	          1         3.3
+                                  LUT4	        229         5.5
+                               LUTGATE	        229         5.5
+                                PFUREG	          8         0.6
 ---------------------------------------------------
 Report for cell sbox_sync_U16
    Instance path: aes/core/r10/a6/sboxsync16
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	        213         4.4
-                               LUTGATE	        213         4.5
-                                PFUREG	          8         0.4
+                                  LUT4	        220         5.3
+                               LUTGATE	        220         5.3
+                                PFUREG	          8         0.6
 ---------------------------------------------------
 Report for cell sbox_sync_U17
    Instance path: aes/core/r10/a6/sboxsync15
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	        214         4.5
-                               LUTGATE	        214         4.5
-                                PFUREG	          8         0.4
+                                  LUT4	        229         5.5
+                               LUTGATE	        229         5.5
+                                PFUREG	          8         0.6
 ---------------------------------------------------
 Report for cell sbox_sync_U18
    Instance path: aes/core/r10/a6/sboxsync14
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	        229         4.8
-                               LUTGATE	        229         4.8
-                                PFUREG	          8         0.4
+                                  LUT4	        216         5.2
+                               LUTGATE	        216         5.2
+                                PFUREG	          8         0.6
 ---------------------------------------------------
 Report for cell sbox_sync_U19
    Instance path: aes/core/r10/a6/sboxsync13
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	        225         4.7
-                               LUTGATE	        225         4.7
-                                PFUREG	          8         0.4
+                                  LUT4	        226         5.5
+                               LUTGATE	        226         5.5
+                                PFUREG	          8         0.6
 ---------------------------------------------------
 Report for cell sbox_sync_U20
    Instance path: aes/core/r10/a6/sboxsync12
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	        229         4.8
-                               LUTGATE	        229         4.8
-                                PFUREG	          8         0.4
+                                  LUT4	        232         5.6
+                               LUTGATE	        232         5.6
+                                PFUREG	          8         0.6
 ---------------------------------------------------
 Report for cell sbox_sync_U21
    Instance path: aes/core/r10/a6/sboxsync11
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	        226         4.7
-                               LUTGATE	        226         4.7
-                                PFUREG	          8         0.4
+                                  LUT4	        211         5.1
+                               LUTGATE	        211         5.1
+                                PFUREG	          8         0.6
 ---------------------------------------------------
 Report for cell sbox_sync_U22
    Instance path: aes/core/r10/a6/sboxsync10
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	        211         4.4
-                               LUTGATE	        211         4.4
-                                PFUREG	          8         0.4
+                                  LUT4	        226         5.5
+                               LUTGATE	        226         5.5
+                                PFUREG	          8         0.6
 ---------------------------------------------------
 Report for cell round1to9
    Instance path: aes/core/r0
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	        409         8.5
-                               LUTGATE	        409         8.6
-                                PFUREG	        424        20.1
+                                  LUT4	        385         9.3
+                               LUTGATE	        385         9.3
+                                PFUREG	          8         0.6
                                    EBR	         20        66.7
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                       addRoundKey_U44	          1         2.5
-                 keyExpansionRound_U45	          1         1.9
-                            mixcolumns	          1         4.2
-                         shiftRows_U46	          1         0.0
-                          subBytes_U47	          1         0.0
+                 keyExpansionRound_U43	          1         2.4
+                            mixcolumns	          1         6.9
+                          subBytes_U44	          1         0.0
 ---------------------------------------------------
-Report for cell addRoundKey_U44
-   Instance path: aes/core/r0/a5
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	        120         2.5
-                               LUTGATE	        120         2.5
----------------------------------------------------
-Report for cell keyExpansionRound_U45
+Report for cell keyExpansionRound_U43
    Instance path: aes/core/r0/a4
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         89         1.9
-                               LUTGATE	         89         1.9
-                                PFUREG	         40         1.9
+                                  LUT4	         98         2.4
+                               LUTGATE	         98         2.4
+                                PFUREG	          8         0.6
                                    EBR	          4        13.3
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                           rotWord_U24	          1         0.0
                            subWord_U23	          1         0.0
 ---------------------------------------------------
 Report for cell subWord_U23
@@ -339,72 +313,55 @@ Report for cell sbox_sync_U6
                                   cell	      count    Res Usage(%)
                                    EBR	          1         3.3
 ---------------------------------------------------
-Report for cell rotWord_U24
-   Instance path: aes/core/r0/a4/r1
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                PFUREG	         32         1.5
----------------------------------------------------
 Report for cell mixcolumns
    Instance path: aes/core/r0/a3
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	        200         4.2
-                               LUTGATE	        200         4.2
-                                PFUREG	        128         6.1
+                                  LUT4	        287         6.9
+                               LUTGATE	        287         7.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                             mixcolumn	          1         1.0
-                         mixcolumn_U25	          1         1.0
-                         mixcolumn_U26	          1         1.1
-                         mixcolumn_U27	          1         1.0
+                             mixcolumn	          1         1.8
+                         mixcolumn_U24	          1         1.8
+                         mixcolumn_U25	          1         1.7
+                         mixcolumn_U26	          1         1.7
 ---------------------------------------------------
 Report for cell mixcolumn
    Instance path: aes/core/r0/a3/mc3
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         49         1.0
-                               LUTGATE	         49         1.0
-                                PFUREG	         32         1.5
+                                  LUT4	         73         1.8
+                               LUTGATE	         73         1.8
 ---------------------------------------------------
-Report for cell mixcolumn_U25
+Report for cell mixcolumn_U24
    Instance path: aes/core/r0/a3/mc2
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         50         1.0
-                               LUTGATE	         50         1.1
-                                PFUREG	         32         1.5
+                                  LUT4	         73         1.8
+                               LUTGATE	         73         1.8
 ---------------------------------------------------
-Report for cell mixcolumn_U26
+Report for cell mixcolumn_U25
    Instance path: aes/core/r0/a3/mc1
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         51         1.1
-                               LUTGATE	         51         1.1
-                                PFUREG	         32         1.5
+                                  LUT4	         71         1.7
+                               LUTGATE	         71         1.7
 ---------------------------------------------------
-Report for cell mixcolumn_U27
+Report for cell mixcolumn_U26
    Instance path: aes/core/r0/a3/mc0
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         50         1.0
-                               LUTGATE	         50         1.1
-                                PFUREG	         32         1.5
+                                  LUT4	         70         1.7
+                               LUTGATE	         70         1.7
 ---------------------------------------------------
-Report for cell shiftRows_U46
-   Instance path: aes/core/r0/a2
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                PFUREG	        128         6.1
----------------------------------------------------
-Report for cell subBytes_U47
+Report for cell subBytes_U44
    Instance path: aes/core/r0/a1
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                PFUREG	        128         6.1
                                    EBR	         16        53.3
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
+                         sbox_sync_U27	          1         0.0
                          sbox_sync_U28	          1         0.0
                          sbox_sync_U29	          1         0.0
                          sbox_sync_U30	          1         0.0
@@ -420,109 +377,99 @@ SUB MODULES
                          sbox_sync_U40	          1         0.0
                          sbox_sync_U41	          1         0.0
                          sbox_sync_U42	          1         0.0
-                         sbox_sync_U43	          1         0.0
 ---------------------------------------------------
-Report for cell sbox_sync_U28
+Report for cell sbox_sync_U27
    Instance path: aes/core/r0/a1/sboxsync9
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                    EBR	          1         3.3
 ---------------------------------------------------
-Report for cell sbox_sync_U29
+Report for cell sbox_sync_U28
    Instance path: aes/core/r0/a1/sboxsync8
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                    EBR	          1         3.3
 ---------------------------------------------------
-Report for cell sbox_sync_U30
+Report for cell sbox_sync_U29
    Instance path: aes/core/r0/a1/sboxsync7
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                    EBR	          1         3.3
 ---------------------------------------------------
-Report for cell sbox_sync_U31
+Report for cell sbox_sync_U30
    Instance path: aes/core/r0/a1/sboxsync6
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                    EBR	          1         3.3
 ---------------------------------------------------
-Report for cell sbox_sync_U32
+Report for cell sbox_sync_U31
    Instance path: aes/core/r0/a1/sboxsync5
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                    EBR	          1         3.3
 ---------------------------------------------------
-Report for cell sbox_sync_U33
+Report for cell sbox_sync_U32
    Instance path: aes/core/r0/a1/sboxsync4
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                    EBR	          1         3.3
 ---------------------------------------------------
-Report for cell sbox_sync_U34
+Report for cell sbox_sync_U33
    Instance path: aes/core/r0/a1/sboxsync3
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                    EBR	          1         3.3
 ---------------------------------------------------
-Report for cell sbox_sync_U35
+Report for cell sbox_sync_U34
    Instance path: aes/core/r0/a1/sboxsync2
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                    EBR	          1         3.3
 ---------------------------------------------------
-Report for cell sbox_sync_U36
+Report for cell sbox_sync_U35
    Instance path: aes/core/r0/a1/sboxsync1
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                    EBR	          1         3.3
 ---------------------------------------------------
-Report for cell sbox_sync_U37
+Report for cell sbox_sync_U36
    Instance path: aes/core/r0/a1/sboxsync16
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                    EBR	          1         3.3
 ---------------------------------------------------
-Report for cell sbox_sync_U38
+Report for cell sbox_sync_U37
    Instance path: aes/core/r0/a1/sboxsync15
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                    EBR	          1         3.3
 ---------------------------------------------------
-Report for cell sbox_sync_U39
+Report for cell sbox_sync_U38
    Instance path: aes/core/r0/a1/sboxsync14
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                    EBR	          1         3.3
 ---------------------------------------------------
-Report for cell sbox_sync_U40
+Report for cell sbox_sync_U39
    Instance path: aes/core/r0/a1/sboxsync13
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                    EBR	          1         3.3
 ---------------------------------------------------
-Report for cell sbox_sync_U41
+Report for cell sbox_sync_U40
    Instance path: aes/core/r0/a1/sboxsync12
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                    EBR	          1         3.3
 ---------------------------------------------------
-Report for cell sbox_sync_U42
+Report for cell sbox_sync_U41
    Instance path: aes/core/r0/a1/sboxsync11
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                    EBR	          1         3.3
 ---------------------------------------------------
-Report for cell sbox_sync_U43
+Report for cell sbox_sync_U42
    Instance path: aes/core/r0/a1/sboxsync10
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                    EBR	          1         3.3
----------------------------------------------------
-Report for cell hsoscEnable
-   Instance path: aes/hsosc
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	         35         0.7
-                               LUTGATE	          9         0.2
-                                LUTCCU	         26        68.4
-                                PFUREG	         25         1.2

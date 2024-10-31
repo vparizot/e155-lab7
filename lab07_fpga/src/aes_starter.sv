@@ -3,14 +3,16 @@
 //   Top level module with SPI interface and SPI core
 /////////////////////////////////////////////
 
-module aes(//input  logic clk,
+module aes(input  logic clk,
            input  logic sck, 
            input  logic sdi,
            output logic sdo,
            input  logic load,
            output logic done);
-    hsoscEnable hsosc(clk);                
+             
     logic [127:0] key, plaintext, cyphertext;
+    //logic clksig;
+    //HSOSC hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(clk));
             
     aes_spi spi(sck, sdi, sdo, done, key, plaintext, cyphertext);   
     aes_core core(clk, load, key, plaintext, done, cyphertext);
@@ -86,9 +88,7 @@ module aes_core(input  logic         clk,
     //logic [127:0] outA, outB, outC, outD, outE, outF, outG, outH, outI, outJ;
     logic [3:0] round;
     logic [10:0] counter;
-    //logic processing;
-    //logic doneTemp = 1'b0;
-    //assign in = plaintext;
+    
 
     always_ff @(posedge clk) begin
 	counter <= counter + 1;
@@ -102,7 +102,6 @@ module aes_core(input  logic         clk,
 		//processing <= 1; // set processing signal to true
 	end
 	else if (round == 12) begin
-	//	cyphertext <= out;
 		done <= 1;
 	end	
 	else if (counter == 10) begin
@@ -111,19 +110,20 @@ module aes_core(input  logic         clk,
 		end
 	else if (counter == 0 && round == 1)
 		begin
-		//round <= round + 1;
+		
 		keyIn <= keyIn0;
 		textIn <= textOut0;
 		end
 	else if (counter == 0 && round < 10) 
 		begin
-		//round <= round + 1;
+		
 		keyIn <= keyOut;
 		textIn <= textOut;
 		end 
 	else if (counter == 0 && round == 10) 
 		begin
-		//round <= round + 1;
+		// skip mixcolumns
+		
 		keyIn10 <= keyOut;
 		textIn10 <= textOut;
 		end 
@@ -135,19 +135,16 @@ module aes_core(input  logic         clk,
     end
 	
     addRoundKey ark1(clk, textIn0, keyIn0, textOut0);
-    round1to9 r0(clk, round, keyIn, textIn, textOut, keyOut);
-    round10 r10(clk, round, keyIn10, textIn10, textOut10);
+    subBytes a1(clk, in, out1);
+    shiftRows a2(clk, out1, out2); 
+    mixcolumns a3(clk, out2, out3);
+    keyExpansionRound a4(clk, currKey, round, keyOut);
+    addRoundKey ark1(clk, out3, keyOutTemp, out);
 
-    //round1to9 r1(clk, 4'd2, key1, outA, outB, key2);
-    //round1to9 r2(clk, 4'd3, key2, outB, outC, key3);
-    //round1to9 r3(clk, 4'd4, key3, outC, outD, key4);
-    //round1to9 r4(clk, 4'd5, key4, outD, outE, key5);
-    //round1to9 r5(clk, 4'd6, key5, outE, outF, key6);
-    //round1to9 r6(clk, 4'd7, key6, outF, outG, key7);
-    //round1to9 r7(clk, 4'd8, key7, outG, outH, key8);
-    //round1to9 r8(clk, 4'd9, key8, outH, outI, key9); // clock, round, keyin, textin, text out, nextround key
-    //round10 r9(clk, 4'd10, key9, outI, outJ); // clock, round, keyin, textin, text out, nextround key
-    //assign cyphertext = outJ;    
+    //round1to9 r0(clk, round, keyIn, textIn, textOut, keyOut);
+    //round10 r10(clk, round, keyIn10, textIn10, textOut10);
+
+    
 endmodule
 
 module round1to9( input logic clk, 
@@ -172,8 +169,8 @@ endmodule
 module round10( input logic clk, 
 		  input logic [3:0] round,
 		  input logic [127:0] currKey, in,
-		  
 		  output logic [127:0] outFinal);
+		  
 	logic [127:0] out1, out2, rkey,  outOfRound;
 
 	subBytes a6(clk, in, out1);
@@ -263,10 +260,10 @@ module mixcolumn(input clk, // added clk signal;
         //assign y = {y0, y1, y2, y3};    
 
         //NOTE: I added always_ff loop
-        always_ff @(posedge clk)
-        begin
-          y <= {y0, y1, y2, y3};   
-        end 
+        //always_ff @(posedge clk)
+        //begin
+         assign y = {y0, y1, y2, y3};   
+        //end 
 endmodule
 
 /////////////////////////////////////////////
@@ -309,10 +306,10 @@ module subBytes(input logic clk,
     sbox_sync sboxsync15(in[119:112], clk, outtemp[119:112]);
     sbox_sync sboxsync16(in[127:120], clk, outtemp[127:120]);
 
-    always_ff @(posedge clk)
-    begin
-      out <= outtemp;
-    end
+    //always_ff @(posedge clk)
+    //begin
+    assign out = outtemp;
+    //end
 
 endmodule
 
@@ -338,9 +335,9 @@ endmodule
 module rotWord(input logic clk,
 	       input logic [31:0] word,
                output logic [31:0] rotWordOut);
-    always_ff @(posedge clk) begin
-    	rotWordOut <= {word[23:0], word[31:24]}; 
-    end
+    //always_ff @(posedge clk) begin
+    assign rotWordOut = {word[23:0], word[31:24]}; 
+    //end
 endmodule
 
 
@@ -358,32 +355,32 @@ module shiftRows(input logic clk,
 		 input  logic [127:0] in,
                  output logic [127:0] out);
 
-    always_ff @(posedge clk)
-    begin
+    //always_ff @(posedge clk)
+    //begin
       // row 0 unshifted
-       out[127:120] <= in[127:120];
-       out[95:88] <= in[95:88];
-       out[63:56] <= in[63:56];
-       out[31:24] <= in[31:24];
+       assign out[127:120] = in[127:120];
+       assign out[95:88] = in[95:88];
+       assign out[63:56] = in[63:56];
+       assign out[31:24] = in[31:24];
 
       // row 1 shifted by 1
-       out[119:112] <= in[87:80];
-       out[87:80] <= in[55:48];
-       out[55:48] <= in[23:16];
-       out[23:16] <= in[119:112];
+       assign out[119:112] = in[87:80];
+       assign out[87:80] = in[55:48];
+       assign out[55:48] = in[23:16];
+       assign out[23:16] = in[119:112];
 
       // row 2 shifted by 2
-       out[111:104] <= in[47:40];
-       out[79:72] <= in[15:8];
-       out[47:40] <= in[111:104];
-       out[15:8] <= in[79:72];
+       assign out[111:104] = in[47:40];
+       assign out[79:72] = in[15:8];
+       assign out[47:40] = in[111:104];
+       assign out[15:8] = in[79:72];
 
       // row 3 shifted by 3
-       out[103:96] <= in[7:0];
-       out[71:64] <= in[103:96];
-       out[39:32] <= in[71:64];
-       out[7:0] <= in[39:32];
-    end
+       assign out[103:96] = in[7:0];
+       assign out[71:64] = in[103:96];
+       assign out[39:32] = in[71:64];
+       assign out[7:0] = in[39:32];
+    //end
 endmodule
 
 
@@ -468,24 +465,12 @@ module hsoscEnable(
 	logic pulse;
 	logic int_osc;
 	logic led_state = 0;
-	logic [24:0] counter = 0;
+	logic pulsr ;
 	//logic selector = 0;
 
 // Internal high-speed oscillator
-	HSOSC hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(int_osc));
+	HSOSC hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(clk));
 	
-// Simple clock divider
-	always_ff @(posedge int_osc)
-	begin
-		counter <= counter + 1;
-		// at hz
-		if (counter == 10000)
-		begin
-			counter <= 0;
-			//if (selector == 0) selector <= 1 ; // turn on LED if off
-			//else selector <= 0; //turn OFF led
-		end
-	end
 
-assign clk = counter[6];
+assign clk = pulse;
 endmodule

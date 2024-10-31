@@ -49,7 +49,7 @@ Package: SG48
 Performance Grade:  High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 2024.1.0.34.2
-Mapped on: Wed Oct 30 22:54:43 2024
+Mapped on: Thu Oct 31 16:28:36 2024
 
 <A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
 
@@ -61,12 +61,12 @@ Command line:   map -pdc
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
 
-   Number of slice registers: 2113 out of  5280 (40%)
+   Number of slice registers: 1384 out of  5280 (26%)
    Number of I/O registers:      1 out of   117 (1%)
-   Number of LUT4s:           4796 out of  5280 (91%)
-      Number of logic LUT4s:             3668
-      Number of inserted feedthru LUT4s: 1090
-      Number of ripple logic:             19 (38 LUT4s)
+   Number of LUT4s:           4140 out of  5280 (78%)
+      Number of logic LUT4s:             3614
+      Number of inserted feedthru LUT4s: 514
+      Number of ripple logic:              6 (12 LUT4s)
    Number of IO sites used:   5 out of 39 (13%)
       Number of IO sites used for general PIO: 5
       Number of IO sites used for I3C: 0 out of 2 (0%)
@@ -88,36 +88,32 @@ Command line:   map -pdc
    Number of SPIs:             0 out of 2 (0%)
    Number of EBRs:             30 out of 30 (100%)
    Number of PLLs:             0 out of 1 (0%)
-   Number of Clocks:  3
+   Number of Clocks:  2
+      Net clk: 1025 loads, 1025 rising, 0 falling (Driver: Pin hf_osc/CLKHF)
       Net sck_c: 385 loads, 383 rising, 2 falling (Driver: Port sck)
-      Net clk: 1729 loads, 1729 rising, 0 falling (Driver: Pin
-     hsosc.counter_121__i7/Q)
-      Net hsosc.int_osc: 13 loads, 13 rising, 0 falling (Driver: Pin
-     hsosc.hf_osc/CLKHF)
    Number of Clock Enables:  5
+      Net VCC_net: 91 loads, 0 SLICEs
+      Net core.n6807: 256 loads, 256 SLICEs
+      Net core.n1054: 128 loads, 128 SLICEs
       Pin load: 256 loads, 256 SLICEs (Net: load_c)
-      Net n1083: 4 loads, 4 SLICEs
-      Net n6824: 256 loads, 256 SLICEs
-      Net done_pad.vcc: 91 loads, 0 SLICEs
-      Net core.n1055: 128 loads, 128 SLICEs
-   Number of LSRs:  6
+      Net core.n1081: 4 loads, 4 SLICEs
+   Number of LSRs:  5
+      Net core.n1048: 6 loads, 6 SLICEs
       Pin load: 4 loads, 4 SLICEs (Net: load_c)
-      Net n1049: 6 loads, 6 SLICEs
-      Net core.round[2]_2: 1 loads, 1 SLICEs
-      Net core.n14607: 1 loads, 1 SLICEs
-      Net core.n108: 1 loads, 1 SLICEs
-      Net hsosc.n7046: 13 loads, 13 SLICEs
+      Net core.round[2]: 1 loads, 1 SLICEs
+      Net core.r0.a4.n5733: 1 loads, 1 SLICEs
+      Net core.r0.a4.n14169: 1 loads, 1 SLICEs
    Top 10 highest fanout non-clock nets:
-      Net load_c: 266 loads
-      Net n9902: 257 loads
-      Net core.n8617: 256 loads
-      Net n1053: 256 loads
-      Net n6824: 256 loads
-      Net core.textIn10[120]: 129 loads
-      Net core.textIn10[121]: 129 loads
-      Net core.textIn10[48]: 129 loads
-      Net core.textIn10[49]: 129 loads
-      Net core.textIn10[50]: 129 loads
+      Net load_c: 265 loads
+      Net core.n29: 258 loads
+      Net core.n10028: 257 loads
+      Net core.n1052: 256 loads
+      Net core.n6807: 256 loads
+      Net core.textIn10[0]: 129 loads
+      Net core.textIn10[123]: 129 loads
+      Net core.textIn10[1]: 129 loads
+      Net core.textIn10[2]: 129 loads
+      Net core.textIn10[3]: 129 loads
 
    Number of warnings:  0
    Number of criticals: 0
@@ -147,28 +143,32 @@ Command line:   map -pdc
 <A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
 
 Block spi/i10_1_lut was optimized away.
-Block load_pad.vlo_inst was optimized away.
+Block i1 was optimized away.
 
 <A name="mrp_osc"></A><B><U><big>OSC Summary</big></U></B>
 
 OSC 1:                                 Pin/Node Value
-  OSC Instance Name:                            hsosc/hf_osc
-  Power UP:                            NODE     done_pad.vcc
-  Enable Signal:                       NODE     done_pad.vcc
-  OSC Output:                          NODE     hsosc.int_osc
+  OSC Instance Name:                            hf_osc
+  Power UP:                            NODE     VCC_net
+  Enable Signal:                       NODE     VCC_net
+  OSC Output:                          NODE     clk
   DIV Setting:                                  00
 
 <A name="mrp_asic"></A><B><U><big>ASIC Components</big></U></B>
 
+Instance Name: hf_osc
+         Type: HFOSC
 Instance Name: spi/key_i0
          Type: IOLOGIC
-Instance Name: core/r10/a8/sw1/sboxsyncsw4/temp_24__I_0
+Instance Name: core/r10/a8/sw1/sboxsyncsw4/keyIn10_16__I_0
          Type: EBR
-Instance Name: core/r10/a8/sw1/sboxsyncsw3/temp_16__I_0
+Instance Name: core/r10/a8/sw1/sboxsyncsw3/keyIn10_8__I_0
          Type: EBR
-Instance Name: core/r10/a8/sw1/sboxsyncsw2/temp_8__I_0
+Instance Name: core/r10/a8/sw1/sboxsyncsw2/keyIn10_0__I_0
          Type: EBR
-Instance Name: core/r10/a8/sw1/sboxsyncsw1/temp_0__I_0
+Instance Name: core/r10/a8/sw1/sboxsyncsw1/keyIn10_24__I_0
+         Type: EBR
+Instance Name: core/r10/a6/sboxsync7/textIn10_48__I_0
          Type: EBR
 Instance Name: core/r10/a6/sboxsync6/textIn10_40__I_0
          Type: EBR
@@ -180,15 +180,13 @@ Instance Name: core/r10/a6/sboxsync3/textIn10_16__I_0
          Type: EBR
 Instance Name: core/r10/a6/sboxsync2/textIn10_8__I_0
          Type: EBR
-Instance Name: core/r10/a6/sboxsync1/textIn10_0__I_0
+Instance Name: core/r0/a4/sw1/sboxsyncsw4/keyIn_16__I_0
          Type: EBR
-Instance Name: core/r0/a4/sw1/sboxsyncsw4/temp_24__I_0
+Instance Name: core/r0/a4/sw1/sboxsyncsw3/keyIn_8__I_0
          Type: EBR
-Instance Name: core/r0/a4/sw1/sboxsyncsw3/temp_16__I_0
+Instance Name: core/r0/a4/sw1/sboxsyncsw2/keyIn_0__I_0
          Type: EBR
-Instance Name: core/r0/a4/sw1/sboxsyncsw2/temp_8__I_0
-         Type: EBR
-Instance Name: core/r0/a4/sw1/sboxsyncsw1/temp_0__I_0
+Instance Name: core/r0/a4/sw1/sboxsyncsw1/keyIn_24__I_0
          Type: EBR
 Instance Name: core/r0/a1/sboxsync9/textIn_64__I_0
          Type: EBR
@@ -222,8 +220,6 @@ Instance Name: core/r0/a1/sboxsync11/textIn_80__I_0
          Type: EBR
 Instance Name: core/r0/a1/sboxsync10/textIn_72__I_0
          Type: EBR
-Instance Name: hsosc/hf_osc
-         Type: HFOSC
 
 <A name="mrp_consum"></A><B><U><big>Constraint Summary</big></U></B>
 
@@ -234,8 +230,8 @@ Instance Name: hsosc/hf_osc
 
    Total CPU Time: 1 secs
    Total REAL Time: 2 secs
-   Peak Memory Usage: 140 MB
-Checksum -- map: 84a5e6ccdf1d4f7261c4f9bfbac14d97e7bf94f5
+   Peak Memory Usage: 127 MB
+Checksum -- map: 2dc525214af3cd67744e588acb94e6bdcd433507
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995
      AT&amp;T Corp.   All rights reserved.

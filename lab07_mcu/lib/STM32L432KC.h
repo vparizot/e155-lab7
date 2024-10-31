@@ -8,7 +8,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
-#include <stm32l432xx.h>
+#include <STM32l432xx.h>
 
 // Include other peripheral libraries
 

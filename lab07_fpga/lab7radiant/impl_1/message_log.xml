@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BaliMessageLog>
-    <Task name="Export">
-        <Message>
-            <ID>1081100</ID>
-            <Severity>1</Severity>
-            <Dynamic>Bitstream authenticated.</Dynamic>
-        </Message>
-    </Task>
     <Task name="Synthesis">
         <Message>
             <ID>35001786</ID>
@@ -356,43 +349,26 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(464): </Dynamic>
-            <Dynamic>hsoscEnable</Dynamic>
-            <Navigation>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv</Navigation>
-            <Navigation>464</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>1</Severity>
             <Dynamic>C:/lscc/radiant/2024.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): </Dynamic>
             <Dynamic>HSOSC</Dynamic>
             <Navigation>C:/lscc/radiant/2024.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>756</Navigation>
         </Message>
         <Message>
-            <ID>35901209</ID>
-            <Severity>16</Severity>
-            <Dynamic>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(480): </Dynamic>
-            <Dynamic>32</Dynamic>
-            <Dynamic>25</Dynamic>
-            <Navigation>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv</Navigation>
-            <Navigation>480</Navigation>
-        </Message>
-        <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(28): </Dynamic>
+            <Dynamic>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(30): </Dynamic>
             <Dynamic>aes_spi</Dynamic>
             <Navigation>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv</Navigation>
-            <Navigation>28</Navigation>
+            <Navigation>30</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(77): </Dynamic>
+            <Dynamic>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(79): </Dynamic>
             <Dynamic>aes_core</Dynamic>
             <Navigation>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv</Navigation>
-            <Navigation>77</Navigation>
+            <Navigation>79</Navigation>
         </Message>
         <Message>
             <ID>35901209</ID>
@@ -406,123 +382,123 @@
         <Message>
             <ID>35901209</ID>
             <Severity>16</Severity>
-            <Dynamic>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(110): </Dynamic>
+            <Dynamic>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(109): </Dynamic>
             <Dynamic>32</Dynamic>
             <Dynamic>4</Dynamic>
             <Navigation>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv</Navigation>
-            <Navigation>110</Navigation>
+            <Navigation>109</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(390): </Dynamic>
+            <Dynamic>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(380): </Dynamic>
             <Dynamic>addRoundKey</Dynamic>
             <Navigation>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv</Navigation>
-            <Navigation>390</Navigation>
+            <Navigation>380</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(153): </Dynamic>
+            <Dynamic>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(143): </Dynamic>
             <Dynamic>round1to9</Dynamic>
             <Navigation>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv</Navigation>
-            <Navigation>153</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>1</Severity>
-            <Dynamic>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(289): </Dynamic>
-            <Dynamic>subBytes</Dynamic>
-            <Navigation>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv</Navigation>
-            <Navigation>289</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>1</Severity>
-            <Dynamic>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(195): </Dynamic>
-            <Dynamic>sbox_sync</Dynamic>
-            <Navigation>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv</Navigation>
-            <Navigation>195</Navigation>
-        </Message>
-        <Message>
-            <ID>35931002</ID>
-            <Severity>16</Severity>
-            <Dynamic>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(202): </Dynamic>
-            <Dynamic>sbox</Dynamic>
-            <Navigation>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv</Navigation>
-            <Navigation>202</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>1</Severity>
-            <Dynamic>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(357): </Dynamic>
-            <Dynamic>shiftRows</Dynamic>
-            <Navigation>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv</Navigation>
-            <Navigation>357</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>1</Severity>
-            <Dynamic>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(228): </Dynamic>
-            <Dynamic>mixcolumns</Dynamic>
-            <Navigation>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv</Navigation>
-            <Navigation>228</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>1</Severity>
-            <Dynamic>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(245): </Dynamic>
-            <Dynamic>mixcolumn</Dynamic>
-            <Navigation>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv</Navigation>
-            <Navigation>245</Navigation>
+            <Navigation>143</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
             <Dynamic>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(279): </Dynamic>
-            <Dynamic>galoismult</Dynamic>
+            <Dynamic>subBytes</Dynamic>
             <Navigation>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv</Navigation>
             <Navigation>279</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(417): </Dynamic>
+            <Dynamic>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(185): </Dynamic>
+            <Dynamic>sbox_sync</Dynamic>
+            <Navigation>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv</Navigation>
+            <Navigation>185</Navigation>
+        </Message>
+        <Message>
+            <ID>35931002</ID>
+            <Severity>16</Severity>
+            <Dynamic>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(192): </Dynamic>
+            <Dynamic>sbox</Dynamic>
+            <Navigation>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv</Navigation>
+            <Navigation>192</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(347): </Dynamic>
+            <Dynamic>shiftRows</Dynamic>
+            <Navigation>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv</Navigation>
+            <Navigation>347</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(218): </Dynamic>
+            <Dynamic>mixcolumns</Dynamic>
+            <Navigation>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv</Navigation>
+            <Navigation>218</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(235): </Dynamic>
+            <Dynamic>mixcolumn</Dynamic>
+            <Navigation>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv</Navigation>
+            <Navigation>235</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(269): </Dynamic>
+            <Dynamic>galoismult</Dynamic>
+            <Navigation>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv</Navigation>
+            <Navigation>269</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(407): </Dynamic>
             <Dynamic>keyExpansionRound</Dynamic>
             <Navigation>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv</Navigation>
-            <Navigation>417</Navigation>
+            <Navigation>407</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(338): </Dynamic>
+            <Dynamic>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(328): </Dynamic>
             <Dynamic>rotWord</Dynamic>
             <Navigation>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv</Navigation>
-            <Navigation>338</Navigation>
+            <Navigation>328</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(321): </Dynamic>
+            <Dynamic>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(311): </Dynamic>
             <Dynamic>subWord</Dynamic>
             <Navigation>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv</Navigation>
-            <Navigation>321</Navigation>
+            <Navigation>311</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(172): </Dynamic>
+            <Dynamic>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(162): </Dynamic>
             <Dynamic>round10</Dynamic>
             <Navigation>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv</Navigation>
-            <Navigation>172</Navigation>
+            <Navigation>162</Navigation>
         </Message>
         <Message>
             <ID>35931038</ID>
             <Severity>16</Severity>
-            <Dynamic>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(202): </Dynamic>
+            <Dynamic>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(192): </Dynamic>
             <Dynamic>sbox_original_ramnet</Dynamic>
             <Navigation>c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv</Navigation>
-            <Navigation>202</Navigation>
+            <Navigation>192</Navigation>
         </Message>
         <Message>
             <ID>35001045</ID>

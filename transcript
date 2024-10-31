@@ -2009,3 +2009,678 @@ run 5000000
 # ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv(75)
 #    Time: 52850 ns  Iteration: 1  Instance: /testbench_aes_spi
 # Break in Module testbench_aes_spi at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv line 75
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_core
+# End time: 16:08:52 on Oct 31,2024, Elapsed time: 17:50:45
+# Errors: 0, Warnings: 2
+# vsim -gui work.testbench_aes_core 
+# Start time: 16:08:52 on Oct 31,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+add wave -position end  sim:/testbench_aes_core/clk
+add wave -position end  sim:/testbench_aes_core/load
+add wave -position end  sim:/testbench_aes_core/done
+add wave -position end  sim:/testbench_aes_core/key
+add wave -position end  sim:/testbench_aes_core/plaintext
+add wave -position end  sim:/testbench_aes_core/cyphertext
+add wave -position end  sim:/testbench_aes_core/expected
+run 5000
+run 500000
+# Error: cyphertext = 0f25841d34dc09fbea1185972f6a0b32, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 10550 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+run 500000
+# Error: cyphertext = 0f25841d34dc09fbea1185972f6a0b32, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 10650 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_core
+# End time: 16:10:15 on Oct 31,2024, Elapsed time: 0:01:23
+# Errors: 0, Warnings: 2
+# vsim -gui work.testbench_aes_core 
+# Start time: 16:10:15 on Oct 31,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+add wave -position end  sim:/testbench_aes_core/clk
+add wave -position end  sim:/testbench_aes_core/load
+add wave -position end  sim:/testbench_aes_core/done
+add wave -position end  sim:/testbench_aes_core/key
+add wave -position end  sim:/testbench_aes_core/plaintext
+add wave -position end  sim:/testbench_aes_core/cyphertext
+add wave -position end  sim:/testbench_aes_core/expected
+run 555555
+# Error: cyphertext = 0f25841d34dc09fbea1185972f6a0b32, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 10550 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_core
+# End time: 16:11:52 on Oct 31,2024, Elapsed time: 0:01:37
+# Errors: 0, Warnings: 2
+# vsim -gui work.testbench_aes_core 
+# Start time: 16:11:52 on Oct 31,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+add wave -position end  sim:/testbench_aes_core/dut/clk
+add wave -position end  sim:/testbench_aes_core/dut/load
+add wave -position end  sim:/testbench_aes_core/dut/key
+add wave -position end  sim:/testbench_aes_core/dut/plaintext
+add wave -position end  sim:/testbench_aes_core/dut/done
+add wave -position end  sim:/testbench_aes_core/dut/cyphertext
+add wave -position end  sim:/testbench_aes_core/dut/keyIn
+add wave -position end  sim:/testbench_aes_core/dut/keyOut
+add wave -position end  sim:/testbench_aes_core/dut/textIn
+add wave -position end  sim:/testbench_aes_core/dut/textOut
+add wave -position end  sim:/testbench_aes_core/dut/textIn0
+add wave -position end  sim:/testbench_aes_core/dut/keyIn0
+add wave -position end  sim:/testbench_aes_core/dut/textOut0
+add wave -position end  sim:/testbench_aes_core/dut/keyOut0
+add wave -position end  sim:/testbench_aes_core/dut/textIn10
+add wave -position end  sim:/testbench_aes_core/dut/keyIn10
+add wave -position end  sim:/testbench_aes_core/dut/textOut10
+add wave -position end  sim:/testbench_aes_core/dut/round
+add wave -position end  sim:/testbench_aes_core/dut/counter
+run 50000
+# Error: cyphertext = 0f25841d34dc09fbea1185972f6a0b32, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 12750 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_core
+# End time: 16:13:06 on Oct 31,2024, Elapsed time: 0:01:14
+# Errors: 0, Warnings: 2
+# vsim -gui work.testbench_aes_core 
+# Start time: 16:13:06 on Oct 31,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+add wave -position end  sim:/testbench_aes_core/dut/clk
+add wave -position end  sim:/testbench_aes_core/dut/load
+add wave -position end  sim:/testbench_aes_core/dut/key
+add wave -position end  sim:/testbench_aes_core/dut/plaintext
+add wave -position end  sim:/testbench_aes_core/dut/done
+add wave -position end  sim:/testbench_aes_core/dut/cyphertext
+add wave -position end  sim:/testbench_aes_core/dut/keyIn
+add wave -position end  sim:/testbench_aes_core/dut/keyOut
+add wave -position end  sim:/testbench_aes_core/dut/textIn
+add wave -position end  sim:/testbench_aes_core/dut/textOut
+add wave -position end  sim:/testbench_aes_core/dut/textIn0
+add wave -position end  sim:/testbench_aes_core/dut/keyIn0
+add wave -position end  sim:/testbench_aes_core/dut/textOut0
+add wave -position end  sim:/testbench_aes_core/dut/keyOut0
+add wave -position end  sim:/testbench_aes_core/dut/textIn10
+add wave -position end  sim:/testbench_aes_core/dut/keyIn10
+add wave -position end  sim:/testbench_aes_core/dut/textOut10
+add wave -position end  sim:/testbench_aes_core/dut/round
+add wave -position end  sim:/testbench_aes_core/dut/counter
+run 50000
+# Error: cyphertext = 0f25841d34dc09fbea1185972f6a0b32, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 13550 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_core
+# End time: 16:14:36 on Oct 31,2024, Elapsed time: 0:01:30
+# Errors: 0, Warnings: 2
+# vsim -gui work.testbench_aes_core 
+# Start time: 16:14:36 on Oct 31,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+add wave -position end  sim:/testbench_aes_core/dut/clk
+add wave -position end  sim:/testbench_aes_core/dut/load
+add wave -position end  sim:/testbench_aes_core/dut/key
+add wave -position end  sim:/testbench_aes_core/dut/plaintext
+add wave -position end  sim:/testbench_aes_core/dut/done
+add wave -position end  sim:/testbench_aes_core/dut/cyphertext
+add wave -position end  sim:/testbench_aes_core/dut/keyIn
+add wave -position end  sim:/testbench_aes_core/dut/keyOut
+add wave -position end  sim:/testbench_aes_core/dut/textIn
+add wave -position end  sim:/testbench_aes_core/dut/textOut
+add wave -position end  sim:/testbench_aes_core/dut/textIn0
+add wave -position end  sim:/testbench_aes_core/dut/keyIn0
+add wave -position end  sim:/testbench_aes_core/dut/textOut0
+add wave -position end  sim:/testbench_aes_core/dut/keyOut0
+add wave -position end  sim:/testbench_aes_core/dut/textIn10
+add wave -position end  sim:/testbench_aes_core/dut/keyIn10
+add wave -position end  sim:/testbench_aes_core/dut/textOut10
+add wave -position end  sim:/testbench_aes_core/dut/round
+add wave -position end  sim:/testbench_aes_core/dut/counter
+run 50000
+# Testbench ran successfully
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 13550 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_core
+# End time: 16:16:21 on Oct 31,2024, Elapsed time: 0:01:45
+# Errors: 0, Warnings: 2
+# vsim -gui work.testbench_aes_core 
+# Start time: 16:16:21 on Oct 31,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+add wave -position end  sim:/testbench_aes_core/clk
+add wave -position end  sim:/testbench_aes_core/load
+add wave -position end  sim:/testbench_aes_core/done
+add wave -position end  sim:/testbench_aes_core/key
+add wave -position end  sim:/testbench_aes_core/plaintext
+add wave -position end  sim:/testbench_aes_core/cyphertext
+add wave -position end  sim:/testbench_aes_core/expected
+run 50000
+# Error: cyphertext = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 6950 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+run 500000
+# Error: cyphertext = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 7050 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+add wave -position end  sim:/testbench_aes_core/dut/clk
+add wave -position end  sim:/testbench_aes_core/dut/load
+add wave -position end  sim:/testbench_aes_core/dut/key
+add wave -position end  sim:/testbench_aes_core/dut/plaintext
+add wave -position end  sim:/testbench_aes_core/dut/done
+add wave -position end  sim:/testbench_aes_core/dut/cyphertext
+add wave -position end  sim:/testbench_aes_core/dut/keyIn
+add wave -position end  sim:/testbench_aes_core/dut/keyOut
+add wave -position end  sim:/testbench_aes_core/dut/textIn
+add wave -position end  sim:/testbench_aes_core/dut/textOut
+add wave -position end  sim:/testbench_aes_core/dut/textIn0
+add wave -position end  sim:/testbench_aes_core/dut/keyIn0
+add wave -position end  sim:/testbench_aes_core/dut/textOut0
+add wave -position end  sim:/testbench_aes_core/dut/keyOut0
+add wave -position end  sim:/testbench_aes_core/dut/textIn10
+add wave -position end  sim:/testbench_aes_core/dut/keyIn10
+add wave -position end  sim:/testbench_aes_core/dut/textOut10
+add wave -position end  sim:/testbench_aes_core/dut/round
+add wave -position end  sim:/testbench_aes_core/dut/counter
+restart
+run 500000
+# Error: cyphertext = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 6950 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+run 500000
+# Error: cyphertext = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 7050 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+run 500000
+# Error: cyphertext = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 7150 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+run 500000
+# Error: cyphertext = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 7250 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+run 500000
+# Error: cyphertext = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 7350 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+run 500000
+# Error: cyphertext = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 7450 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+run 50000000
+# Error: cyphertext = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 7550 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+run 50000000
+# Error: cyphertext = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 7650 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+run 50000000
+# Error: cyphertext = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 7750 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+run 50000000
+# Error: cyphertext = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 7850 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+run 50000000
+# Error: cyphertext = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 7950 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+run 50000000
+# Error: cyphertext = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 8050 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+run 50000000
+# Error: cyphertext = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 8150 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+run 50000000
+# Error: cyphertext = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 8250 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+
+run 50000000
+# Error: cyphertext = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 8350 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+run 50000000
+# Error: cyphertext = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 8450 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+run 50000000
+# Error: cyphertext = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 8550 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+run 50000000
+# Error: cyphertext = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 8650 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+run 999999999
+# Error: cyphertext = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 8750 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_core
+# End time: 16:19:08 on Oct 31,2024, Elapsed time: 0:02:47
+# Errors: 0, Warnings: 2
+# vsim -gui work.testbench_aes_core 
+# Start time: 16:19:08 on Oct 31,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+add wave -position end  sim:/testbench_aes_core/clk
+add wave -position end  sim:/testbench_aes_core/load
+add wave -position end  sim:/testbench_aes_core/done
+add wave -position end  sim:/testbench_aes_core/key
+add wave -position end  sim:/testbench_aes_core/plaintext
+add wave -position end  sim:/testbench_aes_core/cyphertext
+add wave -position end  sim:/testbench_aes_core/expected
+run 50000
+# Error: cyphertext = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 8050 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+run 50000
+# Error: cyphertext = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 8150 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+run 50000
+# Error: cyphertext = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 8250 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+add wave -position end sim:/testbench_aes_core/dut/*
+restart
+run 5000
+run 5000
+# Error: cyphertext = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 8050 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv failed with 2 errors.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 1 failed with 2 errors.
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/galoismult/_primary.dbs (158:158 1:1 14151 0 473 1730416988 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/galoismult/_primary.dbs (158:158 1:1 14151 0 473 1730416988 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/galoismult/_primary.dbs (158:158 1:1 14151 0 473 1730416988 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/galoismult/_primary.dbs (158:158 1:1 14151 0 473 1730416988 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/galoismult/_primary.dbs (158:158 1:1 14151 0 473 1730416988 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/galoismult/_primary.dbs (158:158 1:1 14151 0 473 1730416988 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/galoismult/_primary.dbs (158:158 1:1 14151 0 473 1730416988 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/galoismult/_primary.dbs (158:158 1:1 14151 0 473 1730416988 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/galoismult/_primary.dbs (158:158 1:1 14151 0 473 1730416988 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/galoismult/_primary.dbs (158:158 1:1 14151 0 473 1730416988 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/galoismult/_primary.dbs (158:158 1:1 14151 0 473 1730416988 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/lab7mvp/work/galoismult/_primary.dbs (158:158 1:1 14151 0 473 1730416988 0x10b:0x101)
+vsim -gui work.testbench_aes_core
+# End time: 16:23:18 on Oct 31,2024, Elapsed time: 0:04:10
+# Errors: 0, Warnings: 3
+# vsim -gui work.testbench_aes_core 
+# Start time: 16:23:18 on Oct 31,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+add wave -position end  sim:/testbench_aes_core/dut/clk
+add wave -position end  sim:/testbench_aes_core/dut/load
+add wave -position end  sim:/testbench_aes_core/dut/key
+add wave -position end  sim:/testbench_aes_core/dut/plaintext
+add wave -position end  sim:/testbench_aes_core/dut/done
+add wave -position end  sim:/testbench_aes_core/dut/cyphertext
+add wave -position end  sim:/testbench_aes_core/dut/keyIn
+add wave -position end  sim:/testbench_aes_core/dut/keyOut
+add wave -position end  sim:/testbench_aes_core/dut/textIn
+add wave -position end  sim:/testbench_aes_core/dut/textOut
+add wave -position end  sim:/testbench_aes_core/dut/textIn0
+add wave -position end  sim:/testbench_aes_core/dut/keyIn0
+add wave -position end  sim:/testbench_aes_core/dut/textOut0
+add wave -position end  sim:/testbench_aes_core/dut/keyOut0
+add wave -position end  sim:/testbench_aes_core/dut/textIn10
+add wave -position end  sim:/testbench_aes_core/dut/keyIn10
+add wave -position end  sim:/testbench_aes_core/dut/textOut10
+add wave -position end  sim:/testbench_aes_core/dut/round
+add wave -position end  sim:/testbench_aes_core/dut/counter
+run 50000
+# Error: cyphertext = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, expected 3925841d02dc09fbdc118597196a0b32
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 12450 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+# Compile of aes_core_tb.sv was successful.
+# Compile of aes_sbox_tb.sv was successful.
+# Compile of aes_spi_tb.sv was successful.
+# Compile of aes_starter.sv was successful.
+# Compile of subBytes_tb.sv was successful.
+# Compile of addRoundKey_tb.sv was successful.
+# Compile of keyExpansion_tb.sv was successful.
+# Compile of keyExpansionRound_tb.sv was successful.
+# Compile of rotWord_tb.sv was successful.
+# Compile of shiftRows_tb.sv was successful.
+# Compile of subword_tb.sv was successful.
+# Compile of round1to9_tb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.testbench_aes_core
+# End time: 16:25:03 on Oct 31,2024, Elapsed time: 0:01:45
+# Errors: 0, Warnings: 2
+# vsim -gui work.testbench_aes_core 
+# Start time: 16:25:03 on Oct 31,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_core
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+add wave -position end  sim:/testbench_aes_core/dut/clk
+add wave -position end  sim:/testbench_aes_core/dut/load
+add wave -position end  sim:/testbench_aes_core/dut/key
+add wave -position end  sim:/testbench_aes_core/dut/plaintext
+add wave -position end  sim:/testbench_aes_core/dut/done
+add wave -position end  sim:/testbench_aes_core/dut/cyphertext
+add wave -position end  sim:/testbench_aes_core/dut/keyIn
+add wave -position end  sim:/testbench_aes_core/dut/keyOut
+add wave -position end  sim:/testbench_aes_core/dut/textIn
+add wave -position end  sim:/testbench_aes_core/dut/textOut
+add wave -position end  sim:/testbench_aes_core/dut/textIn0
+add wave -position end  sim:/testbench_aes_core/dut/keyIn0
+add wave -position end  sim:/testbench_aes_core/dut/textOut0
+add wave -position end  sim:/testbench_aes_core/dut/keyOut0
+add wave -position end  sim:/testbench_aes_core/dut/textIn10
+add wave -position end  sim:/testbench_aes_core/dut/keyIn10
+add wave -position end  sim:/testbench_aes_core/dut/textOut10
+add wave -position end  sim:/testbench_aes_core/dut/round
+add wave -position end  sim:/testbench_aes_core/dut/counter
+run 500000
+# Testbench ran successfully
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv(48)
+#    Time: 13550 ns  Iteration: 1  Instance: /testbench_aes_core
+# Break in Module testbench_aes_core at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_core_tb.sv line 48
+vsim -gui work.testbench_aes_spi
+# End time: 16:25:39 on Oct 31,2024, Elapsed time: 0:00:36
+# Errors: 0, Warnings: 1
+# vsim -gui work.testbench_aes_spi 
+# Start time: 16:25:39 on Oct 31,2024
+# Loading sv_std.std
+# Loading work.testbench_aes_spi
+# Loading work.aes
+# Loading work.aes_spi
+# Loading work.aes_core
+# Loading work.addRoundKey
+# Loading work.round1to9
+# Loading work.subBytes
+# Loading work.sbox_sync
+# Loading work.shiftRows
+# Loading work.mixcolumns
+# Loading work.mixcolumn
+# Loading work.galoismult
+# Loading work.keyExpansionRound
+# Loading work.rotWord
+# Loading work.subWord
+# Loading work.round10
+add wave -position end  sim:/testbench_aes_spi/clk
+add wave -position end  sim:/testbench_aes_spi/load
+add wave -position end  sim:/testbench_aes_spi/done
+add wave -position end  sim:/testbench_aes_spi/sck
+add wave -position end  sim:/testbench_aes_spi/sdi
+add wave -position end  sim:/testbench_aes_spi/sdo
+add wave -position end  sim:/testbench_aes_spi/key
+add wave -position end  sim:/testbench_aes_spi/plaintext
+add wave -position end  sim:/testbench_aes_spi/cyphertext
+add wave -position end  sim:/testbench_aes_spi/expected
+add wave -position end  sim:/testbench_aes_spi/comb
+add wave -position end  sim:/testbench_aes_spi/i
+add wave -position end  sim:/testbench_aes_spi/delay
+run 500000
+# Testbench ran successfully
+# ** Note: $stop    : C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv(75)
+#    Time: 52850 ns  Iteration: 1  Instance: /testbench_aes_spi
+# Break in Module testbench_aes_spi at C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/aes_spi_tb.sv line 75

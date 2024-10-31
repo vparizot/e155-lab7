@@ -48,7 +48,7 @@ Performance Grade:      High-Performance_1.2V
 PACKAGE:          SG48
 Package Status:                     Preliminary    Version 1.5
 
-Wed Oct 30 22:55:13 2024
+Thu Oct 31 16:29:06 2024
 
 Pinout by Port Name:
 +-----------+----------+--------------+-------+------------------------------------------+
@@ -57,8 +57,8 @@ Pinout by Port Name:
 | done      | 27/0     | LVCMOS33_OUT | PR19B | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
 | load      | 26/0     | LVCMOS33_IN  | PR19A | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
 | sck       | 21/1     | LVCMOS33_IN  | PL19B | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
-| sdi       | 12/1     | LVCMOS33_IN  | PL19A | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
-| sdo       | 10/1     | LVCMOS33_OUT | PL17A | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
+| sdi       | 10/1     | LVCMOS33_IN  | PL17A | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| sdo       | 12/1     | LVCMOS33_OUT | PL19A | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
 +-----------+----------+--------------+-------+------------------------------------------+
 
 Vccio by Bank:
@@ -78,9 +78,9 @@ Vccio by Bank:
 | 4/2      |     unused, PULL:UP |            |              | PL10A |                  |
 | 6/1      |     unused, PULL:UP |            |              | PL14B |                  |
 | 9/1      |     unused, PULL:UP |            |              | PL16A |                  |
-| 10/1     | sdo                 | LOCATED    | LVCMOS33_OUT | PL17A |                  |
+| 10/1     | sdi                 | LOCATED    | LVCMOS33_IN  | PL17A |                  |
 | 11/1     |     unused, PULL:UP |            |              | PL18A |                  |
-| 12/1     | sdi                 | LOCATED    | LVCMOS33_IN  | PL19A |                  |
+| 12/1     | sdo                 | LOCATED    | LVCMOS33_OUT | PL19A |                  |
 | 13/1     |     unused, PULL:UP |            |              | PL20A |                  |
 | 14/1     |     unused, PULL:UP |            |              | PL24A | SPI_SO           |
 | 15/1     |     unused, PULL:UP |            |              | PL25A | SPISCK           |
@@ -137,8 +137,8 @@ Locate Constraints for each Pin:
 ldc_set_location -site {27} [ get_ports {done} ]
 ldc_set_location -site {26} [ get_ports {load} ]
 ldc_set_location -site {21} [ get_ports {sck} ]
-ldc_set_location -site {12} [ get_ports {sdi} ]
-ldc_set_location -site {10} [ get_ports {sdo} ]
+ldc_set_location -site {10} [ get_ports {sdi} ]
+ldc_set_location -site {12} [ get_ports {sdo} ]
 
 
 
@@ -146,7 +146,7 @@ ldc_set_location -site {10} [ get_ports {sdo} ]
 
 Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
 
-Wed Oct 30 22:55:13 2024
+Thu Oct 31 16:29:06 2024
 
 
 
