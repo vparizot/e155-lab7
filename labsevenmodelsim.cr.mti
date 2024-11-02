@@ -60,7 +60,7 @@ Model Technology ModelSim DE-64 vlog 2022.3 Compiler 2022.07 Jul 18 2022
 Top level modules:
 	keyExpansionRound_tb
 
-} {} {}} C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/subword_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/subword_tb.sv
+} {} {}} C:/Users/vparizot/E155/lab7mvp/lab07_fpga/src/subword_tb.sv {1 {vlog -work work -sv -stats=none {C:\Users\vparizot\E155\lab7mvp\lab07_fpga\src\subword_tb.sv}
 Model Technology ModelSim DE-64 vlog 2022.3 Compiler 2022.07 Jul 18 2022
 -- Compiling module subword_tb
 

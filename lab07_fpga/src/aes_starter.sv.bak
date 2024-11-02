@@ -84,14 +84,23 @@ module aes_core(input  logic         clk,
                 output logic [127:0] cyphertext);
 
     // Define internal variables
-    logic [127:0] keyIn, keyOut, textIn, textOut, textIn0, keyIn0, textOut0, keyOut0, textIn10, keyIn10, textOut10; //in, inA, key0, key1, key2, key3, key4, key5, key6, key7, key8, key9, key10;
+    //logic [127:0] keyIn, keyOut, textIn, textOut, textIn0, keyIn0, textOut0, textIn10, keyIn10, textOut10; //in, inA, key0, key1, key2, key3, key4, key5, key6, key7, key8, key9, key10;
     //logic [127:0] outA, outB, outC, outD, outE, outF, outG, outH, outI, outJ;
     logic [3:0] round;
     logic [10:0] counter;
+    logic [31:0] Rcon;
+    logic [127:0] textIn0, keyIn0, textOut0, in, out1, out2, inMC, outMC, currKey, keyOut, out3, out ;
+
+	addRoundKey ark1(textIn0, keyIn0, textOut0);
+
+	subBytes a1(clk, in, out1);
+   	shiftRows a2(out1, out2); 
+   	mixcolumns a3(inMC, outMC); // mixcolumns a3(clk, out2, out3);
+   	keyExpansionRound a4(clk, currKey, Rcon, keyOut);
+   	addRoundKey ark2(out3, keyOut, out);
     
 
     always_ff @(posedge clk) begin
-	counter <= counter + 1;
 	
 	if (load) begin
 		counter <= 0; 
@@ -101,53 +110,65 @@ module aes_core(input  logic         clk,
 		round <= 0;
 		//processing <= 1; // set processing signal to true
 	end
-	else if (round == 12) begin
-		done <= 1;
-	end	
-	else if (counter == 10) begin
-		counter <= 0;
-		round <= round + 1;
+	else begin 
+		counter <= counter + 1;
+	
+		if (counter == 6) begin
+		counter <= 0; // reset round counter
+		round <= round + 1; // increment round
+
+		in <= out; // update text
+		currKey <= keyOut; // update key
 		end
-	else if (counter == 0 && round == 1)
+	end
+	if (counter == 0 && round == 0) // start round w/ addRoundKey
 		begin
-		
-		keyIn <= keyIn0;
-		textIn <= textOut0;
+		currKey <= keyIn0;
+		in <= textOut0;
 		end
-	else if (counter == 0 && round < 10) 
+
+	if (round < 9) // rounds 1-9
 		begin
-		
-		keyIn <= keyOut;
-		textIn <= textOut;
+		inMC <= out2;
+		out3 <= outMC;
 		end 
-	else if (counter == 0 && round == 10) 
+
+	else //if (round == 9) // final round, set outputs
 		begin
 		// skip mixcolumns
+		out3 <= out2;
 		
-		keyIn10 <= keyOut;
-		textIn10 <= textOut;
 		end 
-	else if (counter == 0 && round > 10)
+	if (counter == 6 && round > 9) // end
 		begin
-		cyphertext <= textOut10;
-		//done <= 1;
+		cyphertext <= out;
+		done <= 1;
 		end
-    end
-	
-    addRoundKey ark1(clk, textIn0, keyIn0, textOut0);
-    subBytes a1(clk, in, out1);
-    shiftRows a2(clk, out1, out2); 
-    mixcolumns a3(clk, out2, out3);
-    keyExpansionRound a4(clk, currKey, round, keyOut);
-    addRoundKey ark1(clk, out3, keyOutTemp, out);
+    
+	if (round == 0) Rcon = 32'h01000000;
+	if (round == 1) Rcon = 32'h02000000;
+	if (round == 2) Rcon = 32'h04000000;
+	if (round == 3) Rcon = 32'h08000000;
+	if (round == 4) Rcon = 32'h10000000;
+	if (round == 5) Rcon = 32'h20000000;
+	if (round == 6) Rcon = 32'h40000000;
+	if (round == 7) Rcon = 32'h80000000;
+	if (round == 8) Rcon = 32'h1b000000;
+	if (round == 9) Rcon = 32'h36000000;
+	end
+		
+    
 
-    //round1to9 r0(clk, round, keyIn, textIn, textOut, keyOut);
-    //round10 r10(clk, round, keyIn10, textIn10, textOut10);
+
+    //addRoundKey ark1( textIn0, keyIn0, textOut0);
+    //round1to9 r0(clk, Rcon, round, keyIn, textIn, textOut, keyOut);
+    //round10 r10(clk, Rcon, round, keyIn10, textIn10, textOut10);
 
     
 endmodule
 
 module round1to9( input logic clk, 
+		  input logic [31:0] Rcon,
 		  input logic [3:0] round,
 		  input logic [127:0] currKey, in,
 		  output logic [127:0] outOfRound, rKeyOut);
@@ -156,27 +177,28 @@ module round1to9( input logic clk,
 
 	subBytes a1(clk, in, out1);
 	shiftRows a2(clk, out1, out2); // TODO: ADD CLK
-	mixcolumns a3(clk, out2, out3); //TODO:add clk
-	keyExpansionRound a4(clk, currKey, round, keyOut);
+	mixcolumns a3(out2, out3); //TODO:add clk
+	keyExpansionRound a4(clk, currKey, round, Rcon, keyOut);
 	
 	assign keyOutTemp = keyOut;
-	addRoundKey a5(clk, out3, keyOutTemp, out);
+	addRoundKey a5(out3, keyOutTemp, out);
 
   assign outOfRound = out;
   assign rKeyOut = keyOut;
 endmodule
 
 module round10( input logic clk, 
+			input logic [31:0] Rcon,
 		  input logic [3:0] round,
-		  input logic [127:0] currKey, in,
+		  input logic [127:0] currKey, in, 
 		  output logic [127:0] outFinal);
 		  
 	logic [127:0] out1, out2, rkey,  outOfRound;
 
 	subBytes a6(clk, in, out1);
 	shiftRows a7(clk, out1, out2); // TODO: ADD CLK
-	keyExpansionRound a8(clk, currKey, round, rkey);
-	addRoundKey a9(clk, out2, rkey, outOfRound);
+	keyExpansionRound a8(clk, currKey, round, Rcon, rkey);
+	addRoundKey a9(out2, rkey, outOfRound);
 	assign outFinal = outOfRound;
 	//assign done = 1'b1;
 
@@ -206,15 +228,7 @@ module sbox_sync(
 	end
 endmodule
 
-module sbox(input  logic [7:0] a,
-            output logic [7:0] y);
-            
-  // sbox implemented as a ROM
-  // This module is combinational and will be inferred using LUTs (logic cells)
-  logic [7:0] sbox[0:255];
-  initial   $readmemh("sbox.txt", sbox);
-  assign y = sbox[a];
-endmodule
+
 /////////////////////////////////////////////
 // mixcolumns
 //   Even funkier action on columns
@@ -222,7 +236,7 @@ endmodule
 //   Same operation performed on each of four columns
 /////////////////////////////////////////////
 
-module mixcolumns(input clk, // added clock input
+module mixcolumns(
 		  input  logic [127:0] a,
                   output logic [127:0] y);
 
@@ -314,31 +328,7 @@ module subBytes(input logic clk,
 endmodule
 
 
-// WORKS AS DESIRED IN TB
-module subWord(input logic clk,
-	       input logic [31:0] word,
-               output logic [31:0] subWordOut);
 
-    logic [7:0] subWordOut0, subWordOut1, subWordOut2, subWordOut3;
-    //assign {word0, word1, word2, word3} = word;
-
-    sbox_sync sboxsyncsw1(word[7:0], clk, subWordOut0);
-    sbox_sync sboxsyncsw2(word[15:8], clk, subWordOut1);
-    sbox_sync sboxsyncsw3(word[23:16], clk, subWordOut2);
-    sbox_sync sboxsyncsw4(word[31:24], clk, subWordOut3);
-	
-    assign subWordOut = {subWordOut3, subWordOut2, subWordOut1, subWordOut0};
-
-endmodule
-
-// WORKS AS DESIRED IN TB
-module rotWord(input logic clk,
-	       input logic [31:0] word,
-               output logic [31:0] rotWordOut);
-    //always_ff @(posedge clk) begin
-    assign rotWordOut = {word[23:0], word[31:24]}; 
-    //end
-endmodule
 
 
 //   The key and message are 128-bit values packed into an array of 16 bytes as
@@ -351,7 +341,7 @@ endmodule
 //   Equivalently, the values are packed into four words as given
 //        [127:96]  [95:64] [63:32] [31:0]      w[0]    w[1]    w[2]    w[3]
 // WORKS AS DESIRED IN TB
-module shiftRows(input logic clk,
+module shiftRows(
 		 input  logic [127:0] in,
                  output logic [127:0] out);
 
@@ -384,37 +374,17 @@ module shiftRows(input logic clk,
 endmodule
 
 
-module addRoundKey(input logic clk,
-		   input  logic [127:0] in,
+module addRoundKey(input  logic [127:0] in,
                    input  logic [127:0] roundKey,
                    output logic [127:0] out);
- 
-
-  //internal variable
-  // logic [31:0] in0, in1, in2, in3;
-  // logic [31:0] rkey0, rkey1, rkey2, rkey3;
-
-  // find roundkey for each word 
-
-  // logic [31:0] y0, y1, y2, y3;
-
-  // assign {a0, a1, a2, a3} = a;
-  // assign {rkey0, rkey1, rkey2, rkey3} = roundKey;
-
-  // XOR operations for each word
-  // assign out0 = in0 ^ rkey0;
-  // assign out1 = in1 ^ rkey1;
-  // assign out2 = in2 ^ rkey2;
-  // assign out3 = in3 ^ rkey3;
-
   assign out = in ^ roundKey; 
 
 endmodule
 
 module keyExpansionRound(input logic clk,
-			 input logic [127:0] key,
-                    	input logic [3:0] round, //i value
-		
+			input logic [127:0] key,
+                    	//input logic [3:0] round, //i value
+			input logic [31:0] Rcon,
                     	output logic [127:0] rkey);
 
     logic [31:0] key0, key1, key2, key3; 
@@ -426,28 +396,11 @@ module keyExpansionRound(input logic clk,
     // define words of roundkeys
     logic [31:0] swkey0, swkey1, swkey2, swkey3;
     logic [31:0] rotkey0, rotkey1, rotkey2, rotkey3, temp;
-    logic [31:0] Rcon;
+    //logic [31:0] Rcon;
     logic [31:0] rkey0, rkey1, rkey2, rkey3;
 
-    always_ff @(posedge clk) begin
-        // Define round constants based on round
-        case (round)
-            1: Rcon <= 32'h01000000;
-            2: Rcon <= 32'h02000000;
-            3: Rcon <= 32'h04000000;
-            4: Rcon <= 32'h08000000;
-            5: Rcon <= 32'h10000000;
-            6: Rcon <= 32'h20000000;
-            7: Rcon <= 32'h40000000;
-            8: Rcon <= 32'h80000000;
-            9: Rcon <= 32'h1b000000;
-            10: Rcon <= 32'h36000000;
-            default: Rcon <= 32'h00000000; // Default case to handle invalid rounds
-        endcase
-        end
-
     // call subword, rot word (need to repeat for EACH Rcon)
-    rotWord r1(clk, key3, rotkey0);
+    rotWord r1(key3, rotkey0);
     assign temp = rotkey0;
     subWord sw1(clk, temp, swkey0);
     assign rkey0 = key0 ^ swkey0 ^ Rcon;
@@ -457,7 +410,31 @@ module keyExpansionRound(input logic clk,
     assign rkey = {rkey0, rkey1, rkey2, rkey3};
 
 endmodule
+// WORKS AS DESIRED IN TB
+module subWord(input logic clk,
+	       input logic [31:0] word,
+               output logic [31:0] subWordOut);
 
+    logic [7:0] subWordOut0, subWordOut1, subWordOut2, subWordOut3;
+    //assign {word0, word1, word2, word3} = word;
+
+    sbox_sync sboxsyncsw1(word[7:0], clk, subWordOut0);
+    sbox_sync sboxsyncsw2(word[15:8], clk, subWordOut1);
+    sbox_sync sboxsyncsw3(word[23:16], clk, subWordOut2);
+    sbox_sync sboxsyncsw4(word[31:24], clk, subWordOut3);
+	
+    assign subWordOut = {subWordOut3, subWordOut2, subWordOut1, subWordOut0};
+
+endmodule
+
+// WORKS AS DESIRED IN TB
+module rotWord(
+	       input logic [31:0] word,
+               output logic [31:0] rotWordOut);
+    //always_ff @(posedge clk) begin
+    assign rotWordOut = {word[23:0], word[31:24]}; 
+    //end
+endmodule
 module hsoscEnable(
 	output logic clk);
 

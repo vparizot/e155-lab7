@@ -1,9 +1,10 @@
 module keyExpansionRound_tb();
 	logic [3:0] round;
 	logic [127:0] key, rkey, rkeyexpected;
+	logic [31:0] Rcon;
 	logic clk;
 
-	keyExpansionRound dut( .key(key), .round(round), .clk(clk), .rkey(rkey));
+	keyExpansionRound dut( .clk(clk), .key(key), .Rcon(Rcon),  .rkey(rkey));
 	always
 		begin
 		clk = 0; #5;
@@ -18,7 +19,7 @@ module keyExpansionRound_tb();
 		//#500;
 		
 		key = 128'ha0fafe1788542cb123a339392a6c7605;
-		round = 3'd2;
+		Rcon = 32'h01000000;
 		rkeyexpected = 128'hf2c295f27a96b9435935807a7359f67f;
 		#500;
 

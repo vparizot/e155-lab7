@@ -14,7 +14,7 @@ Constraint Summary:
  
 Writing output file 'lab7radiant_impl_1_syn.udb'.
 POSTSYN finished successfully.
-Total CPU Time: 1 secs 
+Total CPU Time: 0 secs 
 Total REAL Time: 0 secs 
-Peak Memory Usage: 78 MB
-Checksum -- postsyn: cd8d52ca94c180b3ee927f8af7681fac390b4c2
+Peak Memory Usage: 58 MB
+Checksum -- postsyn: 7779bc0293a95ec42e305bcdc7b50af19bdeacf2

@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Thu Oct 31 16:46:12 2024
+Sat Nov  2 13:20:26 2024
 
 
 Command Line:  C:\lscc\radiant\2024.1\ispfpga\bin\nt64\synthesis.exe -f lab7radiant_impl_1_lattice.synproj -logfile lab7radiant_impl_1_lattice.srp -gui -msgset C:/Users/vparizot/E155/lab7mvp/lab07_fpga/lab7radiant/promote.xml 
@@ -135,21 +135,20 @@ INFO <35901018> - synthesis: c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_s
 INFO <35901018> - synthesis: C:/lscc/radiant/2024.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): compiling module HSOSC. VERI-1018
 INFO <35901018> - synthesis: c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(30): compiling module aes_spi. VERI-1018
 INFO <35901018> - synthesis: c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(79): compiling module aes_core. VERI-1018
-WARNING <35901209> - synthesis: c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(94): expression size 32 truncated to fit in target size 11. VERI-1209
-WARNING <35901209> - synthesis: c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(109): expression size 32 truncated to fit in target size 4. VERI-1209
-INFO <35901018> - synthesis: c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(387): compiling module addRoundKey. VERI-1018
-INFO <35901018> - synthesis: c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(150): compiling module round1to9. VERI-1018
-INFO <35901018> - synthesis: c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(286): compiling module subBytes. VERI-1018
-INFO <35901018> - synthesis: c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(192): compiling module sbox_sync. VERI-1018
-WARNING <35931002> - synthesis: c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(199): net sbox does not have a driver. VDB-1002
-INFO <35901018> - synthesis: c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(354): compiling module shiftRows. VERI-1018
-INFO <35901018> - synthesis: c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(225): compiling module mixcolumns. VERI-1018
-INFO <35901018> - synthesis: c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(242): compiling module mixcolumn. VERI-1018
-INFO <35901018> - synthesis: c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(276): compiling module galoismult. VERI-1018
-INFO <35901018> - synthesis: c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(414): compiling module keyExpansionRound. VERI-1018
-INFO <35901018> - synthesis: c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(335): compiling module rotWord. VERI-1018
-INFO <35901018> - synthesis: c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(318): compiling module subWord. VERI-1018
-INFO <35901018> - synthesis: c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(169): compiling module round10. VERI-1018
+INFO <35901018> - synthesis: c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(377): compiling module addRoundKey. VERI-1018
+INFO <35901018> - synthesis: c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(300): compiling module subBytes. VERI-1018
+INFO <35901018> - synthesis: c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(214): compiling module sbox_sync. VERI-1018
+WARNING <35931002> - synthesis: c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(221): net sbox does not have a driver. VDB-1002
+INFO <35901018> - synthesis: c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(344): compiling module shiftRows. VERI-1018
+INFO <35901018> - synthesis: c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(239): compiling module mixcolumns. VERI-1018
+INFO <35901018> - synthesis: c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(256): compiling module mixcolumn. VERI-1018
+INFO <35901018> - synthesis: c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(290): compiling module galoismult. VERI-1018
+WARNING <35931002> - synthesis: c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(243): net clk does not have a driver. VDB-1002
+INFO <35901018> - synthesis: c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(384): compiling module keyExpansionRound. VERI-1018
+INFO <35901018> - synthesis: c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(431): compiling module rotWord. VERI-1018
+INFO <35901018> - synthesis: c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(414): compiling module subWord. VERI-1018
+WARNING <35901209> - synthesis: c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(114): expression size 32 truncated to fit in target size 11. VERI-1209
+WARNING <35901209> - synthesis: c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(118): expression size 32 truncated to fit in target size 4. VERI-1209
                                                          
 
 
@@ -174,28 +173,24 @@ INFO <35901018> - synthesis: c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_s
                                                          
 
 
-WARNING <35931038> - synthesis: c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(199): ram sbox_original_ramnet has no write-port on it. VDB-1038
-Removed duplicate sequential element \core/r10/a8/Rcon(32 bit), because it is equivalent to \core/r0/a4/Rcon
+WARNING <35931038> - synthesis: c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(221): ram sbox_original_ramnet has no write-port on it. VDB-1038
+WARNING <35931002> - synthesis: c:/users/vparizot/e155/lab7mvp/lab07_fpga/src/aes_starter.sv(243): net clk does not have a driver. VDB-1002
 
 
 
-
-WARNING <35001045> - synthesis: No available RAMs found.
-WARNING <35001045> - synthesis: No available RAMs found.
-WARNING <35001045> - synthesis: No available RAMs found.
-CRITICAL <35001747> - synthesis: Bit(s) of register \core/r0/a4/Rcon stuck at '0': 23, 21, 19, 17, 15, 13, 11, 9, 7, 5, 3, 1
+CRITICAL <35001747> - synthesis: Bit(s) of register driving \core/Rcon[31:0] stuck at '0': 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0
 INFO <35002039> - synthesis: Special Primitives IFD1P3AZ and OFD1P3AZ for ThunderPlus are synthesized using IOL_B.
 
 ################### Begin Area Report (aes)######################
-Number of register bits => 1384 of 5280 (26 % )
-EBR_B => 30
+Number of register bits => 1304 of 5280 (24 % )
+EBR_B => 20
 CCU2 => 6
-FD1P3XZ => 1384
+FD1P3XZ => 1304
 HSOSC_CORE => 1
 IB => 3
 INV => 1
 IOL_B => 1
-LUT4 => 3613
+LUT4 => 1223
 OB => 2
 ################### End Area Report ##################
 Number of odd-length carry chains : 1
@@ -210,16 +205,16 @@ Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : load_c, loads : 265
-  Net : core/n29, loads : 258
-  Net : core/n10028, loads : 257
-  Net : core/n6807, loads : 256
-  Net : core/n1052, loads : 256
-  Net : core/textIn10[0], loads : 129
-  Net : core/textIn10[3], loads : 129
-  Net : core/textIn10[2], loads : 129
-  Net : core/textIn10[1], loads : 129
-  Net : core/textIn10[123], loads : 129
+  Net : load_c, loads : 263
+  Net : core/n29, loads : 257
+  Net : core/n3210, loads : 256
+  Net : core/n2073, loads : 256
+  Net : spi/wasdone, loads : 128
+  Net : core/n4016, loads : 128
+  Net : core/round[0], loads : 20
+  Net : core/round[1], loads : 17
+  Net : core/n619, loads : 15
+  Net : core/round[2], loads : 15
 ################### End Clock Report ##################
 
 ################### Begin Constraint Report ######################
@@ -232,10 +227,10 @@ Constraint Summary:
 Total number of design rule violations: 0
 ###################  End DRC Report  ######################
 
-Peak Memory Usage: 126 MB
+Peak Memory Usage: 104 MB
 
 --------------------------------------------------------------
-Total CPU Time: 4 secs 
-Total REAL Time: 5 secs 
+Total CPU Time: 2 secs 
+Total REAL Time: 3 secs 
 --------------------------------------------------------------
-Checksum -- synthesis -- netlist: 9c64c3ab1740365e423ed728fe4b685e77d83b2
+Checksum -- synthesis -- netlist: 36676da51afa0a95de06d1d62b39c35f40b51e0
