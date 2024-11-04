@@ -101,7 +101,6 @@ module aes_core(input  logic         clk,
     
 
     always_ff @(posedge clk) begin
-	
 	if (load) begin
         // load all new signals, and reset 
 		counter <= 0; 
@@ -112,7 +111,6 @@ module aes_core(input  logic         clk,
 	end
 	else begin 
 		counter <= counter + 1; // counter used to allow for clock delays
-	
 		if (counter == 6) begin
         // after 6 posedges, the signals have stablized, so increment round
 		counter <= 0; // reset round counter
