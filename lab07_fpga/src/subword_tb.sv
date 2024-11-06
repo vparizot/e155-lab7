@@ -1,3 +1,8 @@
+// Victoria Parizot
+// vparizot@hmc.edu
+// 10/31/2024
+// Lab 7 Test Bench for subword, helper function for keyExpansionRounf
+
 module subword_tb();
 	logic [31:0] word, subWordOut, subWordOutExpected;
 	logic clk;
@@ -14,7 +19,5 @@ module subword_tb();
 
 		subWordOutExpected = 32'h8a84eb01;
 		end
-
-
-
+		
 endmodule

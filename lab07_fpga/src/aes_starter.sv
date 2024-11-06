@@ -1,8 +1,14 @@
+// Victoria Parizot
+// vparizot@hmc.edu
+// 10/31/2024
+// Lab 7 AES Encryption main file
+// Derived from Lab 7 started code for E155 FA2024
+
+
 /////////////////////////////////////////////
 // aes
 //   Top level module with SPI interface and SPI core
 /////////////////////////////////////////////
-
 module aes(//input  logic clk,
            input  logic sck, 
            input  logic sdi,
@@ -16,7 +22,6 @@ module aes(//input  logic clk,
             
     aes_spi spi(sck, sdi, sdo, done, key, plaintext, cyphertext);   
     aes_core core(clk, load, key, plaintext, done, cyphertext);
-
 endmodule
 
 /////////////////////////////////////////////
@@ -25,8 +30,6 @@ endmodule
 //   Captures ciphertext when done, then shifts it out
 //   Tricky cases to properly change sdo on negedge clk
 /////////////////////////////////////////////
-
-
 module aes_spi(input  logic sck, 
                input  logic sdi,
                output logic sdo,
@@ -161,44 +164,6 @@ module aes_core(input  logic         clk,
     
 endmodule
 
-module round1to9( input logic clk, 
-		  input logic [31:0] Rcon,
-		  input logic [3:0] round,
-		  input logic [127:0] currKey, in,
-		  output logic [127:0] outOfRound, rKeyOut);
-  	
-	logic [127:0] out, out1, out2, out3, keyOut, keyOutTemp;
-
-	subBytes a1(clk, in, out1);
-	shiftRows a2(clk, out1, out2); // TODO: ADD CLK
-	mixcolumns a3(out2, out3); //TODO:add clk
-	keyExpansionRound a4(clk, currKey, round, Rcon, keyOut);
-	
-	assign keyOutTemp = keyOut;
-	addRoundKey a5(out3, keyOutTemp, out);
-
-  assign outOfRound = out;
-  assign rKeyOut = keyOut;
-endmodule
-
-module round10( input logic clk, 
-			input logic [31:0] Rcon,
-		  input logic [3:0] round,
-		  input logic [127:0] currKey, in, 
-		  output logic [127:0] outFinal);
-		  
-	logic [127:0] out1, out2, rkey,  outOfRound;
-
-	subBytes a6(clk, in, out1);
-	shiftRows a7(clk, out1, out2); // TODO: ADD CLK
-	keyExpansionRound a8(clk, currKey, round, Rcon, rkey);
-	addRoundKey a9(out2, rkey, outOfRound);
-	assign outFinal = outOfRound;
-	//assign done = 1'b1;
-
-endmodule
-
-
 /////////////////////////////////////////////
 // sbox
 //   Infamous AES byte substitutions with magic numbers
@@ -320,9 +285,6 @@ module subBytes(input logic clk,
     assign out = outtemp;
 
 endmodule
-
-
-
 
 
 //   The key and message are 128-bit values packed into an array of 16 bytes as

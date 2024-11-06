@@ -1,3 +1,8 @@
+// Victoria Parizot
+// vparizot@hmc.edu
+// 10/31/2024
+// Lab 7 Test Bench for rounds 1 - 9 AES encryption
+
 module round1to9_tb();
 	logic [3:0] round;
 	logic [127:0] currKey, in, outOfRound, rKeyOut, rkeyexpected, outOfRoundExpected;

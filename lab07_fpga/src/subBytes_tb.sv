@@ -1,3 +1,9 @@
+// Victoria Parizot
+// vparizot@hmc.edu
+// 10/31/2024
+// Lab 7 Test Bench for subBytes module for AES
+
+
 module subBytes_tb();
 	logic clk;
 	logic [127:0] in, out, outExpected;

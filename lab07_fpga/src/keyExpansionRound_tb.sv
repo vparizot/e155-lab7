@@ -1,3 +1,9 @@
+// Victoria Parizot
+// vparizot@hmc.edu
+// 10/31/2024
+// Lab 7 Test Bench for a Key Expansion operation
+
+
 module keyExpansionRound_tb();
 	logic [3:0] round;
 	logic [127:0] key, rkey, rkeyexpected;
